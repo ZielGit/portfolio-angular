@@ -5,7 +5,8 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 @Component({
   selector: 'app-more-proyects',
   templateUrl: './more-proyects.component.html',
-  styleUrls: ['./more-proyects.component.scss']
+  styleUrls: ['./more-proyects.component.scss'],
+  standalone: false
 })
 export class MoreProyectsComponent implements OnInit {
 

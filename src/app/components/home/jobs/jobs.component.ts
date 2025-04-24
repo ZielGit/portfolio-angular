@@ -4,7 +4,8 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 @Component({
   selector: 'app-jobs',
   templateUrl: './jobs.component.html',
-  styleUrls: ['./jobs.component.scss']
+  styleUrls: ['./jobs.component.scss'],
+  standalone: false
 })
 export class JobsComponent implements OnInit {
   
