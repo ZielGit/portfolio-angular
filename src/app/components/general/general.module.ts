@@ -14,25 +14,23 @@ export function HttpLoaderFactory(http: HttpClient){
 }
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent
-  ],
-  imports: [
-    CommonModule,
-    NgbModule,
-    RouterModule,
-    NgbDropdownModule,
-    FormsModule,
-    ReactiveFormsModule,
-    TranslateModule.forChild({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-    })
-  ],
-  exports: [HeaderComponent, FooterComponent]
+    imports: [
+        CommonModule,
+        NgbModule,
+        RouterModule,
+        NgbDropdownModule,
+        FormsModule,
+        ReactiveFormsModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        HeaderComponent,
+        FooterComponent
+    ],
+    exports: [HeaderComponent, FooterComponent]
 })
 export class GeneralModule { }

@@ -8,7 +8,7 @@ describe('MoreProyectsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoreProyectsComponent ]
+      imports: [MoreProyectsComponent]
     })
     .compileComponents();
   }));

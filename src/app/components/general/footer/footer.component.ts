@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, query, stagger, animate, style, transition } from '@angular/animations'
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
@@ -17,8 +17,7 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
         ])
       ])
     ])
-  ],
-  standalone: false
+  ]
 })
 export class FooterComponent implements OnInit {
 
@@ -26,7 +25,5 @@ export class FooterComponent implements OnInit {
     public analyticsService: AnalyticsService
   ) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

@@ -1,12 +1,14 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { NgFor, NgIf } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-proyects',
   templateUrl: './proyects.component.html',
   styleUrls: ['./proyects.component.scss'],
-  standalone: false
+  imports: [NgFor, NgIf, CarouselModule, TranslateModule]
 })
 export class ProyectsComponent implements OnInit {
 
@@ -23,24 +25,17 @@ export class ProyectsComponent implements OnInit {
 
   @ViewChild('imgContainer') imgContainer: ElementRef;
 
-
   constructor(
     public analyticsService: AnalyticsService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-
-
+  debug() {
+    this.imgContainer.nativeElement.scroll({
+      top: this.imgContainer.nativeElement.scrollHeight,
+      left: 0,
+      behavior: 'smooth',    
+    });
   }
-
-debug(){
-
-  this.imgContainer.nativeElement.scroll({
-    top: this.imgContainer.nativeElement.scrollHeight,
-    left: 0,
-    behavior: 'smooth',    
-  });
-}
-
 }

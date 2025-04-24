@@ -1,11 +1,12 @@
-import { Component, OnInit, ViewChild, HostListener, AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router';
-import {trigger, style, query, transition, stagger, animate } from '@angular/animations'
+import { Component, OnInit, HostListener } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { trigger, style, query, transition, stagger, animate } from '@angular/animations';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { UntypedFormControl } from '@angular/forms';
 import { LanguageService } from 'src/app/services/language/language.service';
-import { ThisReceiver } from '@angular/compiler';
+import { NgbNav, NgbNavItem, NgbNavItemRole, NgbNavLink, NgbNavLinkBase, NgbNavContent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu } from '@ng-bootstrap/ng-bootstrap';
+import { NgIf, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -23,11 +24,9 @@ import { ThisReceiver } from '@angular/compiler';
       ])
     ])
   ],
-  standalone: false
+  imports: [RouterLink, NgbNav, NgbNavItem, NgbNavItemRole, NgbNavLink, NgbNavLinkBase, NgbNavContent, NgbDropdown, NgbDropdownToggle, NgIf, NgbDropdownMenu, NgStyle, TranslateModule]
 })
-
 export class HeaderComponent implements OnInit {
-
   responsiveMenuVisible: Boolean = false;
   pageYPosition: number;
   languageFormControl: UntypedFormControl= new UntypedFormControl();
@@ -40,11 +39,8 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
-
     this.languageFormControl.setValue(this.languageService.language)
-
   }
 
   scroll(el) {
@@ -60,21 +56,17 @@ export class HeaderComponent implements OnInit {
     this.languageService.translateService.get("Header.cvName").subscribe(val => {
       this.cvName = val
       console.log(val)
-      // app url
       let url = window.location.href;
-
-      // Open a new window with the CV
       window.open(url + "/../assets/cv/" + this.cvName, "_blank");
     })
-
   }
 
   @HostListener('window:scroll', ['getScrollPosition($event)'])
-    getScrollPosition(event) {
-        this.pageYPosition=window.pageYOffset
-    }
+  getScrollPosition(event) {
+    this.pageYPosition=window.pageYOffset
+  }
 
-    changeLanguage(language: string) {
-      this.languageFormControl.setValue(language);
-    }
+  changeLanguage(language: string) {
+    this.languageFormControl.setValue(language);
+  }
 }

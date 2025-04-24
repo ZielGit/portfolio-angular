@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { BannerComponent } from './banner/banner.component';
+import { AboutComponent } from './about/about.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { ProyectsComponent } from './proyects/proyects.component';
+import { MoreProyectsComponent } from './more-proyects/more-proyects.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  standalone: false
+  imports: [BannerComponent, AboutComponent, JobsComponent, ProyectsComponent, MoreProyectsComponent, ContactComponent]
 })
 export class HomeComponent implements OnInit {
 
   constructor(
     private analyticsService: AnalyticsService,
-  ) {
-  }
+  ) { }
 
   ngOnInit(): void {
     this.analyticsService.sendAnalyticPageView("/inicio", "Se entro a inicio")
   }
-
-
 }

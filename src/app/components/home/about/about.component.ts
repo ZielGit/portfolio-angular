@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { NgFor } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  standalone: false
+  imports: [NgFor, TranslateModule]
 })
 export class AboutComponent implements OnInit {
 
@@ -13,7 +15,5 @@ export class AboutComponent implements OnInit {
     public analyticsService: AnalyticsService
   ) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

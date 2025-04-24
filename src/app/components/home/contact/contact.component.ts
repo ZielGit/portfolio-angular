@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-  standalone: false
+  imports: [TranslateModule]
 })
 export class ContactComponent implements OnInit {
 
@@ -13,7 +14,5 @@ export class ContactComponent implements OnInit {
     public analyticsService: AnalyticsService
   ) { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

@@ -20,26 +20,24 @@ export function HttpLoaderFactory(http: HttpClient){
 
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    BannerComponent,
-    AboutComponent,
-    JobsComponent,
-    ProyectsComponent,
-    MoreProyectsComponent,
-    ContactComponent,
-  ],
-  imports: [
-    CommonModule,
-    NgbNavModule,
-    CarouselModule,
-    TranslateModule.forChild({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      }
-    })
-  ]
+    imports: [
+        CommonModule,
+        NgbNavModule,
+        CarouselModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        HomeComponent,
+        BannerComponent,
+        AboutComponent,
+        JobsComponent,
+        ProyectsComponent,
+        MoreProyectsComponent,
+        ContactComponent
+    ]
 })
 export class HomeModule { }
