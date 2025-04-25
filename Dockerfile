@@ -1,8 +1,8 @@
 # ---- Base Image ----
-FROM node:20-alpine
+FROM node:22-alpine
 
 # Instalar Angular CLI globalmente (versión 17)
-RUN npm install -g @angular/cli@17
+RUN npm install -g @angular/cli@19
 
 # Configurar el workspace y permisos
 WORKDIR /app
