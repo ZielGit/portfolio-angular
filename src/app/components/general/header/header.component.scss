@@ -1,4 +1,5 @@
-@import "./../../../../variables.scss";
+@use "./../../../../variables.scss" as *;
+
 .main-navbar {
     height: 70px;
     background: $Navy;
