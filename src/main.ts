@@ -5,7 +5,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { HttpLoaderFactory } from './app/app.module';
 import { environment } from './environments/environment';
-import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { provideTranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { provideHttpClient, withInterceptorsFromDi, HttpClient } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { HomeModule } from './app/components/home/home.module';
@@ -21,6 +21,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
+    new TranslateHttpLoader(http, './assets/i18n/', '.json');
+
 bootstrapApplication(AppComponent, {
     providers: [
         importProvidersFrom(HomeModule, GeneralModule, BrowserModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', {
@@ -32,7 +35,14 @@ bootstrapApplication(AppComponent, {
                 deps: [HttpClient],
             },
         }), NgbModule),
-        TranslateService, provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClient(withInterceptorsFromDi()),
+        provideTranslateService({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: httpLoaderFactory,
+                deps: [HttpClient],
+            },
+        }),
         provideAnimations()
     ]
 })
