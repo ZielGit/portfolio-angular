@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
-import { NgFor } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-more-proyects',
   templateUrl: './more-proyects.component.html',
   styleUrls: ['./more-proyects.component.scss'],
-  imports: [NgFor, TranslateModule]
+  imports: [TranslateModule]
 })
 export class MoreProyectsComponent implements OnInit {
 
