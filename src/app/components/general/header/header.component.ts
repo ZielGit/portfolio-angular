@@ -57,7 +57,7 @@ export class HeaderComponent implements OnInit {
       this.cvName = val
       console.log(val)
       let url = window.location.href;
-      window.open(url + "/../assets/cv/" + this.cvName, "_blank");
+      window.open(url + "/../cv/" + this.cvName, "_blank");
     })
   }
 
