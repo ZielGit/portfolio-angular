@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 
 import { trigger, style, animate, transition, stagger, query } from "@angular/animations";
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
@@ -23,10 +23,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule]
 })
 export class BannerComponent implements OnInit {
-
-  constructor(
-    public analyticsService: AnalyticsService
-  ) { }
+  analyticsService = inject(AnalyticsService);
 
   ngOnInit(): void { }
 }

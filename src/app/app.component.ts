@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import * as AOS from 'aos';
 import { Title, Meta } from '@angular/platform-browser';
-import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from "src/app/services/language/language.service";
-import { Location } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/general/header/header.component';
 import { FooterComponent } from './components/general/footer/footer.component';
@@ -15,15 +13,9 @@ import { FooterComponent } from './components/general/footer/footer.component';
   imports: [HeaderComponent, RouterOutlet, FooterComponent]
 })
 export class AppComponent implements OnInit{
-  title = 'andresjosehr-portfolio';
-
-  constructor(
-    private titleService: Title,
-    private metaService: Meta,
-    private translateService: TranslateService,
-    private location: Location,
-    private languageService: LanguageService
-  ) { }
+  private titleService = inject(Title);
+  private metaService = inject(Meta);
+  private languageService = inject(LanguageService);
 
   ngOnInit(): void{
     this.languageService.initLanguage()

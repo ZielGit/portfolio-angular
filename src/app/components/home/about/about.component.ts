@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
 import { TranslateModule } from '@ngx-translate/core';
@@ -10,10 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule]
 })
 export class AboutComponent implements OnInit {
-
-  constructor(
-    public analyticsService: AnalyticsService
-  ) { }
+  analyticsService = inject(AnalyticsService);
 
   ngOnInit(): void { }
 }

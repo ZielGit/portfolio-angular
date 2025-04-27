@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
@@ -11,11 +11,8 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule]
 })
 export class MoreProyectsComponent implements OnInit {
-
-  constructor(
-    private router: Router,
-    public analyticsService: AnalyticsService
-  ) { }
+  private router = inject(Router);
+  analyticsService = inject(AnalyticsService);
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 import { BannerComponent } from './banner/banner.component';
 import { AboutComponent } from './about/about.component';
@@ -14,10 +14,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [BannerComponent, AboutComponent, JobsComponent, ProyectsComponent, MoreProyectsComponent, ContactComponent]
 })
 export class HomeComponent implements OnInit {
-
-  constructor(
-    private analyticsService: AnalyticsService,
-  ) { }
+  private analyticsService = inject(AnalyticsService);
 
   ngOnInit(): void {
     this.analyticsService.sendAnalyticPageView("/inicio", "Se entro a inicio")

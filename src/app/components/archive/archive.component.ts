@@ -20,7 +20,6 @@ import { trigger, query, stagger, style, animate, transition } from "@angular/an
 })
 export class ArchiveComponent implements OnInit, AfterViewInit {
   public state: boolean = false;
-  constructor() { }
 
   ngOnInit(): void { }
 

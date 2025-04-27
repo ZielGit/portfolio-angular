@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { trigger, style, query, transition, stagger, animate } from '@angular/animations';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
@@ -27,16 +27,14 @@ import { NgStyle } from '@angular/common';
   imports: [RouterLink, NgbNav, NgbNavItem, NgbNavItemRole, NgbNavLink, NgbNavLinkBase, NgbNavContent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgStyle, TranslateModule]
 })
 export class HeaderComponent implements OnInit {
+  private router = inject(Router);
+  analyticsService = inject(AnalyticsService);
+  languageService = inject(LanguageService);
+
   responsiveMenuVisible: Boolean = false;
   pageYPosition: number;
   languageFormControl: UntypedFormControl= new UntypedFormControl();
   cvName: string = "";
-
-  constructor(
-    private router: Router,
-    public analyticsService: AnalyticsService,
-    public languageService: LanguageService
-  ) { }
 
   ngOnInit(): void {
     this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))

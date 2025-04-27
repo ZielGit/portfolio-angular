@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 import { NgbNav, NgbNavItem, NgbNavItemRole, NgbNavLink, NgbNavLinkBase, NgbNavContent, NgbNavOutlet } from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,11 +11,9 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [NgbNav, NgbNavItem, NgbNavItemRole, NgbNavLink, NgbNavLinkBase, NgbNavContent, NgbNavOutlet, TranslateModule]
 })
 export class JobsComponent implements OnInit {
-  active = 0
+  analyticsService = inject(AnalyticsService);
 
-  constructor(
-    public analyticsService: AnalyticsService
-  ) { }
+  active = 0
 
   ngOnInit(): void { }
 }
