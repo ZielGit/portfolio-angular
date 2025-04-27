@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, inject, viewChild } from '@angular/core';
 import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
@@ -24,13 +24,13 @@ export class ProyectsComponent implements OnInit {
     autoplayTimeout:3000
   }
 
-  @ViewChild('imgContainer') imgContainer: ElementRef;
+  readonly imgContainer = viewChild<ElementRef>('imgContainer');
 
   ngOnInit(): void { }
 
   debug() {
-    this.imgContainer.nativeElement.scroll({
-      top: this.imgContainer.nativeElement.scrollHeight,
+    this.imgContainer().nativeElement.scroll({
+      top: this.imgContainer().nativeElement.scrollHeight,
       left: 0,
       behavior: 'smooth',
     });
