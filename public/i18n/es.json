@@ -21,79 +21,67 @@
   "Experience.Title": "Experiencia",
   "Experience.Jobs": [
     {
-      "Tab": "Global",
-      "Title": "Fullstack developer",
-      "Date": "Mayo 2023",
+      "Tab": "OLITEL",
+      "Title": "Ingeniero Desarrollador",
+      "Date": "Diciembre 2024 - Marzo 2024",
       "Description": [
-        "Lider en la toma de desiciones tecnicas",
-        "Contratación de talento tecnico para la empresa",
-        "Lider de quipo del departamento de tecnología",
-        "Creación y mantenimiento de una plataforma de gestion de procesos internos para ventas de cursos",
-        "Programación de funciones y plugins personalizados para personalizacion de una plataforma de wordpress",
-        "Implementación de integración continua y respaldos diarios.",
-        "Reuniones de planificación en informes."
-      ]
-    },
-    {
-      "Tab": "Proyex",
-      "Title": "Fullstack developer",
-      "Date": "Diciembre 2019 - Mayo 2023",
-      "Description": [
-        "Creación y mantenimiento de una plataforma de monitoreo con gráficos en Wordpress.",
-        "Programación funcional en plantillas y plugins para añadir las características necesarias de monitoreo.",
-        "Implementación de integración continua y respaldos diarios.",
-        "Creación y mantenimiento de una segunda plataforma de Monitoreo Realizada en Angular, Angular Material, Laravel, Mysql, RxJS, Sass con gráficos (configurables), sistema de alarmas, y gestión de usuarios y configuración de parámetros generales.",
-        "Reuniones de planificación en informes."
+        "Desarrollo del backend con laravel como api y frontend con angular, implementación, configuración y mantenimiento de CPanel, integración continua/despliegue continuo (CI/CD), documentación de apis y documentación técnica de los proyectos."
       ]
     },
     {
       "Tab": "Freelancer",
-      "Title": "Independiente",
-      "Date": "Mayo 2016 - Actualidad",
+      "Title": "Desarrollador Full Stack Senior",
+      "Date": "Septiembre 2024 - Noviembre 2024",
       "Description": [
-        "Implementacion de mejoras continuas, trabajando en frontend y backend.",
-        "Creacion de plataformas con Angular, Laravel, Wordpress programadas con paradigmas de programación funcional, reactiva y orientada a objetos.",
-        "Automatizacion de procesos con estructuras de datos.",
-        "Maquetacion de diseños con SASS, Bootstrap, Materialize, Bulma, etc."
+        "Desarrollo del backend y frontend para sitios web. Configuración y gestión de servidores web y bases de datos. Integración de servicios externos, como sistemas para pagos online y correo electrónico. Elaboración de documentación de las aplicaciones o soluciones desarrolladas. Actualización y mantenimiento de las plataformas y sistemas web asignados."
       ]
     },
     {
-      "Tab": "Moebius",
-      "Title": "FullStack developer",
-      "Date": "Julio 2017 - Octubre 2018",
+      "Tab": "UNISCJSA",
+      "Title": "Desarrollador .NET Senior",
+      "Date": "Mayo 2024 - Agosto 2024",
       "Description": [
-        "Liderando un equipo de 4 personas en el desarrollo de una plataforma de gestión de Datos de turismo hecha en Angular, Laravel y MySQL. ",
-        "Implementacion de CI/CD en Azure. Refactorizando y optimizando tiempos de carga de la aplicación.",
-        "Codificación de peticiones a API con RxJS.",
-        "Crecion de modulos con formularios reactivos complejos",
-        "Redacción de informes semanales acerca de metas y planes."
+        "Responsable programador encargado de brindar soluciones al funcionamiento del sistema integrado de gestión académica universitaria (SIGAU). "
       ]
     },
     {
-      "Tab": "TechLatam",
-      "Title": "Frontend developer",
-      "Date": "Febrero 2016 - Mayo 2017",
+      "Tab": "La Preventiva Seguros",
+      "Title": "Desarrollador Laravel Senior",
+      "Date": "Febrero 2024 - Mayo 2024",
       "Description": [
-        "Creación de plantillas de wordpress con ACF, programación funcional en Javascript / jQuery, estilos en SASS",
-        "integración de mejoras en diseño y tiempos de carga de plantillas.",
-        "Comunicación efectiva con equipo de diseño, trabajando con Avocode / Figma"
+        "Actualización y mantenimiento de la web. Optimización del desarrollo de funciones del sistema web. Diseño y desarrollo del sitio web. Desarrollo del backend y frontend para el sistema web, Configuración y gestión de servidores web y bases de datos, Integración de servicios externos, como API's y correo electrónico, testing, deploy en servidores, Integración continua/despliegue continuo (CI/CD)."
       ]
     },
     {
-      "Tab": "CANTV",
-      "Title": "Analista de sistema",
-      "Date": "Noviembre 2015 - Diciembre 2016",
+      "Tab": "La Preventiva Seguros",
+      "Title": "Desarrollador Laravel Junior",
+      "Date": "Febrero 2023 - Febrero 2024",
       "Description": [
-        "Programacion de nuevas funcionalidades para una plataforma de gestión de empleados existente realizada en Angular y ExpressJS",
-        "Realizar refactorización de código antiguo. Asegurar la compatibilidad de cada dependencia en cada actualización, junto también con la actualización regular de Angular."
+        "Integración con API's, mejora en los procesos del software, resolución de problemas, nuevas implementaciones y corrección de errores del sistema ERP."
       ]
     },
     {
-      "Tab": "IEP",
-      "Title": "Profesor de Inglés",
-      "Date": "Enero 2015 - Julio 2015",
+      "Tab": "Freelancer",
+      "Title": "Desarrollador Full Stack Junior",
+      "Date": "Enero 2022 - Febrero 2023",
       "Description": [
-        "Enseñando ingles a nivel básico a una matrícula de más de 200 alumnos."
+        "Desarrollo del backend y frontend para sitios web. Configuración y gestión de servidores web y bases de datos. Integración de servicios externos, como sistemas para pagos online y correo electrónico. Elaboración de documentación de las aplicaciones o soluciones desarrolladas. Actualización y mantenimiento de las plataformas y sistemas web asignados."
+      ]
+    },
+    {
+      "Tab": "MiTSoftware",
+      "Title": "Desarrollador Laravel Junior",
+      "Date": "Septiembre 2021 - Diciembre 2021",
+      "Description": [
+        "Programación web, pruebas unitarias, mantenimiento de base de datos e integración de servicios externos, como API’s y correo electrónico."
+      ]
+    },
+    {
+      "Tab": "Fenix Corporation",
+      "Title": "Programador Full Stack Junior",
+      "Date": "Diciembre 2019 - Agosto 2021",
+      "Description": [
+        "Desarrollo del backend y frontend para sitios web, implementación de nuevas funcionalidades y mantenimiento de sitios web."
       ]
     }
   ],
