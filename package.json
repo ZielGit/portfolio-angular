@@ -25,7 +25,7 @@
     "@angular/router": "^20.3.15",
     "@angular/service-worker": "^20.3.15",
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "@ng-bootstrap/ng-bootstrap": "^18.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^19.0.1",
     "@ngx-translate/core": "^16.0.4",
     "@ngx-translate/http-loader": "^16.0.1",
     "@popperjs/core": "^2.11.8",
