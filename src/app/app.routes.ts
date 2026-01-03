@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { Archive } from './components/archive/archive';
 import { Home } from './pages/home/home';
+import { Project } from './pages/project/project';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/es', pathMatch: 'full' },
@@ -8,7 +8,7 @@ export const routes: Routes = [
     path: ':language',
     children: [
       { path: '', component: Home },
-      { path: 'proyectos', component: Archive },
+      { path: 'projects', component: Project },
     ],
   },
   { path: '**', redirectTo: '/es' },

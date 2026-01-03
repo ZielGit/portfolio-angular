@@ -2,10 +2,10 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-archive',
+  selector: 'app-project',
   imports: [],
-  templateUrl: './archive.html',
-  styleUrl: './archive.scss',
+  templateUrl: './project.html',
+  styleUrl: './project.scss',
   animations: [
     trigger('archiveAnimation', [
       transition(':enter', [
@@ -17,7 +17,7 @@ import { AfterViewInit, Component } from '@angular/core';
     ]),
   ],
 })
-export class Archive implements AfterViewInit {
+export class Project implements AfterViewInit {
   public state = false;
 
   ngAfterViewInit(): void {
