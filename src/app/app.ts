@@ -3,8 +3,8 @@ import { Meta, Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import * as AOS from 'aos';
 import { LanguageService } from 'src/app/services/language/language.service';
-import { Footer } from './components/layout/footer/footer';
-import { Header } from './components/layout/header/header';
+import { Footer } from './layout/footer/footer';
+import { Header } from './layout/header/header';
 
 @Component({
   selector: 'app-root',
