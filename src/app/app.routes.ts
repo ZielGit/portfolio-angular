@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { ArchiveComponent } from './components/archive/archive.component';
-import { HomeComponent } from './components/home/home.component';
+import { Home } from './pages/home/home';
+import { Project } from './pages/project/project';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/es', pathMatch: 'full' },
   {
     path: ':language',
     children: [
-      { path: '', component: HomeComponent },
-      { path: 'proyectos', component: ArchiveComponent },
+      { path: '', component: Home },
+      { path: 'projects', component: Project },
     ],
   },
   { path: '**', redirectTo: '/es' },
