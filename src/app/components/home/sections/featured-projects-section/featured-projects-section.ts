@@ -1,16 +1,15 @@
-import { Component, ElementRef, OnInit, inject, viewChild } from '@angular/core';
-import { OwlOptions, CarouselModule } from 'ngx-owl-carousel-o';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
-import { TranslateModule } from '@ngx-translate/core';
-
 @Component({
-  selector: 'app-proyects',
-  templateUrl: './proyects.component.html',
-  styleUrls: ['./proyects.component.scss'],
-  imports: [CarouselModule, TranslateModule]
+  selector: 'app-featured-projects-section',
+  imports: [CarouselModule, TranslatePipe],
+  templateUrl: './featured-projects-section.html',
+  styleUrl: './featured-projects-section.scss',
 })
-export class ProyectsComponent implements OnInit {
+export class FeaturedProjectsSection {
   analyticsService = inject(AnalyticsService);
 
   customOptions: OwlOptions = {
@@ -21,12 +20,10 @@ export class ProyectsComponent implements OnInit {
     navSpeed: 700,
     items: 1,
     autoplay: true,
-    autoplayTimeout:3000
-  }
+    autoplayTimeout: 3000,
+  };
 
   readonly imgContainer = viewChild<ElementRef>('imgContainer');
-
-  ngOnInit(): void { }
 
   debug() {
     this.imgContainer().nativeElement.scroll({
