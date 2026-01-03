@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { Header } from './header';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('Header', () => {
+  let component: Header;
+  let fixture: ComponentFixture<Header>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HeaderComponent]
-    })
-    .compileComponents();
+      imports: [Header],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(Header);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

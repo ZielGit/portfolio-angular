@@ -3,12 +3,12 @@ import { Meta, Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import * as AOS from 'aos';
 import { LanguageService } from 'src/app/services/language/language.service';
-import { FooterComponent } from './components/general/footer/footer.component';
-import { HeaderComponent } from './components/general/header/header.component';
+import { Footer } from './components/layout/footer/footer';
+import { Header } from './components/layout/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, RouterOutlet, FooterComponent],
+  imports: [Header, RouterOutlet, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
