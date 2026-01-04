@@ -1,17 +1,17 @@
 import { Injectable, inject } from '@angular/core';
-import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { GoogleAnalyticsService } from '@hakimio/ngx-google-analytics';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AnalyticsService {
-  private $gaService = inject(GoogleAnalyticsService);
+  private gaService = inject(GoogleAnalyticsService);
 
-  sendAnalyticEvent(action: string, category: string, label){
-    this.$gaService.event(action, category, label)
+  sendAnalyticEvent(action: string, category: string, label) {
+    this.gaService.event(action, { category, label });
   }
 
-  sendAnalyticPageView(path: string, title: string){
-    this.$gaService.pageView(path, title)
+  sendAnalyticPageView(path: string, title: string) {
+    this.gaService.pageView(path, { title });
   }
 }

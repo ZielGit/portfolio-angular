@@ -2,8 +2,10 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
+import { provideGoogleAnalytics } from '@hakimio/ngx-google-analytics';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { environment } from 'src/environments/environment';
 import { routes } from './app.routes';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: HttpClient) =>
@@ -15,6 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),
     provideAnimations(),
+    provideGoogleAnalytics(environment.gaMeasurementID),
     provideTranslateService({
       loader: {
         provide: TranslateLoader,
