@@ -1,6 +1,6 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit, inject } from '@angular/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { Component, inject } from '@angular/core';
+import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
 
 @Component({
   selector: 'app-footer',
@@ -18,8 +18,6 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
     ]),
   ],
 })
-export class Footer implements OnInit {
-  analyticsService = inject(AnalyticsService);
-
-  ngOnInit(): void {}
+export class Footer {
+  analyticsApi = inject(AnalyticsApi);
 }

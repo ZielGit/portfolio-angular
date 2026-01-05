@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  trackAnalyticID: 'G-7HJ1YQEM33',
+  gaMeasurementID: 'G-7HJ1YQEM33',
 };

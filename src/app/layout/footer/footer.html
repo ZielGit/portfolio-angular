@@ -3,7 +3,7 @@
     <ul class="footer-left-bar d-none d-md-block">
       <li>
         <a
-          (click)="analyticsService.sendAnalyticEvent('click_github', 'footer', 'github')"
+          (click)="analyticsApi.sendAnalyticEvent('click_github', 'footer', 'github')"
           href="https://github.com/ZielGit"
           target="_blank"
         >
@@ -12,7 +12,7 @@
       </li>
       <li>
         <a
-          (click)="analyticsService.sendAnalyticEvent('click_linkedin', 'footer', 'github')"
+          (click)="analyticsApi.sendAnalyticEvent('click_linkedin', 'footer', 'github')"
           href="https://www.linkedin.com/in/frans-vilcahuaman/"
           target="_blank"
         >
@@ -22,7 +22,7 @@
     </ul>
     <div class="footer-right-bar d-none d-md-block">
       <a
-        (click)="analyticsService.sendAnalyticEvent('click_send_mail', 'footer', 'email')"
+        (click)="analyticsApi.sendAnalyticEvent('click_send_mail', 'footer', 'email')"
         href="mailto:frans_421_12@hotmail.com"
         target="_blank"
         >frans_421_12&#64;hotmail.com
@@ -32,7 +32,7 @@
 
   <div class="footer-credits text-center">
     <a
-      (click)="analyticsService.sendAnalyticEvent('click_github_portfolio_andresjose', 'footer', 'click')"
+      (click)="analyticsApi.sendAnalyticEvent('click_github_portfolio_andresjose', 'footer', 'click')"
       href="https://github.com/ZielGit/portfolio-angular"
       target="_blank"
       rel="nofollow noopener noreferrer"

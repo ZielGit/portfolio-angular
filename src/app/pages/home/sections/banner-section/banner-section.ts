@@ -1,7 +1,7 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
 
 @Component({
   selector: 'app-banner-section',
@@ -20,5 +20,5 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
   ],
 })
 export class BannerSection {
-  analyticsService = inject(AnalyticsService);
+  analyticsApi = inject(AnalyticsApi);
 }

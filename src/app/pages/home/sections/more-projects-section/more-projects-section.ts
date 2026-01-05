@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
 
 @Component({
   selector: 'app-more-projects-section',
@@ -11,7 +11,7 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 })
 export class MoreProjectsSection implements OnInit {
   private router = inject(Router);
-  analyticsService = inject(AnalyticsService);
+  analyticsApi = inject(AnalyticsApi);
 
   ngOnInit() {
     this.router.events.subscribe(evt => {

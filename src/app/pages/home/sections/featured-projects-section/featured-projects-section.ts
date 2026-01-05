@@ -1,7 +1,6 @@
-import { Component, ElementRef, inject, viewChild } from '@angular/core';
+import { Component, ElementRef, viewChild } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
 @Component({
   selector: 'app-featured-projects-section',
@@ -10,8 +9,6 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
   styleUrl: './featured-projects-section.scss',
 })
 export class FeaturedProjectsSection {
-  analyticsService = inject(AnalyticsService);
-
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
