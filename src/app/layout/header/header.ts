@@ -15,8 +15,8 @@ import {
   NgbNavLinkBase,
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
-import { LanguageService } from 'src/app/services/language/language.service';
+import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
+import { Language } from 'src/app/services/language/language';
 
 @Component({
   selector: 'app-header',
@@ -49,8 +49,8 @@ import { LanguageService } from 'src/app/services/language/language.service';
 })
 export class Header implements OnInit {
   private router = inject(Router);
-  analyticsService = inject(AnalyticsService);
-  languageService = inject(LanguageService);
+  analyticsApi = inject(AnalyticsApi);
+  language = inject(Language);
 
   responsiveMenuVisible = false;
   pageYPosition: number;
@@ -58,8 +58,8 @@ export class Header implements OnInit {
   cvName = '';
 
   ngOnInit(): void {
-    this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val));
-    this.languageFormControl.setValue(this.languageService.language);
+    this.languageFormControl.valueChanges.subscribe(val => this.language.changeLanguage(val));
+    this.languageFormControl.setValue(this.language.language);
   }
 
   scroll(el) {
@@ -72,7 +72,7 @@ export class Header implements OnInit {
   }
 
   downloadCV() {
-    this.languageService.translateService.get('Header.cvName').subscribe(val => {
+    this.language.translateService.get('Header.cvName').subscribe(val => {
       this.cvName = val;
       console.log(val);
       const url = window.location.href;

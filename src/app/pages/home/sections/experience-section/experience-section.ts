@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   NgbNav,
   NgbNavContent,
@@ -9,7 +9,6 @@ import {
   NgbNavOutlet,
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslatePipe } from '@ngx-translate/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
 @Component({
   selector: 'app-experience-section',
@@ -18,7 +17,5 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
   styleUrl: './experience-section.scss',
 })
 export class ExperienceSection {
-  analyticsService = inject(AnalyticsService);
-
   active = 0;
 }

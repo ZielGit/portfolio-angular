@@ -1,12 +1,12 @@
 import { Location } from '@angular/common';
-import { Injectable, inject } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LanguageService {
+export class Language {
   translateService = inject(TranslateService);
   private location = inject(Location);
   private router = inject(Router);

@@ -1,10 +1,10 @@
-import { Injectable, inject } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { GoogleAnalyticsService } from '@hakimio/ngx-google-analytics';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AnalyticsService {
+export class AnalyticsApi {
   private gaService = inject(GoogleAnalyticsService);
 
   sendAnalyticEvent(action: string, category: string, label) {

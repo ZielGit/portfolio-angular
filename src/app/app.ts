@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import * as AOS from 'aos';
-import { LanguageService } from 'src/app/services/language/language.service';
+import { Language } from 'src/app/services/language/language';
 import { Footer } from './layout/footer/footer';
 import { Header } from './layout/header/header';
 
@@ -13,14 +13,14 @@ import { Header } from './layout/header/header';
   styleUrl: './app.scss',
 })
 export class App implements OnInit {
-  private titleService = inject(Title);
-  private metaService = inject(Meta);
-  private languageService = inject(LanguageService);
+  private title = inject(Title);
+  private meta = inject(Meta);
+  private language = inject(Language);
 
   ngOnInit(): void {
-    this.languageService.initLanguage();
-    this.titleService.setTitle('Frans Vilcahuamán | Full Stack Developer');
-    this.metaService.addTags([
+    this.language.initLanguage();
+    this.title.setTitle('Frans Vilcahuamán | Full Stack Developer');
+    this.meta.addTags([
       { name: 'keywords', content: 'Frontend, backend, software, developer' },
       {
         name: 'description',

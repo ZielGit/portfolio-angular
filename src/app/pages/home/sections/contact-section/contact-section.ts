@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
 
 @Component({
   selector: 'app-contact-section',
@@ -9,5 +9,5 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
   styleUrl: './contact-section.scss',
 })
 export class ContactSection {
-  analyticsService = inject(AnalyticsService);
+  analyticsApi = inject(AnalyticsApi);
 }

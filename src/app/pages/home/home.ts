@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
 import { AboutSection } from './sections/about-section/about-section';
 import { BannerSection } from './sections/banner-section/banner-section';
 import { ContactSection } from './sections/contact-section/contact-section';
@@ -21,9 +21,9 @@ import { MoreProjectsSection } from './sections/more-projects-section/more-proje
   styleUrl: './home.scss',
 })
 export class Home implements OnInit {
-  private analyticsService = inject(AnalyticsService);
+  private analyticsApi = inject(AnalyticsApi);
 
   ngOnInit(): void {
-    this.analyticsService.sendAnalyticPageView('/inicio', 'Se entro a inicio');
+    this.analyticsApi.sendAnalyticPageView('/inicio', 'Se entro a inicio');
   }
 }
