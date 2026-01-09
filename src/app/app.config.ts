@@ -1,6 +1,5 @@
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { provideGoogleAnalytics } from '@hakimio/ngx-google-analytics';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
@@ -16,7 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),
-    provideAnimations(),
     provideGoogleAnalytics(environment.gaMeasurementID),
     provideTranslateService({
       loader: {
