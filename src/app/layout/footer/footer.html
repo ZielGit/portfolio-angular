@@ -1,7 +1,7 @@
 <footer>
-  <div [@animateFooter]>
+  <div class="footer-animate">
     <ul class="footer-left-bar d-none d-md-block">
-      <li>
+      <li class="animate-item">
         <a
           (click)="analyticsApi.sendAnalyticEvent('click_github', 'footer', 'github')"
           href="https://github.com/ZielGit"
@@ -10,7 +10,7 @@
           <i class="fab fa-github"></i>
         </a>
       </li>
-      <li>
+      <li class="animate-item">
         <a
           (click)="analyticsApi.sendAnalyticEvent('click_linkedin', 'footer', 'github')"
           href="https://www.linkedin.com/in/frans-vilcahuaman/"
@@ -22,6 +22,7 @@
     </ul>
     <div class="footer-right-bar d-none d-md-block">
       <a
+        class="animate-item"
         (click)="analyticsApi.sendAnalyticEvent('click_send_mail', 'footer', 'email')"
         href="mailto:frans_421_12@hotmail.com"
         target="_blank"

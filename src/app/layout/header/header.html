@@ -1,41 +1,41 @@
-<nav [@animateMenu] class="navbar main-navbar on-top" [class.nav-shadow]="this.pageYPosition>0">
+<nav class="navbar main-navbar on-top menu-animate" [class.nav-shadow]="this.pageYPosition>0">
   <div class="container">
-    <a class="navbar-brand text-light" [routerLink]="'inicio'">
+    <a class="navbar-brand text-light animate-item" [routerLink]="'inicio'">
       <img src="images/logo.png" width="50" />
     </a>
     <ul ngbNav #nav="ngbNav" class="menu-ul">
-      <li ngbNavItem (click)='analyticsApi.sendAnalyticEvent("click_about", "menu", "click")'>
+      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_about", "menu", "click")'>
         <a ngbNavLink (click)='scroll("about")'>
           <span class="nav-number">01. </span>
           <span class="underline nav-text">{{ "Header.Item1" | translate }}</span>
         </a>
         <ng-template ngbNavContent>First content</ng-template>
       </li>
-      <li ngbNavItem (click)='analyticsApi.sendAnalyticEvent("click_experience", "menu", "click")'>
+      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_experience", "menu", "click")'>
         <a ngbNavLink (click)='scroll("jobs")'>
           <span class="nav-number">02. </span>
           <span class="underline nav-text">{{ "Header.Item2" | translate }}</span>
         </a>
         <ng-template ngbNavContent>Second content</ng-template>
       </li>
-      <li ngbNavItem (click)='analyticsApi.sendAnalyticEvent("click_jobs", "menu", "click")'>
+      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_jobs", "menu", "click")'>
         <a ngbNavLink (click)='scroll("proyects")'>
           <span class="nav-number">03. </span>
           <span class="underline nav-text">{{ "Header.Item3" | translate }}</span>
         </a>
         <ng-template ngbNavContent>Second content</ng-template>
       </li>
-      <li ngbNavItem (click)='analyticsApi.sendAnalyticEvent("click_contact", "menu", "click")'>
+      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_contact", "menu", "click")'>
         <a ngbNavLink (click)='scroll("contact")'>
           <span class="nav-number">04. </span>
           <span class="underline nav-text">{{ "Header.Item4" | translate }}</span>
         </a>
         <ng-template ngbNavContent>Second content</ng-template>
       </li>
-      <li ngbNavItem>
+      <li ngbNavItem class="animate-item">
         <a (click)="downloadCV()" class="main-btn cv-btn" ngbNavLink> {{ "Header.cvBtn" | translate }} </a>
       </li>
-      <li>
+      <li class="animate-item">
         <div ngbDropdown class="d-inline-block">
           <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
             @if (languageFormControl.value === "es") {
@@ -51,7 +51,6 @@
             } @if (languageFormControl.value === "pt_BR") {
             <span class="flag-text">Portugués</span>
             }
-
             <svg class="arrow-language" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z" />
             </svg>
