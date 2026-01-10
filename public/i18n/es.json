@@ -17,75 +17,128 @@
     "Tambien programo cosas para mi uso personal, bien sea por hobbie o por utilidad.",
     "Algunas de las tecnologías en las que me he capacitado y trabajado incluyen (pero no se limitan) a:"
   ],
-
-  "Experience.Title": "Experiencia",
-  "Experience.Jobs": [
-    {
-      "Tab": "OLITEL",
-      "Title": "Ingeniero Desarrollador",
-      "Date": "Diciembre 2024 - Marzo 2024",
-      "Description": [
-        "Desarrollo del backend con laravel como api y frontend con angular, implementación, configuración y mantenimiento de CPanel, integración continua/despliegue continuo (CI/CD), documentación de apis y documentación técnica de los proyectos."
-      ]
+  "experience": {
+    "title": "Experiencia",
+    "positions": {
+      "juniorProg": "Programador Junior Full Stack",
+      "JuniorDev": "Desarrollador Junior Full Stack",
+      "juniorLaravelDev": "Desarrollador Junior Laravel Full Stack",
+      "seniorLaravelDev": "Desarrollador Senior Laravel Full Stack",
+      "seniorNETDev": "Desarrollador Senior .NET",
+      "seniorDev": "Desarrollador Senior Full Stack",
+      "ingDev": "Ingeniero Desarrollador"
     },
-    {
-      "Tab": "Freelancer",
-      "Title": "Desarrollador Full Stack Senior",
-      "Date": "Septiembre 2024 - Noviembre 2024",
-      "Description": [
-        "Desarrollo del backend y frontend para sitios web. Configuración y gestión de servidores web y bases de datos. Integración de servicios externos, como sistemas para pagos online y correo electrónico. Elaboración de documentación de las aplicaciones o soluciones desarrolladas. Actualización y mantenimiento de las plataformas y sistemas web asignados."
-      ]
+    "exp-1": {
+      "func-1": "Desarrollo de APIs con PHP, Laravel y .NET.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y jQuery.",
+      "func-3": "Integración de servicios externos, APIs y correo electrónico.",
+      "func-4": "Diseño e implementación de base de datos SQL Server y MySQL.",
+      "func-5": "Optimización de procesos de negocio.",
+      "func-6": "Actualización y mantenimiento de módulos en los sitios web.",
+      "func-7": "Recopilación de los requerimientos de los proyectos.",
+      "func-8": "Documentación técnica de los proyectos."
     },
-    {
-      "Tab": "UNISCJSA",
-      "Title": "Desarrollador .NET Senior",
-      "Date": "Mayo 2024 - Agosto 2024",
-      "Description": [
-        "Responsable programador encargado de brindar soluciones al funcionamiento del sistema integrado de gestión académica universitaria (SIGAU). "
-      ]
+    "exp-2": {
+      "func-1": "Desarrollo de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y Vue.",
+      "func-3": "Implementación de pruebas unitarias y de características con PHPUnit y Jest.",
+      "func-4": "Administración de la base de datos MySQL.",
+      "func-5": "Uso de Clean Code.",
+      "func-6": "Uso de Scrum como metodología ágil.",
+      "func-7": "Recopilación y análisis de requerimientos.",
+      "func-8": "Documentación técnica del proyecto."
     },
-    {
-      "Tab": "La Preventiva Seguros",
-      "Title": "Desarrollador Laravel Senior",
-      "Date": "Febrero 2024 - Mayo 2024",
-      "Description": [
-        "Actualización y mantenimiento de la web. Optimización del desarrollo de funciones del sistema web. Diseño y desarrollo del sitio web. Desarrollo del backend y frontend para el sistema web, Configuración y gestión de servidores web y bases de datos, Integración de servicios externos, como API's y correo electrónico, testing, deploy en servidores, Integración continua/despliegue continuo (CI/CD)."
-      ]
+    "exp-3": {
+      "func-1": "Desarrollo de APIs con Laravel y .NET.",
+      "func-2": "Desarrollo de interfaces con Angular, Vue y jQuery.",
+      "func-3": "Configuración y gestión de servidores web.",
+      "func-4": "Diseño e implementación de bases de datos SQL Server, MySQL, PostgreSQL y MongoDB.",
+      "func-5": "Integración de servicios externos, como sistemas para pagos online y correo electrónico.",
+      "func-6": "Elaboración de documentación de las aplicaciones o soluciones desarrolladas.",
+      "func-7": "Actualización y mantenimiento de las plataformas y sistemas web asignados.",
+      "func-8": "Documentación de procesos técnicos y flujos de desarrollo.",
+      "func-9": "Documentación de usuario como manuales de uso.",
+      "func-10": "Implementación de pruebas unitarias y de características con PHPUnit y Jest."
     },
-    {
-      "Tab": "La Preventiva Seguros",
-      "Title": "Desarrollador Laravel Junior",
-      "Date": "Febrero 2023 - Febrero 2024",
-      "Description": [
-        "Integración con API's, mejora en los procesos del software, resolución de problemas, nuevas implementaciones y corrección de errores del sistema ERP."
-      ]
+    "exp-4": {
+      "func-1": "Desarrollo de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y jQuery.",
+      "func-3": "Integración de servicios externos.",
+      "func-4": "Implementación de seguridad con Sanctum (OAuth 2.0).",
+      "func-5": "Diseño, implementación y administración de la base de datos MySQL.",
+      "func-6": "Implementación de Integración Continua/Despliegue Continuo (CI/CD).",
+      "func-7": "Optimización de los procesos de negocio.",
+      "func-8": "Recopilación de requerimientos.",
+      "func-9": "Corrección de errores del sistema ERP.",
+      "func-10": "Documentación de APIs."
     },
-    {
-      "Tab": "Freelancer",
-      "Title": "Desarrollador Full Stack Junior",
-      "Date": "Enero 2022 - Febrero 2023",
-      "Description": [
-        "Desarrollo del backend y frontend para sitios web. Configuración y gestión de servidores web y bases de datos. Integración de servicios externos, como sistemas para pagos online y correo electrónico. Elaboración de documentación de las aplicaciones o soluciones desarrolladas. Actualización y mantenimiento de las plataformas y sistemas web asignados."
-      ]
+    "exp-5": {
+      "func-1": "Desarrollo y mantenimiento de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y jQuery.",
+      "func-3": "Actualización y mantenimiento de los módulos en el ERP.",
+      "func-4": "Administración y configuración de AWS y Digital Ocean.",
+      "func-5": "Diseño, implementación y mantenimiento de bases de datos MySQL y MongoDB.",
+      "func-6": "Integración de servicios externos, APIs y correo electrónico.",
+      "func-7": "Implementación de pruebas unitarias y de características con PHPUnit y Jest.",
+      "func-8": "Uso de Clean Code.",
+      "func-9": "Uso de la metodología ágil Scrum junto con Jira como gestor del proyecto.",
+      "func-10": "Optimización de CI/CD, creación de pipelines para el despliegue a los entornos de desarrollo y producción junto con pruebas automatizadas.",
+      "func-11": "Recopilación y análisis de requerimientos.",
+      "func-12": "Documentación de requerimientos, APIs, despliegue, pruebas automatizadas y creación de manuales.",
+      "func-13": "Participación en Code Review, mentoría y capacitación de desarrolladores juniors del equipo."
     },
-    {
-      "Tab": "MiTSoftware",
-      "Title": "Desarrollador Laravel Junior",
-      "Date": "Septiembre 2021 - Diciembre 2021",
-      "Description": [
-        "Programación web, pruebas unitarias, mantenimiento de base de datos e integración de servicios externos, como API’s y correo electrónico."
-      ]
+    "exp-6": {
+      "func-1": "Diseño y desarrollo de APIs con .NET.",
+      "func-2": "Integración de APIs internos con servicios externos.",
+      "func-3": "Implementación de arquitectura de software con Clean Architecture, Domain-Driven Design y principios SOLID con Clean Code.",
+      "func-4": "Desarrollo y optimización de procedimientos almacenados, consultas y funciones en SQL Server, MySQL y Entity Framework, mejorando el rendimiento de base de datos.",
+      "func-5": "Implementación de autenticación y autorización mediante JWT y OAuth 2.0.",
+      "func-6": "Gestión en el ciclo de vida del desarrollo con Git, Azure DevOps y CI/CD pipelines, reduciendo los tiempos de despliegue y errores manuales.",
+      "func-7": "Desarrollo e implementación de pruebas unitarias y de integración con xUnit y Moq, asegurando la calidad del software antes del despliegue.",
+      "func-8": "Integración de servicios en la nube utilizando Azure Functions, App Services, Blob Storage y Service Bus.",
+      "func-9": "Documentación de procesos, APIs y manuales de usuario, facilitando el aprendizaje y mantenimiento de sistema."
     },
-    {
-      "Tab": "Fenix Corporation",
-      "Title": "Programador Full Stack Junior",
-      "Date": "Diciembre 2019 - Agosto 2021",
-      "Description": [
-        "Desarrollo del backend y frontend para sitios web, implementación de nuevas funcionalidades y mantenimiento de sitios web."
-      ]
+    "exp-7": {
+      "func-1": "Desarrollo y mantenimiento de APIs con FastAPI, Laravel y .NET.",
+      "func-2": "Desarrollo de interfaces con Angular y Vue.",
+      "func-3": "Configuración y gestión de servidores web y bases de datos SQL Server, MySQL, PostgreSQL y Redis.",
+      "func-4": "Integración de servicios externos, como sistemas para pagos online y correo electrónico.",
+      "func-5": "Uso de Clean Code.",
+      "func-6": "Uso de Scrum como metodología ágil.",
+      "func-7": "Recopilación y análisis de requerimientos funcionales y no funcionales.",
+      "func-8": "Implementación de pruebas unitarias y de características con Pytest, PHPUnit y Vitest.",
+      "func-9": "Elaboración de documentación de las aplicaciones o soluciones desarrolladas.",
+      "func-10": "Actualización y mantenimiento de las plataformas y sistemas web asignados."
+    },
+    "exp-8": {
+      "func-1": "Desarrollo y mantenimiento de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Angular.",
+      "func-3": "Migración de aplicaciones de React.",
+      "func-4": "Implementación de autenticación y autorización mediante JWT.",
+      "func-5": "Administración y configuración de Google Cloud.",
+      "func-6": "Implementación, configuración y mantenimiento de CPanel.",
+      "func-7": "Diseño, implementación y mantenimiento de bases de datos MySQL y PostgreSQL.",
+      "func-8": "Uso de Clean Code.",
+      "func-9": "Implementación de arquitectura de software con Clean Architecture, Hexagonal Architecture, Domain-Driven Design.",
+      "func-10": "Uso de la metodología ágil Scrum junto con Jira como gestor del proyecto.",
+      "func-11": "Implementación de Integración Continua/Despliegue Continuo (CI/CD), creación de pipelines para el despliegue a los entornos de desarrollo.",
+      "func-12": "Documentación de requerimientos, componentes, APIs, despliegue y creación de manuales.",
+      "func-13": "Participación en Code Review, mentoría y capacitación de desarrolladores juniors."
+    },
+    "exp-9": {
+      "func-1": "Desarrollo y mantenimiento de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Vue.",
+      "func-3": "Actualización y mantenimiento de los módulos en el sistema.",
+      "func-4": "Implementación autenticación y autorización mediante JWT.",
+      "func-5": "Diseño, implementación y mantenimiento de bases de datos PostgreSQL y Redis.",
+      "func-6": "Uso de Clean Code.",
+      "func-7": "Implementación y mantenimiento de arquitectura de software con Clean Architecture, CSR pattern y Domain-Driven Design.",
+      "func-8": "Uso de la metodología ágil Scrum junto con Jira como gestor del proyecto.",
+      "func-9": "Desarrollo e implementación de Task Scheduling y Queues.",
+      "func-10": "Migración y saneamiento de datos.",
+      "func-11": "Documentación de APIs con Postman."
     }
-  ],
-
+  },
   "FeatureProjects.Title": "Mis proyectos",
   "FeatureProjects.Label": "Proyecto Destacado",
   "FeatureProjects.Projects": [
@@ -114,9 +167,6 @@
       ],
       "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
     },
-
-
-
 
     {
       "Title": "Vas Aviation",
@@ -156,7 +206,6 @@
       ],
       "Technologies": ["Wordpress", "Elementor", "Woocommerce", "Wordpress Codex", "PHP", "Mysql"]
     },
-
 
     {
       "Title": "Agrourbana",

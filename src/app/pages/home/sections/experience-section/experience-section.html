@@ -4,24 +4,26 @@
       <div class="about-title mb-5" data-aos="fade-up" data-aos-duration="1000">
         <h3 class="e-font section-title">
           <span class="code-font n-section-title">02.</span>
-          {{ "Experience.Title" | translate }}
+          {{ "experience.title" | translate }}
         </h3>
       </div>
       <div class="jobs-tabs" data-aos="fade-up" data-aos-duration="1000">
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" orientation="vertical" class="nav-tabs jobs-tabs">
-          @for (job of 'Experience.Jobs' | translate; track job; let i = $index) {
-          <li [title]="job.Tab" [ngbNavItem]="i">
-            <a ngbNavLink>{{ job.Tab }}</a>
+          @for (exp of experiences; track exp; let i = $index) {
+          <li [title]="exp.company" [ngbNavItem]="i">
+            <a ngbNavLink>{{ exp.company }}</a>
             <ng-template ngbNavContent>
               <h4 class="title-tab-content">
-                {{ job.Title }} |
-                <span class="company-tab-content">{{ job.Tab }}</span>
+                {{ exp.positionKey | translate }} |
+                <span class="company-tab-content">{{ exp.company }}</span>
               </h4>
-              <h5 class="job-time">{{ job.Date }}</h5>
-              @for ( jobDescriptionParagraph of job.Description; track jobDescriptionParagraph; let i = $index) {
-              <p class="job-description" [innerHTML]="jobDescriptionParagraph | translate"></p>
+              <h5 class="job-time">
+                {{ exp.place }} | {{ exp.startDate | date : 'MMMM y' }} - {{ exp.endDate | date : 'MMMM y' }}
+              </h5>
+
+              @for (funcKey of exp.functionKeys; track funcKey) {
+              <p class="job-description" [innerHTML]="funcKey | translate"></p>
               }
-              <span></span>
             </ng-template>
           </li>
           }

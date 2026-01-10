@@ -17,87 +17,128 @@
     "I also program things for my personal use, whether for hobby or utility.",
     "Some of the technologies I have trained and worked with include (but are not limited to):"
   ],
-
-  "Experience.Title": "Experience",
-  "Experience.Jobs": [
-    {
-      "Tab": "Global",
-      "Title": "Fullstack Developer",
-      "Date": "May 2023",
-      "Description": [
-        "Leader in technical decision making",
-        "Hiring technical talent for the company",
-        "Team leader of the technology department",
-        "Creation and maintenance of an internal process management platform for course sales",
-        "Programming custom functions and plugins for customizing a WordPress platform",
-        "Implementation of continuous integration and daily backups.",
-        "Planning and reporting meetings."
-      ]
+  "experience": {
+    "title": "Experience",
+    "positions": {
+      "juniorProg": "Junior Full Stack Programmer",
+      "JuniorDev": "Junior Full Stack Developer",
+      "juniorLaravelDev": "Junior Laravel Full Stack Developer",
+      "seniorLaravelDev": "Senior Laravel Full Stack Developer",
+      "seniorNETDev": "Senior .NET Developer",
+      "seniorDev": "Senior Full Stack Developer",
+      "ingDev": "Development Engineer"
     },
-    {
-      "Tab": "Proyex",
-      "Title": "Fullstack Developer",
-      "Date": "December 2019 - May 2023",
-      "Description": [
-        "Creation and maintenance of a monitoring platform with charts in WordPress.",
-        "Functional programming in templates and plugins to add necessary monitoring features.",
-        "Implementation of continuous integration and daily backups.",
-        "Creation and maintenance of a second Monitoring Platform made with Angular, Angular Material, Laravel, MySQL, RxJS, Sass with configurable charts, alarm systems, and user management and general configuration settings.",
-        "Planning and reporting meetings."
-      ]
+    "exp-1": {
+      "func-1": "Development of APIs with PHP, Laravel and .NET.",
+      "func-2": "Development of interfaces with Laravel (Blade) and jQuery.",
+      "func-3": "Integration of external services, APIs and email.",
+      "func-4": "Design and implementation of SQL Server and MySQL databases.",
+      "func-5": "Optimization of business processes.",
+      "func-6": "Updating and maintaining modules on websites.",
+      "func-7": "Gathering project requirements.",
+      "func-8": "Technical documentation of projects."
     },
-    {
-      "Tab": "Freelancer",
-      "Title": "Freelancer",
-      "Date": "May 2016 - Present",
-      "Description": [
-        "Continuous improvements implementation, working on frontend and backend.",
-        "Creation of platforms with Angular, Laravel, WordPress programmed with functional, reactive, and object-oriented programming paradigms.",
-        "Process automation with data structures.",
-        "Template designs with SASS, Bootstrap, Materialize, Bulma, etc."
-      ]
+    "exp-2": {
+      "func-1": "Developing APIs with Laravel.",
+      "func-2": "Developing interfaces with Laravel (Blade) and Vue.",
+      "func-3": "Implementing unit and feature tests with PHPUnit and Jest.",
+      "func-4": "Administrating the MySQL database.",
+      "func-5": "Use of Clean Code.",
+      "func-6": "Use of Scrum as an agile methodology.",
+      "func-7": "Requirements gathering and analysis.",
+      "func-8": "Technical project documentation."
     },
-    {
-      "Tab": "Moebius",
-      "Title": "Fullstack Developer",
-      "Date": "July 2017 - October 2018",
-      "Description": [
-        "Leading a team of 4 people in the development of a tourism data management platform made in Angular, Laravel, and MySQL.",
-        "Implementation of CI/CD in Azure. Refactoring and optimizing application load times.",
-        "Coding API requests with RxJS.",
-        "Creating modules with complex reactive forms.",
-        "Writing weekly reports about goals and plans."
-      ]
+    "exp-3": {
+      "func-1": "Development of APIs with Laravel and .NET.",
+      "func-2": "Interface development with Angular, Vue and jQuery.",
+      "func-3": "Web server configuration and management.",
+      "func-4": "Designing and implementing SQL Server, MySQL, PostgreSQL and MongoDB databases.",
+      "func-5": "Integrating external services, such as online payment systems and email.",
+      "func-6": "Creating documentation for developed applications or solutions.",
+      "func-7": "Updating and maintaining assigned web platforms and systems.",
+      "func-8": "Documenting technical processes and development workflows.",
+      "func-9": "Creating user documentation, such as user manuals.",
+      "func-10": "Implementation of unit and feature tests with PHPUnit and Jest."
     },
-    {
-      "Tab": "TechLatam",
-      "Title": "Frontend Developer",
-      "Date": "February 2016 - May 2017",
-      "Description": [
-        "Creating WordPress templates with ACF, functional programming in JavaScript/jQuery, styles in SASS.",
-        "Integrating design and load time improvements for templates.",
-        "Effective communication with the design team, working with Avocode/Figma."
-      ]
+    "exp-4": {
+      "func-1": "Developing APIs with Laravel.",
+      "func-2": "Developing interfaces with Laravel (Blade) and jQuery.",
+      "func-3": "Integrating external services.",
+      "func-4": "Implementing security with Sanctum (OAuth 2.0).",
+      "func-5": "Design, implementation and administration of the MySQL database.",
+      "func-6": "Implementation of Continuous Integration/Continuous Deployment (CI/CD)",
+      "func-7": "Optimizing business processes.",
+      "func-8": "Requirements gathering.",
+      "func-9": "ERP system bug fixes.",
+      "func-10": "API Documentation."
     },
-    {
-      "Tab": "CANTV",
-      "Title": "Systems Analyst",
-      "Date": "November 2015 - December 2016",
-      "Description": [
-        "Programming new functionalities for an existing employee management platform made with Angular and ExpressJS.",
-        "Refactoring old code. Ensuring compatibility of each dependency with each update, including regular Angular updates."
-      ]
+    "exp-5": {
+      "func-1": "Development and maintenance of APIs with Laravel.",
+      "func-2": "Development of interfaces with Laravel (Blade) and jQuery.",
+      "func-3": "Updating and maintenance of modules in the ERP.",
+      "func-4": "Administration and configuration of AWS and DigitalOcean.",
+      "func-5": "Design, implementation and maintenance of MySQL and MongoDB databases.",
+      "func-6": "Integration of external services, APIs and email.",
+      "func-7": "Implementation of unit and feature tests with PHPUnit and Jest.",
+      "func-8": "Use of Clean Code.",
+      "func-9": "Use of the Scrum agile methodology with Jira as a project management tool.",
+      "func-10": "Optimization of CI/CD, creation of pipelines for deployment to development and production environments along with automated testing.",
+      "func-11": "Requirements gathering and analysis.",
+      "func-12": "Documentation of requirements, APIs, deployment, automated testing and creation of manuals.",
+      "func-13": "Participation in Code Review, mentoring and training of junior developers on the team."
     },
-    {
-      "Tab": "IEP",
-      "Title": "English Teacher",
-      "Date": "January 2015 - July 2015",
-      "Description": [
-        "Teaching basic English to a student body of over 200 students."
-      ]
+    "exp-6": {
+      "func-1": "Design and development of APIs with .NET.",
+      "func-2": "Integration of internal APIs with external services.",
+      "func-3": "Implementation of software architecture with Clean Architecture, Domain-Driven Design and SOLID principles with Clean Code.",
+      "func-4": "Development and optimization of stored procedures, queries and functions in SQL Server, MySQL and Entity Framework, improving database performance.",
+      "func-5": "Implementation of authentication and authorization using JWT and OAuth 2.0.",
+      "func-6": "Development lifecycle management with Git, Azure DevOps and CI/CD pipelines, reducing deployment times and manual errors.",
+      "func-7": "Development and implementation of unit and integration tests with xUnit and Moq, ensuring software quality before deployment.",
+      "func-8": "Integration of cloud services using Azure Functions, App Services, Blob Storage and Service Bus.",
+      "func-9": "Documentation of processes, APIs and user manuals, facilitating system learning and maintenance."
+    },
+    "exp-7": {
+      "func-1": "Development and maintenance of APIs with FastAPI, Laravel and .NET.",
+      "func-2": "Development of user interfaces with Angular and Vue.",
+      "func-3": "Configuration and management of web servers and SQL Server, MySQL, PostgreSQL and Redis databases.",
+      "func-4": "Integration of external services, such as online payment and email systems.",
+      "func-5": "Use of Clean Code.",
+      "func-6": "Use of Scrum as an agile methodology.",
+      "func-7": "Gathering and analyzing functional and non-functional requirements.",
+      "func-8": "Implementation of unit and feature tests with Pytest, PHPUnit and Vitest.",
+      "func-9": "Creation of documentation for developed applications or solutions.",
+      "func-10": "Updating and maintaining assigned web platforms and systems."
+    },
+    "exp-8": {
+      "func-1": "Development and maintenance of APIs with Laravel.",
+      "func-2": "Development of interfaces with Angular.",
+      "func-3": "Migrating applications from React.",
+      "func-4": "Implementation of authentication and authorization using JWT.",
+      "func-5": "Administration and configuration of Google Cloud.",
+      "func-6": "Implementation, configuration and maintenance of CPanel.",
+      "func-7": "Design, implementation and maintenance of MySQL and PostgreSQL databases.",
+      "func-8": "Use of Clean Code.",
+      "func-9": "Implementation of software architecture with Clean Architecture, Hexagonal Architecture and Domain-Driven Design.",
+      "func-10": "Use of the Agile Scrum methodology with Jira as a project management tool.",
+      "func-11": "Implementation of Continuous Integration/Continuous Deployment (CI/CD), creation of pipelines for deployment to development environments.",
+      "func-12": "Documentation of requirements, components, APIs, deployment and creation of manuals.",
+      "func-13": "Participation in Code Review, mentoring and training of junior developers."
+    },
+    "exp-9": {
+      "func-1": "Development and maintenance of APIs with Laravel.",
+      "func-2": "Development of interfaces with Vue.",
+      "func-3": "Updating and maintenance of modules in the system.",
+      "func-4": "Implementation of authentication and authorization using JWT.",
+      "func-5": "Design, implementation and maintenance of PostgreSQL and Redis databases.",
+      "func-6": "Use of Clean Code.",
+      "func-7": "Implementation and maintenance of software architecture with Clean Architecture, CSR pattern and Domain-Driven Design.",
+      "func-8": "Use of the Agile Scrum methodology with Jira as a project management tool.",
+      "func-9": "Development and implementation of Task Scheduling and Queues.",
+      "func-10": "Data migration and sanitization.",
+      "func-11": "Documentation of APIs with Postman."
     }
-  ],
-
+  },
   "FeatureProjects.Title": "My Projects",
   "FeatureProjects.Label": "Highlighted Project",
   "FeatureProjects.Projects": [
