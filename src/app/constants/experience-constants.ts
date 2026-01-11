@@ -11,7 +11,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-1.func-6',
       'experience.exp-1.func-7',
       'experience.exp-1.func-8',
-    ],
+    ] as const,
   },
   EXP_2: {
     id: 'exp-2',
@@ -25,7 +25,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-2.func-6',
       'experience.exp-2.func-7',
       'experience.exp-2.func-8',
-    ],
+    ] as const,
   },
   EXP_3: {
     id: 'exp-3',
@@ -41,7 +41,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-3.func-8',
       'experience.exp-3.func-9',
       'experience.exp-3.func-10',
-    ],
+    ] as const,
   },
   EXP_4: {
     id: 'exp-4',
@@ -57,7 +57,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-4.func-8',
       'experience.exp-4.func-9',
       'experience.exp-4.func-10',
-    ],
+    ] as const,
   },
   EXP_5: {
     id: 'exp-5',
@@ -76,7 +76,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-5.func-11',
       'experience.exp-5.func-12',
       'experience.exp-5.func-13',
-    ],
+    ] as const,
   },
   EXP_6: {
     id: 'exp-6',
@@ -91,7 +91,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-6.func-7',
       'experience.exp-6.func-8',
       'experience.exp-6.func-9',
-    ],
+    ] as const,
   },
   EXP_7: {
     id: 'exp-7',
@@ -107,7 +107,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-7.func-8',
       'experience.exp-7.func-9',
       'experience.exp-7.func-10',
-    ],
+    ] as const,
   },
   EXP_8: {
     id: 'exp-8',
@@ -126,7 +126,7 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-8.func-11',
       'experience.exp-8.func-12',
       'experience.exp-8.func-13',
-    ],
+    ] as const,
   },
   EXP_9: {
     id: 'exp-9',
@@ -143,6 +143,16 @@ export const EXPERIENCE_CONSTANTS = {
       'experience.exp-9.func-9',
       'experience.exp-9.func-10',
       'experience.exp-9.func-11',
-    ],
+    ] as const,
   },
 } as const;
+
+/**
+ * Tipo derivado de las constantes para type safety
+ */
+export type ExperienceConstant = typeof EXPERIENCE_CONSTANTS;
+
+/**
+ * Tipo de las claves de experiencias para type safety
+ */
+export type ExperienceKey = keyof typeof EXPERIENCE_CONSTANTS;

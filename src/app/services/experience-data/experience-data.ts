@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { EXPERIENCE_CONSTANTS } from 'src/app/constants/experience-constants';
-import { ExperienceModel } from 'src/app/models/experience-model';
+import { ExperienceModel, ExperienceSortOptions, SortField } from 'src/app/models/experience-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ExperienceData {
-  private experiences: ExperienceModel[] = [
+  private readonly experiencesData = signal<readonly ExperienceModel[]>([
     {
       id: EXPERIENCE_CONSTANTS.EXP_1.id,
       company: 'Fenix Corporation',
@@ -88,25 +88,39 @@ export class ExperienceData {
       endDate: new Date(2025, 7),
       functionKeys: EXPERIENCE_CONSTANTS.EXP_9.functions,
     },
-  ];
+  ]);
 
-  getExperiences(options?: { sortBy?: 'startDate' | 'endDate'; order?: 'asc' | 'desc' }): ExperienceModel[] {
-    const sortBy = options?.sortBy || 'endDate';
-    const order = options?.order || 'desc';
+  private readonly sortOptions = signal<Required<ExperienceSortOptions>>({
+    sortBy: 'endDate',
+    order: 'desc',
+  });
 
-    return [...this.experiences].sort((a, b) => {
-      let dateA: Date, dateB: Date;
+  readonly experiences = computed(() => {
+    const data = this.experiencesData();
+    const options = this.sortOptions();
+    return this.sortExperiences(data, options);
+  });
 
-      if (sortBy === 'endDate') {
-        dateA = a.endDate || new Date();
-        dateB = b.endDate || new Date();
-      } else {
-        dateA = a.startDate;
-        dateB = b.startDate;
-      }
+  private sortExperiences(
+    experiences: readonly ExperienceModel[],
+    options: Required<ExperienceSortOptions>
+  ): readonly ExperienceModel[] {
+    const { sortBy, order } = options;
+
+    return [...experiences].sort((a, b) => {
+      const dateA = this.getDateForSorting(a, sortBy);
+      const dateB = this.getDateForSorting(b, sortBy);
 
       const diff = dateA.getTime() - dateB.getTime();
       return order === 'asc' ? diff : -diff;
     });
+  }
+
+  private getDateForSorting(experience: ExperienceModel, sortBy: SortField): Date {
+    if (sortBy === 'endDate') {
+      // Si no hay fecha de fin, usar fecha actual (trabajo actual)
+      return experience.endDate || new Date();
+    }
+    return experience.startDate;
   }
 }

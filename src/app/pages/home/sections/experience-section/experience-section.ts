@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import {
   NgbNav,
   NgbNavContent,
@@ -10,6 +10,7 @@ import {
   NgbNavOutlet,
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ExperienceModel } from 'src/app/models/experience-model';
 import { ExperienceData } from 'src/app/services/experience-data/experience-data';
 
 @Component({
@@ -29,11 +30,19 @@ import { ExperienceData } from 'src/app/services/experience-data/experience-data
   styleUrl: './experience-section.scss',
 })
 export class ExperienceSection {
-  private experienceData = inject(ExperienceData);
+  private readonly experienceData = inject(ExperienceData);
 
-  active = 0;
-  experiences = this.experienceData.getExperiences({
-    sortBy: 'endDate',
-    order: 'desc',
-  });
+  readonly activeTabIndex = signal<number>(0);
+  readonly experiences = this.experienceData.experiences;
+  readonly totalExperiences = computed(() => this.experiences().length);
+
+  selectTab(index: number): void {
+    if (index >= 0 && index < this.totalExperiences()) {
+      this.activeTabIndex.set(index);
+    }
+  }
+
+  trackByExperienceId(_index: number, experience: ExperienceModel): string {
+    return experience.id;
+  }
 }
