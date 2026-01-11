@@ -1,9 +1,16 @@
 export interface ExperienceModel {
-  id: string;
-  company: string;
-  positionKey: string;
-  place: string;
-  startDate: Date;
-  endDate: Date | null;
-  functionKeys: readonly string[];
+  readonly id: string;
+  readonly company: string;
+  readonly positionKey: string;
+  readonly place: string;
+  readonly startDate: Date;
+  readonly endDate: Date | null;
+  readonly functionKeys: readonly string[];
 }
+
+export interface ExperienceSortOptions {
+  readonly sortBy?: 'startDate' | 'endDate';
+  readonly order?: 'asc' | 'desc';
+}
+
+export type SortField = 'startDate' | 'endDate';
