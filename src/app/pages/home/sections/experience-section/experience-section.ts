@@ -1,4 +1,3 @@
-import { DatePipe } from '@angular/common';
 import { Component, computed, inject, signal } from '@angular/core';
 import {
   NgbNav,
@@ -11,6 +10,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ExperienceModel } from 'src/app/models/experience-model';
+import { LocalizedDatePipe } from 'src/app/pipes/localized-date-pipe';
 import { ExperienceData } from 'src/app/services/experience-data/experience-data';
 
 @Component({
@@ -23,8 +23,8 @@ import { ExperienceData } from 'src/app/services/experience-data/experience-data
     NgbNavLinkBase,
     NgbNavContent,
     NgbNavOutlet,
-    DatePipe,
     TranslatePipe,
+    LocalizedDatePipe,
   ],
   templateUrl: './experience-section.html',
   styleUrl: './experience-section.scss',
