@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 @Injectable({
   providedIn: 'root',
 })
-export class Language {
+export class LanguageStore {
   translateService = inject(TranslateService);
   private location = inject(Location);
   private router = inject(Router);
