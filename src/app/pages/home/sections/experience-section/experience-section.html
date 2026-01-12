@@ -25,8 +25,8 @@
                 <span class="company-tab-content">{{ exp.company }}</span>
               </h4>
               <h5 class="job-time">
-                {{ exp.place }} | {{ exp.startDate | localizedDate : 'MMMM y' }} - {{ exp.endDate | localizedDate :
-                'MMMM y' }}
+                {{ exp.place }} | {{ (exp.startDate | localizedDate : 'MMMM y') | capitalize }} - {{ (exp.endDate |
+                localizedDate : 'MMMM y') | capitalize }}
               </h5>
 
               @for (funcKey of exp.functionKeys; track funcKey) {
