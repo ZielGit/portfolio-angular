@@ -10,7 +10,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ExperienceModel } from 'src/app/models/experience-model';
-import { LocalizedDatePipe } from 'src/app/pipes/localized-date-pipe';
+import { LocalizedDatePipe } from 'src/app/pipes/localized-date/localized-date-pipe';
 import { ExperienceData } from 'src/app/services/experience-data/experience-data';
 
 @Component({

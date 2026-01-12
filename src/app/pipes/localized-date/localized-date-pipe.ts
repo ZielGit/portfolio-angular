@@ -1,10 +1,9 @@
 import { DatePipe } from '@angular/common';
 import { inject, Pipe, PipeTransform } from '@angular/core';
-import { Language } from '../services/language/language';
+import { Language } from 'src/app/services/language/language';
 
 @Pipe({
   name: 'localizedDate',
-  pure: false,
 })
 export class LocalizedDatePipe implements PipeTransform {
   private language = inject(Language);
