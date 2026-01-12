@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { inject, Injectable, Injector } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -10,7 +10,6 @@ export class Language {
   translateService = inject(TranslateService);
   private location = inject(Location);
   private router = inject(Router);
-  private injector = inject(Injector);
 
   language: 'es' | 'en' | 'pt_BR' = 'es';
 
