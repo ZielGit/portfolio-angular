@@ -1,7 +1,14 @@
 import { Location } from '@angular/common';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import {
+  AppLanguage,
+  AVAILABLE_LANGUAGES,
+  BROWSER_LANGUAGE_MAP,
+  DEFAULT_LANGUAGE,
+  LANGUAGE_CONFIGS,
+} from 'src/app/models/language-model';
 
 @Injectable({
   providedIn: 'root',
@@ -11,29 +18,22 @@ export class LanguageStore {
   private location = inject(Location);
   private router = inject(Router);
 
-  language: 'es' | 'en' | 'pt_BR' = 'es';
+  // language: AppLanguage = DEFAULT_LANGUAGE;
+  readonly language = signal<AppLanguage>(DEFAULT_LANGUAGE);
 
-  private readonly validLanguages = ['en', 'es', 'pt_BR'] as const;
-
-  // Map de idiomas a locales de Angular
-  private readonly languageToLocale: Record<'es' | 'en' | 'pt_BR', string> = {
-    es: 'es',
-    en: 'en',
-    pt_BR: 'pt-BR',
-  };
-
-  initLanguage() {
-    this.translateService.addLangs(['en', 'es', 'pt_BR']);
+  initLanguage(): void {
+    this.translateService.addLangs(AVAILABLE_LANGUAGES as unknown as string[]);
 
     // Obtener el idioma de la URL actual si existe
     const currentPath = this.location.path();
     const urlSegments = currentPath.split('/').filter(segment => segment);
     const urlLanguage = urlSegments[0];
 
-    // Verificar si el primer segmento es un idioma válido
-    let language: 'es' | 'en' | 'pt_BR';
+    let language: AppLanguage;
+
+    // Verificar si el primer segmento de la URL es un idioma válido
     if (this.isValidLanguage(urlLanguage)) {
-      language = urlLanguage as 'es' | 'en' | 'pt_BR';
+      language = urlLanguage;
     } else {
       // Si no hay idioma en la URL, detectar del navegador o localStorage
       language = this.detectLanguage();
@@ -47,9 +47,9 @@ export class LanguageStore {
     this.setLanguage(language);
   }
 
-  changeLanguage(language: 'es' | 'en' | 'pt_BR') {
+  changeLanguage(language: AppLanguage): void {
     if (!this.isValidLanguage(language)) {
-      console.error(`Idioma no válido: ${language}`);
+      console.error(`❌ Idioma no válido: ${language}`);
       return;
     }
 
@@ -73,58 +73,95 @@ export class LanguageStore {
     this.router.navigateByUrl(newPath);
   }
 
+  getCurrentLanguageConfig() {
+    return LANGUAGE_CONFIGS[this.language()];
+  }
+
+  getAvailableLanguages() {
+    return Object.values(LANGUAGE_CONFIGS);
+  }
+
+  isDifferentLanguage(language: AppLanguage): boolean {
+    return this.language() !== language;
+  }
+
   /**
    * Establece el idioma en todos los sistemas necesarios
+   * @private
    */
-  private setLanguage(language: 'es' | 'en' | 'pt_BR') {
+  private setLanguage(newLanguage: AppLanguage): void {
     // 1. Establecer en ngx-translate
-    this.translateService.setDefaultLang(language);
-    this.translateService.use(language);
+    this.translateService.setDefaultLang(newLanguage);
+    this.translateService.use(newLanguage);
 
     // 2. Guardar en localStorage
-    localStorage.setItem('language', language);
+    localStorage.setItem('language', newLanguage);
 
     // 3. Actualizar propiedad del servicio
-    this.language = language;
+    this.language.set(newLanguage);
 
-    // 4. IMPORTANTE: Forzar recarga para que LOCALE_ID se actualice
-    // En una SPA, necesitamos recargar la página para que el LOCALE_ID cambie
-    // O usar una solución más avanzada con componentes dinámicos
+    // 4. Actualizar atributo lang del HTML
+    document.documentElement.lang = newLanguage;
 
-    console.log(`✅ Idioma cambiado a: ${language}`);
+    console.log(`✅ Idioma cambiado a: ${newLanguage} (${LANGUAGE_CONFIGS[newLanguage].label})`);
   }
 
-  private isValidLanguage(lang: string): lang is 'es' | 'en' | 'pt_BR' {
-    return (this.validLanguages as readonly string[]).includes(lang);
+  /**
+   * Type guard para validar si una string es un idioma válido
+   * @private
+   */
+  private isValidLanguage(lang: string): lang is AppLanguage {
+    return (AVAILABLE_LANGUAGES as readonly string[]).includes(lang);
   }
 
-  private detectLanguage(): 'es' | 'en' | 'pt_BR' {
-    // Primero intentar desde localStorage
+  private detectLanguage(): AppLanguage {
+    // 1. Intentar desde localStorage
     const savedLang = localStorage.getItem('language');
     if (savedLang && this.isValidLanguage(savedLang)) {
-      return savedLang as 'es' | 'en' | 'pt_BR';
+      console.log(`📦 Idioma detectado desde localStorage: ${savedLang}`);
+      return savedLang;
     }
 
-    // Si no, detectar del navegador
-    return this.detectBrowserLanguage();
+    // 2. Detectar del navegador
+    const browserLang = this.detectBrowserLanguage();
+    console.log(`🌐 Idioma detectado desde navegador: ${browserLang}`);
+    return browserLang;
   }
 
-  private detectBrowserLanguage(): 'es' | 'en' | 'pt_BR' {
-    const browserLang = navigator.language || (navigator as Navigator & { userLanguage?: string }).userLanguage || 'en';
-    const langCode = browserLang.toLowerCase();
+  private detectBrowserLanguage(): AppLanguage {
+    // Obtener idiomas del navegador
+    const browserLangs = [
+      navigator.language,
+      ...(navigator.languages || []),
+      (navigator as Navigator & { userLanguage?: string }).userLanguage,
+    ].filter(Boolean) as string[];
 
-    if (langCode.includes('es')) {
-      return 'es';
+    console.log('🔍 Idiomas del navegador:', browserLangs);
+
+    // Intentar encontrar coincidencia exacta o parcial
+    for (const browserLang of browserLangs) {
+      const normalized = browserLang.toLowerCase();
+
+      // Buscar coincidencia exacta (ej: 'es-PE')
+      if (BROWSER_LANGUAGE_MAP[browserLang]) {
+        return BROWSER_LANGUAGE_MAP[browserLang];
+      }
+
+      // Buscar coincidencia normalizada (ej: 'es-pe' → 'es-PE')
+      const exactMatch = Object.keys(BROWSER_LANGUAGE_MAP).find(key => key.toLowerCase() === normalized);
+      if (exactMatch) {
+        return BROWSER_LANGUAGE_MAP[exactMatch];
+      }
+
+      // Buscar por código de idioma base (ej: 'es' de 'es-CL')
+      const baseCode = normalized.split('-')[0];
+      if (BROWSER_LANGUAGE_MAP[baseCode]) {
+        return BROWSER_LANGUAGE_MAP[baseCode];
+      }
     }
 
-    if (langCode.includes('pt-br') || langCode.includes('pt_br') || langCode === 'pt') {
-      return 'pt_BR';
-    }
-
-    return 'en';
-  }
-
-  getCurrentLocale(): string {
-    return this.languageToLocale[this.language];
+    // Si no hay coincidencias, usar idioma por defecto
+    console.log(`⚠️ No se encontró coincidencia, usando idioma por defecto: ${DEFAULT_LANGUAGE}`);
+    return DEFAULT_LANGUAGE;
   }
 }
