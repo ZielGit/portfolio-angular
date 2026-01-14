@@ -1,6 +1,5 @@
 import { NgStyle } from '@angular/common';
-import { Component, HostListener, inject, OnInit } from '@angular/core';
-import { UntypedFormControl } from '@angular/forms';
+import { Component, computed, HostListener, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import {
   NgbDropdown,
@@ -14,8 +13,9 @@ import {
   NgbNavLinkBase,
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
+import { AppLanguage, LANGUAGE_CONFIGS } from 'src/app/models/language-model';
 import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
-import { Language } from 'src/app/services/language/language';
+import { LanguageStore } from 'src/app/services/language-store/language-store';
 
 @Component({
   selector: 'app-header',
@@ -36,32 +36,38 @@ import { Language } from 'src/app/services/language/language';
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class Header implements OnInit {
+export class Header {
   private router = inject(Router);
   analyticsApi = inject(AnalyticsApi);
-  language = inject(Language);
+  languageStore = inject(LanguageStore);
 
   responsiveMenuVisible = false;
   pageYPosition: number;
-  languageFormControl: UntypedFormControl = new UntypedFormControl();
+
+  readonly currentLanguage = computed(() => this.languageStore.language());
+  readonly currentLanguageConfig = computed(() => LANGUAGE_CONFIGS[this.currentLanguage()]);
+  readonly availableLanguages = computed(() => Object.values(LANGUAGE_CONFIGS));
+
   cvName = '';
 
-  ngOnInit(): void {
-    this.languageFormControl.valueChanges.subscribe(val => this.language.changeLanguage(val));
-    this.languageFormControl.setValue(this.language.language);
-  }
+  scroll(el: string): void {
+    const element = document.getElementById(el);
 
-  scroll(el) {
-    if (document.getElementById(el)) {
-      document.getElementById(el).scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     } else {
-      this.router.navigate(['/home']).then(() => document.getElementById(el).scrollIntoView({ behavior: 'smooth' }));
+      // Si el elemento no existe, navegar a home primero
+      this.router.navigate([`/${this.currentLanguage()}`]).then(() => {
+        setTimeout(() => {
+          document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      });
     }
     this.responsiveMenuVisible = false;
   }
 
   downloadCV() {
-    this.language.translateService.get('Header.cvName').subscribe(val => {
+    this.languageStore.translateService.get('Header.cvName').subscribe(val => {
       this.cvName = val;
       console.log(val);
       const url = window.location.href;
@@ -69,12 +75,18 @@ export class Header implements OnInit {
     });
   }
 
-  @HostListener('window:scroll', ['getScrollPosition($event)'])
-  getScrollPosition(event) {
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
     this.pageYPosition = window.pageYOffset;
   }
 
-  changeLanguage(language: string) {
-    this.languageFormControl.setValue(language);
+  changeLanguage(language: AppLanguage): void {
+    if (this.languageStore.isDifferentLanguage(language)) {
+      this.languageStore.changeLanguage(language);
+    }
+  }
+
+  isLanguageActive(language: AppLanguage): boolean {
+    return this.currentLanguage() === language;
   }
 }
