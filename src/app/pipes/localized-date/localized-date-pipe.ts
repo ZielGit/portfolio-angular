@@ -1,27 +1,24 @@
 import { DatePipe } from '@angular/common';
 import { inject, Pipe, PipeTransform } from '@angular/core';
-import { Language } from 'src/app/services/language/language';
+import { LanguageStore } from 'src/app/services/language-store/language-store';
 
 @Pipe({
   name: 'localizedDate',
+  pure: false,
 })
 export class LocalizedDatePipe implements PipeTransform {
-  private language = inject(Language);
+  private languageStore = inject(LanguageStore);
 
-  private readonly localeMap: Record<'es' | 'en' | 'pt_BR', string> = {
-    es: 'es',
-    en: 'en',
-    pt_BR: 'pt-BR',
-  };
-
-  transform(value: Date | string | number | null | undefined, format = 'mediumDate'): string | null {
+  transform(value: Date | string | number | null | undefined, format = 'mediumDate', timezone?: string): string | null {
     if (!value) return null;
 
-    // Obtener el locale actual
-    const locale = this.localeMap[this.language.language];
+    // Obtener el locale actual del servicio
+    const locale = this.languageStore.language();
 
-    // Usar DatePipe con el locale correcto
+    // Crear una nueva instancia de DatePipe con el locale correcto
     const datePipe = new DatePipe(locale);
-    return datePipe.transform(value, format, undefined, locale);
+
+    // Transformar la fecha con el formato y timezone especificados
+    return datePipe.transform(value, format, timezone, locale);
   }
 }
