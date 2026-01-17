@@ -139,6 +139,18 @@
       "func-11": "Documentation of APIs with Postman."
     }
   },
+  "education": {
+    "title": "Education",
+    "degrees": {
+      "bachelor": "Bachelor",
+      "engineer": "Engineer",
+      "master": "Master"
+    },
+    "fieldsOfStudy": {
+      "systemsEngr": "Systems and Computer Engineering",
+      "systemsMtr": "Enterprise Systems Management"
+    }
+  },
   "FeatureProjects.Title": "My Projects",
   "FeatureProjects.Label": "Highlighted Project",
   "FeatureProjects.Projects": [

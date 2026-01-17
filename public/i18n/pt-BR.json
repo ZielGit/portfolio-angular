@@ -126,5 +126,17 @@
       "func-10": "Migração e higienização de dados.",
       "func-11": "Documentação de APIs com Postman."
     }
+  },
+  "education": {
+    "title": "Educação",
+    "degrees": {
+      "bachelor": "Bacharel",
+      "engineer": "Engenheiro",
+      "master": "Mestrado"
+    },
+    "fieldsOfStudy": {
+      "systemsEngr": "Engenharia de Sistemas e Computação",
+      "systemsMtr": "Gestão de Sistemas Empresariais"
+    }
   }
 }
