@@ -1,0 +1,319 @@
+{
+  "Header.Item1": "Acerca de mi",
+  "Header.Item2": "Experiencia",
+  "Header.Item3": "Proyectos",
+  "Header.Item4": "Contacto",
+  "Header.cvBtn": "Curriculum",
+  "Header.cvName": "CV_Frans_Vilcahuaman_Español.pdf",
+
+  "Banner.Pretitle": "Hola! Mi nombre es",
+  "Banner.Description": "Tengo <span class='underline'>5 años de experiencia</span> desarrollando sistemas para hacer de la web un lugar mejor. Me dedico a escribir y refactorizar código limpio, reutilizable y escalable en varias tecnologias, aplicando buenas practicas y estandares de calidad y desarrollo.",
+  "Banner.ActionBtn": "Saludame",
+
+  "AboutMe.Title": "Acerca de mi",
+  "AboutMe.Paragraphs": [
+    "En <span class='underline'>5 años de experiencia </span> he cubierto muchos roles: <span class='underline'>Backend developer</span>, <span class='underline'>frontend developer</span> y <span class='underline'>full stack developer</span>. Me encanta aportar mis conocimientos para crear cosas nuevas que ayuden a resolver problemas.",
+    "Mis capacidades también incluyen implementar mejoras en sistemas, optimizar sitios, estandarizar patrones y sugerir y ejecutar ideas que añadan valor al proyecto en el que este trabajando.",
+    "Tambien programo cosas para mi uso personal, bien sea por hobbie o por utilidad.",
+    "Algunas de las tecnologías en las que me he capacitado y trabajado incluyen (pero no se limitan) a:"
+  ],
+  "experience": {
+    "title": "Experiencia",
+    "positions": {
+      "juniorProg": "Programador Junior Full Stack",
+      "JuniorDev": "Desarrollador Junior Full Stack",
+      "juniorLaravelDev": "Desarrollador Junior Laravel Full Stack",
+      "seniorLaravelDev": "Desarrollador Senior Laravel Full Stack",
+      "seniorNETDev": "Desarrollador Senior .NET",
+      "seniorDev": "Desarrollador Senior Full Stack",
+      "ingDev": "Ingeniero Desarrollador"
+    },
+    "exp-1": {
+      "func-1": "Desarrollo de APIs con PHP, Laravel y .NET.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y jQuery.",
+      "func-3": "Integración de servicios externos, APIs y correo electrónico.",
+      "func-4": "Diseño e implementación de base de datos SQL Server y MySQL.",
+      "func-5": "Optimización de procesos de negocio.",
+      "func-6": "Actualización y mantenimiento de módulos en los sitios web.",
+      "func-7": "Recopilación de los requerimientos de los proyectos.",
+      "func-8": "Documentación técnica de los proyectos."
+    },
+    "exp-2": {
+      "func-1": "Desarrollo de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y Vue.",
+      "func-3": "Implementación de pruebas unitarias y de características con PHPUnit y Jest.",
+      "func-4": "Administración de la base de datos MySQL.",
+      "func-5": "Uso de Clean Code.",
+      "func-6": "Uso de Scrum como metodología ágil.",
+      "func-7": "Recopilación y análisis de requerimientos.",
+      "func-8": "Documentación técnica del proyecto."
+    },
+    "exp-3": {
+      "func-1": "Desarrollo de APIs con Laravel y .NET.",
+      "func-2": "Desarrollo de interfaces con Angular, Vue y jQuery.",
+      "func-3": "Configuración y gestión de servidores web.",
+      "func-4": "Diseño e implementación de bases de datos SQL Server, MySQL, PostgreSQL y MongoDB.",
+      "func-5": "Integración de servicios externos, como sistemas para pagos online y correo electrónico.",
+      "func-6": "Elaboración de documentación de las aplicaciones o soluciones desarrolladas.",
+      "func-7": "Actualización y mantenimiento de las plataformas y sistemas web asignados.",
+      "func-8": "Documentación de procesos técnicos y flujos de desarrollo.",
+      "func-9": "Documentación de usuario como manuales de uso.",
+      "func-10": "Implementación de pruebas unitarias y de características con PHPUnit y Jest."
+    },
+    "exp-4": {
+      "func-1": "Desarrollo de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y jQuery.",
+      "func-3": "Integración de servicios externos.",
+      "func-4": "Implementación de seguridad con Sanctum (OAuth 2.0).",
+      "func-5": "Diseño, implementación y administración de la base de datos MySQL.",
+      "func-6": "Implementación de Integración Continua/Despliegue Continuo (CI/CD).",
+      "func-7": "Optimización de los procesos de negocio.",
+      "func-8": "Recopilación de requerimientos.",
+      "func-9": "Corrección de errores del sistema ERP.",
+      "func-10": "Documentación de APIs."
+    },
+    "exp-5": {
+      "func-1": "Desarrollo y mantenimiento de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Laravel (Blade) y jQuery.",
+      "func-3": "Actualización y mantenimiento de los módulos en el ERP.",
+      "func-4": "Administración y configuración de AWS y Digital Ocean.",
+      "func-5": "Diseño, implementación y mantenimiento de bases de datos MySQL y MongoDB.",
+      "func-6": "Integración de servicios externos, APIs y correo electrónico.",
+      "func-7": "Implementación de pruebas unitarias y de características con PHPUnit y Jest.",
+      "func-8": "Uso de Clean Code.",
+      "func-9": "Uso de la metodología ágil Scrum junto con Jira como gestor del proyecto.",
+      "func-10": "Optimización de CI/CD, creación de pipelines para el despliegue a los entornos de desarrollo y producción junto con pruebas automatizadas.",
+      "func-11": "Recopilación y análisis de requerimientos.",
+      "func-12": "Documentación de requerimientos, APIs, despliegue, pruebas automatizadas y creación de manuales.",
+      "func-13": "Participación en Code Review, mentoría y capacitación de desarrolladores juniors del equipo."
+    },
+    "exp-6": {
+      "func-1": "Diseño y desarrollo de APIs con .NET.",
+      "func-2": "Integración de APIs internos con servicios externos.",
+      "func-3": "Implementación de arquitectura de software con Clean Architecture, Domain-Driven Design y principios SOLID con Clean Code.",
+      "func-4": "Desarrollo y optimización de procedimientos almacenados, consultas y funciones en SQL Server, MySQL y Entity Framework, mejorando el rendimiento de base de datos.",
+      "func-5": "Implementación de autenticación y autorización mediante JWT y OAuth 2.0.",
+      "func-6": "Gestión en el ciclo de vida del desarrollo con Git, Azure DevOps y CI/CD pipelines, reduciendo los tiempos de despliegue y errores manuales.",
+      "func-7": "Desarrollo e implementación de pruebas unitarias y de integración con xUnit y Moq, asegurando la calidad del software antes del despliegue.",
+      "func-8": "Integración de servicios en la nube utilizando Azure Functions, App Services, Blob Storage y Service Bus.",
+      "func-9": "Documentación de procesos, APIs y manuales de usuario, facilitando el aprendizaje y mantenimiento de sistema."
+    },
+    "exp-7": {
+      "func-1": "Desarrollo y mantenimiento de APIs con FastAPI, Laravel y .NET.",
+      "func-2": "Desarrollo de interfaces con Angular y Vue.",
+      "func-3": "Configuración y gestión de servidores web y bases de datos SQL Server, MySQL, PostgreSQL y Redis.",
+      "func-4": "Integración de servicios externos, como sistemas para pagos online y correo electrónico.",
+      "func-5": "Uso de Clean Code.",
+      "func-6": "Uso de Scrum como metodología ágil.",
+      "func-7": "Recopilación y análisis de requerimientos funcionales y no funcionales.",
+      "func-8": "Implementación de pruebas unitarias y de características con Pytest, PHPUnit y Vitest.",
+      "func-9": "Elaboración de documentación de las aplicaciones o soluciones desarrolladas.",
+      "func-10": "Actualización y mantenimiento de las plataformas y sistemas web asignados."
+    },
+    "exp-8": {
+      "func-1": "Desarrollo y mantenimiento de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Angular.",
+      "func-3": "Migración de aplicaciones de React.",
+      "func-4": "Implementación de autenticación y autorización mediante JWT.",
+      "func-5": "Administración y configuración de Google Cloud.",
+      "func-6": "Implementación, configuración y mantenimiento de CPanel.",
+      "func-7": "Diseño, implementación y mantenimiento de bases de datos MySQL y PostgreSQL.",
+      "func-8": "Uso de Clean Code.",
+      "func-9": "Implementación de arquitectura de software con Clean Architecture, Hexagonal Architecture, Domain-Driven Design.",
+      "func-10": "Uso de la metodología ágil Scrum junto con Jira como gestor del proyecto.",
+      "func-11": "Implementación de Integración Continua/Despliegue Continuo (CI/CD), creación de pipelines para el despliegue a los entornos de desarrollo.",
+      "func-12": "Documentación de requerimientos, componentes, APIs, despliegue y creación de manuales.",
+      "func-13": "Participación en Code Review, mentoría y capacitación de desarrolladores juniors."
+    },
+    "exp-9": {
+      "func-1": "Desarrollo y mantenimiento de APIs con Laravel.",
+      "func-2": "Desarrollo de interfaces con Vue.",
+      "func-3": "Actualización y mantenimiento de los módulos en el sistema.",
+      "func-4": "Implementación autenticación y autorización mediante JWT.",
+      "func-5": "Diseño, implementación y mantenimiento de bases de datos PostgreSQL y Redis.",
+      "func-6": "Uso de Clean Code.",
+      "func-7": "Implementación y mantenimiento de arquitectura de software con Clean Architecture, CSR pattern y Domain-Driven Design.",
+      "func-8": "Uso de la metodología ágil Scrum junto con Jira como gestor del proyecto.",
+      "func-9": "Desarrollo e implementación de Task Scheduling y Queues.",
+      "func-10": "Migración y saneamiento de datos.",
+      "func-11": "Documentación de APIs con Postman."
+    }
+  },
+  "education": {
+    "title": "Educación",
+    "degrees": {
+      "bachelor": "Bachiller",
+      "engineer": "Ingeniero",
+      "master": "Magíster"
+    },
+    "fieldsOfStudy": {
+      "systemsEngr": "Ingeniería de Sistemas y Computación",
+      "systemsMtr": "Gerencia de Sistemas Empresariales"
+    }
+  },
+  "FeatureProjects.Title": "Mis proyectos",
+  "FeatureProjects.Label": "Proyecto Destacado",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "Gisselle",
+      "Description": "Aplicacion web para gestion interna de empresa que abarca departamento de ventas, cobranza y seguimiento muy extensa y compleja con diversas funciones hecha en <span class='underline'>Angular</span> y <span class='underline'>Laravel</span>. Trabaja con <span class='underline'>websockets</span>, <span class='underline'>schedules</span>, <span class='underline'>jobs de laravel</span>, integraciones con wordpress, zadarma, liveconnect, etc.",
+      "imgs": [
+        "images/gisselle/Captura de pantalla 2024-05-19 1009582.png",
+        "images/gisselle/Captura de pantalla 2024-05-19 115514.png",
+        "images/gisselle/Captura de pantalla 2024-05-19 115702.png",
+        "images/gisselle/Captura de pantalla 2024-05-19 115829.png",
+        "images/gisselle/Captura de pantalla 2024-05-19 1009582.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+
+    {
+      "Title": "Emelteciot",
+      "Description": "Aplicación de monitoreo para consulta de datos, hecha con <span class='underline'>Angular</span> y <span class='underline'>Laravel</span>. Se aplica la libreria de graficos <span class='underline'>chart.js</span>",
+      "imgs": [
+        "images/proyex2/Captura de pantalla 2024-07-28 102852.png",
+        "images/proyex2/849c117f-bed9-4406-9c13-c8669f655acc.png",
+        "images/proyex2/62cdf90c-6196-4a6e-b639-8919cda4f749.png",
+        "images/proyex2/8c919208-d6a8-48f4-890d-4817323b6923.png",
+        "images/proyex2/8c919208-d6a8-48f4-890d-4817323b6923 (1).png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+
+    {
+      "Title": "Vas Aviation",
+      "Description": "Aplicación de seguimiento de solicitudes para combustible de aeronaves. Cuenta con <span class='underline'>modulo de correo electronico</span>, <span class='underline'>notificaciones en tiempo real</span>, <span class='underline'>manejo de archivos CSV para importación de datos</span>, <span class='underline'>cotizaciones de precio</span>. Etc. Desarrollada en <span class='underline'>Angular</span> y <span class='underline'>laravel</span>",
+      "imgs": [
+        "images/vasaviation/capture0.png",
+        "images/vasaviation/capture1.png",
+        "images/vasaviation/capture2.png",
+        "images/vasaviation/capture3.png",
+        "images/vasaviation/capture4.png",
+        "images/vasaviation/capture5.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+
+    {
+      "Title": "GlobalJobs",
+      "Description": "Plataforma e-learning desarrollada con wordpress. Diseño totalmente presonalizado, con plugins desarrollados desde cero. Cuenta con modulo de pagos personalizados, aula virtual, dashboard de seguimiento de cursos",
+      "imgs": [
+        "images/globaljobs/capture1.png",
+        "images/globaljobs/capture2.png",
+        "images/globaljobs/capture3.png",
+        "images/globaljobs/capture4.png",
+        "images/globaljobs/capture5.png",
+        "images/globaljobs/capture6.png"
+      ],
+      "Technologies": ["Wordpress", "Wordpress Codex", "PHP", "Mysql"]
+    },
+
+    {
+      "Title": "GlobalJobs",
+      "Description": "Plataforma e-commerce de productos de tecnologia. Desarrollada con Wordpress e implementando un sistema de envios para los productos. Cuenta con reporte de ventas mediante programacion personalizada",
+      "imgs": [
+        "images/mbelectronics/capture0.png",
+        "images/mbelectronics/capture1.png",
+        "images/mbelectronics/capture2.png"
+      ],
+      "Technologies": ["Wordpress", "Elementor", "Woocommerce", "Wordpress Codex", "PHP", "Mysql"]
+    },
+
+    {
+      "Title": "Agrourbana",
+      "Description": "Aplicación de monitoreo realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span> y <span class='underline'>gestión de usuarios</span>. Cuenta también con lógica de formularios reactvios para la configuración de parámetros.",
+      "imgs": [
+        "images/agrourbana/agrourbana1.png",
+        "images/agrourbana/agrourbana2.png",
+        "images/agrourbana/agrourbana3.png",
+        "images/agrourbana/agrourbana4.png",
+        "images/agrourbana/agrourbana5.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Tu super plan",
+      "Description": "Cotizador de planes de salud que cuenta con un buscador con el que se hacen consultas avanzadas. Los planes son mostrados en base a la edad, ingreso mensual y ubicacion del usuario. Cuenta con <span class='underline'>chat en linea</span>, <span class='underline'>formulario de contacto</span>, <span class='underline'>sistema de notificaiones por whatsapp y correo</span>, <span class='underline'>auth</span>, y <span class='underline'>gestion de informacion internet a travez del rol de administrador</span>.",
+      "imgs": [
+        "images/tusuperplan/tusuperplan1.png",
+        "images/tusuperplan/tusuperplan2.png",
+        "images/tusuperplan/tusuperplan3.png",
+        "images/tusuperplan/tusuperplan4.png",
+        "images/tusuperplan/tusuperplan5.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    },
+    {
+      "Title": "Proyexiot",
+      "Description": "Plataforma de monitoreo de datos pertenecientes a pozos de agua, remolcadores y diversas instalaciones realizada desde cero con módulo de auth, <span class='underline'>gráficos configurables</span>, <span class='underline'>alarmas configurables</span>, <span class='underline'>gestión de usuarios</span> y <span class='underline'>geolocalizacion con openlayers.</span> Cuenta también con lógica de formularios reactivos para la configuración de parámetros.",
+      "imgs": [
+        "images/proyex/proyex1.png",
+        "images/proyex/proyex2.png",
+        "images/proyex/proyex3.png",
+        "images/proyex/proyex4.png",
+        "images/proyex/proyex5.png",
+        "images/proyex/proyex6.png",
+        "images/proyex/proyex7.png",
+        "images/proyex/proyex8.png",
+        "images/proyex/proyex9.png",
+        "images/proyex/proyex10.png",
+        "images/proyex/proyex11.png",
+        "images/proyex/proyex12.png"
+      ],
+      "Technologies": ["Laravel", "Angular", "SASS", "Angular Material", "RxJS"]
+    }
+  ],
+
+  "OtherProjects.Title": "Mas proyectos",
+  "OtherProjects.Projects": [
+    {
+      "Title": "Hands game",
+      "Description": "Juego de piedra papel y tijeras extendido. Un proyecto personal desarrollado en angular en el que juegas al azar contra la máquina. Cuenta con la utilización de servicios, interfaces y componentes.",
+      "imgs": ["images/hands-game.png"],
+      "ghLink": "https://github.com/andresjosehr/hands-game",
+      "demoLink": "https://proyectos.andresjosehr.com/hands-game",
+      "Technologies": ["Angular", "CSS GRID", "SASS", "Angular animations"]
+    },
+    {
+      "Title": "Countries viewer",
+      "Description": "Interfaz que consume una API de países con el que se pueden visualizar lista de países, ver detalles de cada país, filtrar por nombre y región. Ademas cuenta con un dark mode para alternar entre el tema oscuro y el claro.",
+      "imgs": ["images/countries-viewer.png"],
+      "ghLink": "https://github.com/andresjosehr/countries-viewer",
+      "demoLink": "https://proyectos.andresjosehr.com/countries-viewer",
+      "Technologies": ["Angular", "RxJS", "SASS", "API"]
+    },
+    {
+      "Title": "Four card feature section",
+      "Description": "Una sola página que cuenta con un diseño minimalista que enumera 4 características en 4 cards. Se usan animaciones de entrada con angular animations.",
+      "ghLink": "https://github.com/andresjosehr/fourd-card-feature-section",
+      "demoLink": "https://proyectos.andresjosehr.com/four-card-feature-section",
+      "Technologies": ["Angular", "SASS", "CSS GRID"]
+    },
+    {
+      "Title": "Social proof section",
+      "Description": "Proyecto personal de una página diseñada a partir de un diseño hecho en figma. Se utilizó angular para el desarrollo junto con SASS y CSS GRID.",
+      "ghLink": "https://github.com/andresjosehr/social-proof-section",
+      "demoLink": "https://proyectos.andresjosehr.com/social-proof-section",
+      "Technologies": ["Angular", "CSS GRID", "GIT"]
+    },
+    {
+      "Title": "FAQ accordion card",
+      "Description": "Acordeón de preguntas frecuentes con lógica y animnaciones realizadas en Angular.",
+      "ghLink": "https://github.com/andresjosehr/faq-accordion",
+      "demoLink": "https://proyectos.andresjosehr.com/faq-accordion",
+      "Technologies": ["Angular", "CSS GRID", "Angular animations"]
+    },
+    {
+      "Title": "Profile card",
+      "Description": "Simple diseño de una página que cuenta con una carta de perfil con información básica de una persona.",
+      "ghLink": "https://github.com/andresjosehr/profile-card-component",
+      "demoLink": "https://proyectos.andresjosehr.com/profile-card-component",
+      "Technologies": ["Angular", "SASS", "GIT"]
+    }
+  ],
+
+  "Contact.Pretitle": "Y... ¿Ahora?",
+  "Contact.Title": "¡Salúdame!",
+  "Contact.Content": "Estaré encantado de recibir tu contacto si quieres conversar acerca de nuevas oportunidades. Escríbeme, y te responderé tan pronto como vea tu mensaje.",
+  "Contact.Btn": "Contactame"
+}
