@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { ArchiveComponent } from './components/archive/archive.component';
+import { DEFAULT_LANGUAGE } from './models/language-model';
 
 export const routes: Routes = [
-    { path: ':language?', component: HomeComponent },
-    { path: ':language?/proyectos', component: ArchiveComponent },
-    { path: '**', pathMatch: 'full', redirectTo: '/' },
+  { path: '', redirectTo: `/${DEFAULT_LANGUAGE}`, pathMatch: 'full' },
+  {
+    path: ':lang',
+    children: [
+      { path: '', loadComponent: () => import('./pages/home/home').then(m => m.Home) },
+      { path: 'projects', loadComponent: () => import('./pages/project/project').then(m => m.Project) },
+    ],
+  },
+  { path: '**', redirectTo: `/${DEFAULT_LANGUAGE}` },
 ];

@@ -13,12 +13,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "i18n": {
-        "sourceLocale": "es",
-        "locales": {
-          "en-US": "src/locale/messages.en.xlf"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -94,12 +88,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n",
-          "options": {
-            "buildTarget": "portfolio-angular:build"
-          }
         },
         "test": {
           "builder": "@angular/build:karma",

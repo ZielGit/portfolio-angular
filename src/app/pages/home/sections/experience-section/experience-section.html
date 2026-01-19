@@ -1,0 +1,43 @@
+<section class="section" id="jobs">
+  <div class="container jobs">
+    <div class="section-box">
+      <div class="about-title mb-5" data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="e-font section-title">
+          <span class="code-font n-section-title">02.</span>
+          {{ "experience.title" | translate }}
+        </h3>
+      </div>
+      <div class="jobs-tabs" data-aos="fade-up" data-aos-duration="1000">
+        <ul
+          ngbNav
+          #nav="ngbNav"
+          [activeId]="activeTabIndex()"
+          (activeIdChange)="selectTab($event)"
+          orientation="vertical"
+          class="nav-tabs jobs-tabs"
+        >
+          @for (exp of experiences(); track trackByExperienceId($index, exp); let i = $index) {
+          <li [title]="exp.company" [ngbNavItem]="i">
+            <a ngbNavLink>{{ exp.company }}</a>
+            <ng-template ngbNavContent>
+              <h4 class="title-tab-content">
+                {{ exp.positionKey | translate }} |
+                <span class="company-tab-content">{{ exp.company }}</span>
+              </h4>
+              <h5 class="job-time">
+                {{ exp.place }} | {{ (exp.startDate | localizedDate : 'MMMM y') | capitalize }} - {{ (exp.endDate |
+                localizedDate : 'MMMM y') | capitalize }}
+              </h5>
+
+              @for (funcKey of exp.functionKeys; track funcKey) {
+              <p class="job-description" [innerHTML]="funcKey | translate"></p>
+              }
+            </ng-template>
+          </li>
+          }
+        </ul>
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
