@@ -7,7 +7,7 @@ import { GoogleAnalyticsService } from '@hakimio/ngx-google-analytics';
 export class AnalyticsApi {
   private gaService = inject(GoogleAnalyticsService);
 
-  sendAnalyticEvent(action: string, category: string, label) {
+  sendAnalyticEvent(action: string, category: string, label: string) {
     this.gaService.event(action, { category, label });
   }
 

@@ -22,11 +22,14 @@ export class MoreProjectsSection implements OnInit {
     });
   }
 
-  redirect(route: string, event) {
-    const id = event.target.id;
-    if (id == 'demoLink' || id == 'ghLink') {
+  redirect(route: string, event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+    const id = target.id;
+
+    if (id === 'demoLink' || id === 'ghLink') {
       return;
     }
+
     window.open(route, '_blank');
   }
 }

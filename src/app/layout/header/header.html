@@ -55,7 +55,6 @@
               [class.first-item]="isFirst"
               [class.middle-item]="!isFirst && !isLast"
               [class.last-item]="isLast"
-              [disabled]="isLanguageActive(lang.code)"
             >
               <img width="20px" [src]="lang.flagUrl" [alt]="lang.label" />
               <span class="flag-text">{{ lang.label }}</span>

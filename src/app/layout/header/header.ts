@@ -42,7 +42,7 @@ export class Header {
   languageStore = inject(LanguageStore);
 
   responsiveMenuVisible = false;
-  pageYPosition: number;
+  pageYPosition = 0;
 
   readonly currentLanguage = computed(() => this.languageStore.language());
   readonly currentLanguageConfig = computed(() => LANGUAGE_CONFIGS[this.currentLanguage()]);

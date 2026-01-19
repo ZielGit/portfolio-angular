@@ -1,4 +1,4 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -19,14 +19,4 @@ export class FeaturedProjectsSection {
     autoplay: true,
     autoplayTimeout: 3000,
   };
-
-  readonly imgContainer = viewChild<ElementRef>('imgContainer');
-
-  debug() {
-    this.imgContainer().nativeElement.scroll({
-      top: this.imgContainer().nativeElement.scrollHeight,
-      left: 0,
-      behavior: 'smooth',
-    });
-  }
 }
