@@ -1,6 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { inject, Pipe, PipeTransform } from '@angular/core';
-import { LanguageStore } from 'src/app/services/language-store/language-store';
+import { LanguageStore } from '../../services/language-store/language-store';
 
 @Pipe({
   name: 'localizedDate',

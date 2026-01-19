@@ -8,7 +8,7 @@ import { provideRouter } from '@angular/router';
 import { provideGoogleAnalytics } from '@hakimio/ngx-google-analytics';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { routes } from './app.routes';
 import { DEFAULT_LANGUAGE } from './models/language-model';
 

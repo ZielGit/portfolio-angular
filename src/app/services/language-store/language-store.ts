@@ -8,7 +8,7 @@ import {
   BROWSER_LANGUAGE_MAP,
   DEFAULT_LANGUAGE,
   LANGUAGE_CONFIGS,
-} from 'src/app/models/language-model';
+} from '../../models/language-model';
 
 @Injectable({
   providedIn: 'root',

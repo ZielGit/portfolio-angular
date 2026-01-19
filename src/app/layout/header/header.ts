@@ -13,9 +13,9 @@ import {
   NgbNavLinkBase,
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
-import { AppLanguage, LANGUAGE_CONFIGS } from 'src/app/models/language-model';
-import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
-import { LanguageStore } from 'src/app/services/language-store/language-store';
+import { AppLanguage, LANGUAGE_CONFIGS } from '../../models/language-model';
+import { AnalyticsApi } from '../../services/analytics-api/analytics-api';
+import { LanguageStore } from '../../services/language-store/language-store';
 
 @Component({
   selector: 'app-header',

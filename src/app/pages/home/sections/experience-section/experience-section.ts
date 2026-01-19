@@ -9,10 +9,10 @@ import {
   NgbNavOutlet,
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ExperienceModel } from 'src/app/models/experience-model';
-import { CapitalizePipe } from 'src/app/pipes/capitalize/capitalize-pipe';
-import { LocalizedDatePipe } from 'src/app/pipes/localized-date/localized-date-pipe';
-import { ExperienceData } from 'src/app/services/experience-data/experience-data';
+import { ExperienceModel } from '../../../../models/experience-model';
+import { CapitalizePipe } from '../../../../pipes/capitalize/capitalize-pipe';
+import { LocalizedDatePipe } from '../../../../pipes/localized-date/localized-date-pipe';
+import { ExperienceData } from '../../../../services/experience-data/experience-data';
 
 @Component({
   selector: 'app-experience-section',

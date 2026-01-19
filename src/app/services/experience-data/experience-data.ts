@@ -1,6 +1,6 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { EXPERIENCE_CONSTANTS } from 'src/app/constants/experience-constants';
-import { ExperienceModel, ExperienceSortOptions, SortField } from 'src/app/models/experience-model';
+import { EXPERIENCE_CONSTANTS } from '../../constants/experience-constants';
+import { ExperienceModel, ExperienceSortOptions, SortField } from '../../models/experience-model';
 
 @Injectable({
   providedIn: 'root',

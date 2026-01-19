@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
+import { AnalyticsApi } from '../../services/analytics-api/analytics-api';
 import { AboutSection } from './sections/about-section/about-section';
 import { BannerSection } from './sections/banner-section/banner-section';
 import { ContactSection } from './sections/contact-section/contact-section';

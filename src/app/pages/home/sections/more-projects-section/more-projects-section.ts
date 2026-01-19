@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
+import { AnalyticsApi } from '../../../../services/analytics-api/analytics-api';
 
 @Component({
   selector: 'app-more-projects-section',

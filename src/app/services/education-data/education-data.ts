@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { EDUCATION_CONSTANTS } from 'src/app/constants/education-constants';
-import { EducationModel } from 'src/app/models/education-model';
+import { EDUCATION_CONSTANTS } from '../../constants/education-constants';
+import { EducationModel } from '../../models/education-model';
 
 @Injectable({
   providedIn: 'root',

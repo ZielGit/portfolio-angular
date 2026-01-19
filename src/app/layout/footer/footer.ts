@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { AnalyticsApi } from 'src/app/services/analytics-api/analytics-api';
+import { AnalyticsApi } from '../../services/analytics-api/analytics-api';
 
 @Component({
   selector: 'app-footer',
