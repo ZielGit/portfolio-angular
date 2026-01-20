@@ -12,7 +12,7 @@ import {
   NgbNavLink,
   NgbNavLinkBase,
 } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import { AppLanguage, LANGUAGE_CONFIGS } from '../../models/language-model';
 import { AnalyticsApi } from '../../services/analytics-api/analytics-api';
 import { LanguageStore } from '../../services/language-store/language-store';
@@ -31,7 +31,7 @@ import { LanguageStore } from '../../services/language-store/language-store';
     NgbDropdownToggle,
     NgbDropdownMenu,
     NgStyle,
-    TranslateModule,
+    TranslatePipe,
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
