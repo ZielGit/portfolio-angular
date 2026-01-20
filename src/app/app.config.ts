@@ -3,7 +3,7 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
 import localeEnUs from '@angular/common/locales/en';
 import localeEsPe from '@angular/common/locales/es-PE';
 import localePtBr from '@angular/common/locales/pt';
-import { ApplicationConfig, LOCALE_ID, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, LOCALE_ID } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideGoogleAnalytics } from '@hakimio/ngx-google-analytics';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
@@ -21,7 +21,6 @@ const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (http: Http
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),
     provideGoogleAnalytics(environment.gaMeasurementID),
