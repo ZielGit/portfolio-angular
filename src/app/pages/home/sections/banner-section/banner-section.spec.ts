@@ -13,7 +13,7 @@ describe('BannerSection', () => {
 
     fixture = TestBed.createComponent(BannerSection);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

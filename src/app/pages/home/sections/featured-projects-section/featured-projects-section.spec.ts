@@ -13,7 +13,7 @@ describe('FeaturedProjectsSection', () => {
 
     fixture = TestBed.createComponent(FeaturedProjectsSection);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {
