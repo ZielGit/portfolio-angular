@@ -13,7 +13,7 @@ describe('ExperienceSection', () => {
 
     fixture = TestBed.createComponent(ExperienceSection);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {
