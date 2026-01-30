@@ -28,4 +28,27 @@ jobs:
         run: npm ci
 
       - name: Ejecutar tests con Vitest
-        run: npm run test
+        run: npm run test -- --watch=false
+
+      - name: Generar reporte de cobertura
+        run: npm run test -- --watch=false --coverage
+        continue-on-error: true
+
+      - name: Subir reporte de cobertura
+        uses: codecov/codecov-action@v4
+        if: success()
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Comentar cobertura en PR
+        uses: romeovs/lcov-reporter-action@v0.3.1
+        if: github.event_name == 'pull_request'
+        with:
+          lcov-file: ./coverage/lcov.info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          delete-old-comments: true
