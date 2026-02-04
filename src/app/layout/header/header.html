@@ -33,7 +33,7 @@
         <ng-template ngbNavContent>Second content</ng-template>
       </li>
       <li ngbNavItem class="animate-item">
-        <a (click)="downloadCV()" class="main-btn cv-btn" ngbNavLink> {{ "Header.cvBtn" | translate }} </a>
+        <a (click)="previewCV()" class="main-btn cv-btn" ngbNavLink> {{ "Header.cvBtn" | translate }} </a>
       </li>
       <li class="animate-item">
         <div ngbDropdown class="d-inline-block">
@@ -106,7 +106,7 @@
               <a (click)='scroll("proyects")'> <span>04. </span> {{ "Header.Item4" | translate }} </a>
             </li>
             <li>
-              <a (click)="downloadCV()" class="main-btn cv-btn"> {{ "Header.cvBtn" | translate }} </a>
+              <a (click)="previewCV()" class="main-btn cv-btn"> {{ "Header.cvBtn" | translate }} </a>
             </li>
             <li>
               <div class="language-container">

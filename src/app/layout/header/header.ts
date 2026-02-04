@@ -15,6 +15,7 @@ import {
 import { TranslatePipe } from '@ngx-translate/core';
 import { AppLanguage, LANGUAGE_CONFIGS } from '../../models/language-model';
 import { AnalyticsApi } from '../../services/analytics-api/analytics-api';
+import { CvGenerator } from '../../services/cv-generator/cv-generator';
 import { LanguageStore } from '../../services/language-store/language-store';
 
 @Component({
@@ -39,7 +40,8 @@ import { LanguageStore } from '../../services/language-store/language-store';
 export class Header {
   private router = inject(Router);
   analyticsApi = inject(AnalyticsApi);
-  languageStore = inject(LanguageStore);
+  private languageStore = inject(LanguageStore);
+  private cvGenerator = inject(CvGenerator);
 
   responsiveMenuVisible = false;
   pageYPosition = 0;
@@ -66,13 +68,8 @@ export class Header {
     this.responsiveMenuVisible = false;
   }
 
-  downloadCV() {
-    this.languageStore.translateService.get('Header.cvName').subscribe(val => {
-      this.cvName = val;
-      console.log(val);
-      const url = window.location.href;
-      window.open(url + '/../cv/' + this.cvName, '_blank');
-    });
+  previewCV(): void {
+    this.cvGenerator.openCVInNewTab();
   }
 
   @HostListener('window:scroll')
