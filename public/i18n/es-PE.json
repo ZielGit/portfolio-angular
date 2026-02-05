@@ -5,8 +5,6 @@
   "Header.Item4": "Contacto",
   "Header.cvBtn": "Curriculum",
   "Header.cvName": "CV_Frans_Vilcahuaman_Español.pdf",
-
-  "Banner.Pretitle": "Hola! Mi nombre es",
   "Banner.Description": "Tengo <span class='underline'>5 años de experiencia</span> desarrollando sistemas para hacer de la web un lugar mejor. Me dedico a escribir y refactorizar código limpio, reutilizable y escalable en varias tecnologias, aplicando buenas practicas y estandares de calidad y desarrollo.",
   "Banner.ActionBtn": "Saludame",
 
@@ -17,6 +15,14 @@
     "Tambien programo cosas para mi uso personal, bien sea por hobbie o por utilidad.",
     "Algunas de las tecnologías en las que me he capacitado y trabajado incluyen (pero no se limitan) a:"
   ],
+  "greeting": "Hola! Mi nombre es",
+  "title": "Desarrollador Full Stack",
+  "professionalSummary": {
+    "title": "Perfil Profesional",
+    "summary": "Desarrollador {{level}} Full Stack con más de {{years}} años de experiencia en el diseño, desarrollo e implementación de sistemas web escalables. Especializado en {{mainSkills}}, con enfoque en código limpio, arquitectura limpia y automatización de despliegues. Experiencia liderando iniciativas técnicas y brindando mentoría a desarrolladores junior, fortaleciendo la calidad del software y las buenas prácticas del equipo.",
+    "mainSkillsSeparator": ", ",
+    "mainSkillsLastSeparator": " y "
+  },
   "present": "Actualidad",
   "experience": {
     "title": "Experiencia",
