@@ -11,10 +11,10 @@ export class PersonalData {
   private translateService = inject(TranslateService);
 
   private readonly basicInfo = signal<PersonalInfoModel>({
-    firstName: 'Frans Justo',
+    firstName: 'Frans J.',
     lastName: 'Vilcahuamán Rojas',
-    fullName: 'Frans Justo Vilcahuamán Rojas',
-    title: 'Full Stack Developer',
+    fullName: 'Frans J. Vilcahuamán Rojas',
+    title: 'title',
     email: 'frans_421_12@hotmail.com',
     phone: '+51 989 606 114',
     location: 'Lima, Perú',
