@@ -3,14 +3,14 @@
     <div class="section-box-banner">
       <div class="content">
         <div class="animate-item">
-          <h1>{{ "Banner.Pretitle" | translate }}</h1>
+          <h1>{{ "greeting" | translate }}</h1>
         </div>
         <div class="banner-title animate-item">
-          <h2>Frans Vilcahuamán.</h2>
-          <h3>Software Developer</h3>
+          <h2>{{ fullName() }}</h2>
+          <h3>{{ 'title' | translate }}</h3>
         </div>
         <div class="banner-description animate-item">
-          <p [innerHTML]='"Banner.Description" | translate' class="mt-4"></p>
+          <p class="mt-2">{{ summaryKey() | translate : summaryParams() }}</p>
         </div>
       </div>
       <div class="div-btn-banner animate-item">
