@@ -5,6 +5,14 @@
   "Header.Item4": "Contato",
   "Header.cvBtn": "Retomar",
   "Header.cvName": "CV_Frans_Vilcahuaman_Portugués.pdf",
+  "greeting": "Olá! Meu nome é",
+  "title": "Desenvolvedor Full Stack",
+  "professionalSummary": {
+    "title": "Perfil profissional",
+    "summary": "Desenvolvedor Full Stack {{level}} com mais de {{years}} anos de experiência em design, desenvolvimento e implementação de sistemas web escaláveis. Especializado em {{mainSkills}}, com foco em código limpo, arquitetura limpa e implantações automatizadas. Experiência em liderar iniciativas técnicas e orientar desenvolvedores juniores, aprimorando a qualidade do software e as melhores práticas da equipe.",
+    "mainSkillsSeparator": ", ",
+    "mainSkillsLastSeparator": " e "
+  },
   "present": "Presente",
   "experience": {
     "title": "Experiência",

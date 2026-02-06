@@ -5,8 +5,6 @@
   "Header.Item4": "Contact",
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV_Frans_Vilcahuaman_Inglés.pdf",
-
-  "Banner.Pretitle": "Hello! My name is",
   "Banner.Description": "I have <span class='underline'>8 years of experience</span> developing systems, interfaces, bots, and technological solutions to make the web a better place. I am dedicated to writing and refactoring clean, reusable, and scalable code in <span class='underline'>Angular</span> and <span class='underline'>Laravel</span>, applying good practices and development standards.",
   "Banner.ActionBtn": "Say Hi",
 
@@ -17,6 +15,14 @@
     "I also program things for my personal use, whether for hobby or utility.",
     "Some of the technologies I have trained and worked with include (but are not limited to):"
   ],
+  "greeting": "Hello! My name is",
+  "title": "Full Stack Developer",
+  "professionalSummary": {
+    "title": "Professional Profile",
+    "summary": "{{level}} Full Stack Developer with over {{years}} years of experience in the design, development, and implementation of scalable web systems. Specialized in {{mainSkills}}, with a focus on clean code, clean architecture, and automated deployments. Experience leading technical initiatives and mentoring junior developers, strengthening software quality and team best practices.",
+    "mainSkillsSeparator": ", ",
+    "mainSkillsLastSeparator": " and "
+  },
   "present": "Present",
   "experience": {
     "title": "Experience",
