@@ -42,10 +42,14 @@
           <div class="about-img-container">
             <img
               (click)="analyticsApi.sendAnalyticEvent('click_image', 'about', 'image')"
+              (keydown.enter)="analyticsApi.sendAnalyticEvent('click_image', 'about', 'image')"
+              (keydown.space)="analyticsApi.sendAnalyticEvent('click_image', 'about', 'image')"
               class="rounded"
               width="270"
               src="images/me.jpg"
               alt="Frans Vilcahuamán"
+              tabindex="0"
+              role="button"
             />
           </div>
         </div>
