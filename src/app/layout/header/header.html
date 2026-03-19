@@ -4,36 +4,54 @@
       <img src="images/logo.png" width="50" alt="Logo" />
     </a>
     <ul ngbNav #nav="ngbNav" class="menu-ul">
-      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_about", "menu", "click")'>
-        <a ngbNavLink (click)='scroll("about")'>
+      <li ngbNavItem class="animate-item">
+        <a
+          ngbNavLink
+          href="javascript:void(0)"
+          (click)='scroll("about"); analyticsApi.sendAnalyticEvent("click_about", "menu", "click")'
+        >
           <span class="nav-number">01. </span>
           <span class="underline nav-text">{{ "Header.Item1" | translate }}</span>
         </a>
         <ng-template ngbNavContent>First content</ng-template>
       </li>
-      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_experience", "menu", "click")'>
-        <a ngbNavLink (click)='scroll("jobs")'>
+      <li ngbNavItem class="animate-item">
+        <a
+          ngbNavLink
+          href="javascript:void(0)"
+          (click)='scroll("jobs"); analyticsApi.sendAnalyticEvent("click_experience", "menu", "click")'
+        >
           <span class="nav-number">02. </span>
           <span class="underline nav-text">{{ "Header.Item2" | translate }}</span>
         </a>
         <ng-template ngbNavContent>Second content</ng-template>
       </li>
-      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_jobs", "menu", "click")'>
-        <a ngbNavLink (click)='scroll("proyects")'>
+      <li ngbNavItem class="animate-item">
+        <a
+          ngbNavLink
+          href="javascript:void(0)"
+          (click)='scroll("proyects"); analyticsApi.sendAnalyticEvent("click_jobs", "menu", "click")'
+        >
           <span class="nav-number">03. </span>
           <span class="underline nav-text">{{ "Header.Item3" | translate }}</span>
         </a>
         <ng-template ngbNavContent>Second content</ng-template>
       </li>
-      <li ngbNavItem class="animate-item" (click)='analyticsApi.sendAnalyticEvent("click_contact", "menu", "click")'>
-        <a ngbNavLink (click)='scroll("contact")'>
+      <li ngbNavItem class="animate-item">
+        <a
+          ngbNavLink
+          href="javascript:void(0)"
+          (click)='scroll("contact"); analyticsApi.sendAnalyticEvent("click_contact", "menu", "click")'
+        >
           <span class="nav-number">04. </span>
           <span class="underline nav-text">{{ "Header.Item4" | translate }}</span>
         </a>
         <ng-template ngbNavContent>Second content</ng-template>
       </li>
       <li ngbNavItem class="animate-item">
-        <a (click)="previewCV()" class="main-btn cv-btn" ngbNavLink> {{ "Header.cvBtn" | translate }} </a>
+        <a href="javascript:void(0)" (click)="previewCV()" class="main-btn cv-btn" ngbNavLink>
+          {{ "Header.cvBtn" | translate }}
+        </a>
       </li>
       <li class="animate-item">
         <div ngbDropdown class="d-inline-block">
@@ -50,11 +68,15 @@
             @for (lang of availableLanguages(); track lang.code; let isFirst = $first; let isLast = $last) {
             <div
               (click)="changeLanguage(lang.code)"
+              (keydown.enter)="changeLanguage(lang.code)"
+              (keydown.space)="changeLanguage(lang.code)"
               class="language-container language-container-selector"
               [class.active]="isLanguageActive(lang.code)"
               [class.first-item]="isFirst"
               [class.middle-item]="!isFirst && !isLast"
               [class.last-item]="isLast"
+              tabindex="0"
+              role="button"
             >
               <img width="20px" [src]="lang.flagUrl" [alt]="lang.label" />
               <span class="flag-text">{{ lang.label }}</span>
@@ -82,9 +104,13 @@
     <!-- Hamburger Menu Toggle -->
     <div class="menu-wrapper">
       <div
-        [class.animate]="responsiveMenuVisible"
         (click)="responsiveMenuVisible = !responsiveMenuVisible"
+        (keydown.enter)="responsiveMenuVisible = !responsiveMenuVisible"
+        (keydown.space)="responsiveMenuVisible = !responsiveMenuVisible"
         class="hamburger-menu"
+        [class.animate]="responsiveMenuVisible"
+        tabindex="0"
+        role="button"
       ></div>
     </div>
 
@@ -93,28 +119,54 @@
       <aside [class.aside-show]="responsiveMenuVisible" [class.nav-shadow]="pageYPosition > 0" class="on-top">
         <nav>
           <ol>
-            <li (click)='analyticsApi.sendAnalyticEvent("click_about", "menu", "click")'>
-              <a (click)='scroll("about")'> <span>01. </span> {{ "Header.Item1" | translate }} </a>
-            </li>
-            <li (click)='analyticsApi.sendAnalyticEvent("click_experience", "menu", "click")'>
-              <a (click)='scroll("jobs")'> <span>02. </span> {{ "Header.Item2" | translate }} </a>
-            </li>
-            <li (click)='analyticsApi.sendAnalyticEvent("click_jobs", "menu", "click")'>
-              <a (click)='scroll("proyects")'> <span>03. </span> {{ "Header.Item3" | translate }} </a>
-            </li>
-            <li (click)='analyticsApi.sendAnalyticEvent("click_contact", "menu", "click")'>
-              <a (click)='scroll("proyects")'> <span>04. </span> {{ "Header.Item4" | translate }} </a>
+            <li>
+              <a
+                href="javascript:void(0)"
+                (click)='scroll("about"); analyticsApi.sendAnalyticEvent("click_about", "menu", "click")'
+              >
+                <span>01. </span> {{ "Header.Item1" | translate }}
+              </a>
             </li>
             <li>
-              <a (click)="previewCV()" class="main-btn cv-btn"> {{ "Header.cvBtn" | translate }} </a>
+              <a
+                href="javascript:void(0)"
+                (click)='scroll("jobs"); analyticsApi.sendAnalyticEvent("click_experience", "menu", "click")'
+              >
+                <span>02. </span> {{ "Header.Item2" | translate }}
+              </a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                (click)='scroll("proyects"); analyticsApi.sendAnalyticEvent("click_jobs", "menu", "click")'
+              >
+                <span>03. </span> {{ "Header.Item3" | translate }}
+              </a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                (click)='scroll("proyects"); analyticsApi.sendAnalyticEvent("click_contact", "menu", "click")'
+              >
+                <span>04. </span> {{ "Header.Item4" | translate }}
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" (click)="previewCV()" class="main-btn cv-btn">
+                {{ "Header.cvBtn" | translate }}
+              </a>
             </li>
             <li>
               <div class="language-container">
                 @for (lang of availableLanguages(); track lang.code; let isFirst = $first; let isLast = $last) {
                 <div
                   (click)="changeLanguage(lang.code)"
+                  (keydown.enter)="changeLanguage(lang.code)"
+                  (keydown.space)="changeLanguage(lang.code)"
                   class="language-container language-container-selector"
                   [class.active]="isLanguageActive(lang.code)"
+                  tabindex="0"
+                  role="button"
                 >
                   <img [src]="lang.flagUrl" [alt]="lang.label" />
                   <span class="flag-text">{{ lang.label }}</span>
