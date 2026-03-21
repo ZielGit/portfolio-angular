@@ -22,7 +22,7 @@ export class MoreProjectsSection implements OnInit {
     });
   }
 
-  redirect(route: string, event: MouseEvent): void {
+  redirect(route: string, event: Event): void {
     const target = event.target as HTMLElement;
     const id = target.id;
 
