@@ -21,4 +21,5 @@ export class BannerSection {
     years: this.personalData.summary().yearsOfExperience,
     mainSkills: this.personalData.formatMainSkills(),
   }));
+  readonly mailtoLink = computed(() => this.personalData.mailtoLink());
 }

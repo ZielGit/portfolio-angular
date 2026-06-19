@@ -16,7 +16,7 @@
       <div class="div-btn-banner animate-item">
         <a
           (click)='analyticsApi.sendAnalyticEvent("click_send_mail", "banner", "email")'
-          href="mailto:andresjosehr@gmail.com"
+          [href]="mailtoLink()"
           target="_black"
           class="main-btn"
         >
