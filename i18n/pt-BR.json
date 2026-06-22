@@ -1,0 +1,151 @@
+{
+  "Header.Item1": "Sobre Mim",
+  "Header.Item2": "Experiência",
+  "Header.Item3": "Projetos",
+  "Header.Item4": "Contato",
+  "Header.cvBtn": "Retomar",
+  "Header.cvName": "CV_Frans_Vilcahuaman_Portugués.pdf",
+  "greeting": "Olá! Meu nome é",
+  "title": "Desenvolvedor Full Stack",
+  "professionalSummary": {
+    "title": "Perfil profissional",
+    "summary": "Desenvolvedor Full Stack {{level}} com mais de {{years}} anos de experiência em design, desenvolvimento e implementação de sistemas web escaláveis. Especializado em {{mainSkills}}, com foco em código limpo, arquitetura limpa e implantações automatizadas. Experiência em liderar iniciativas técnicas e orientar desenvolvedores juniores, aprimorando a qualidade do software e as melhores práticas da equipe.",
+    "mainSkillsSeparator": ", ",
+    "mainSkillsLastSeparator": " e "
+  },
+  "present": "Presente",
+  "experience": {
+    "title": "Experiência",
+    "positions": {
+      "juniorProg": "Programador Full Stack Júnior",
+      "JuniorDev": "Desenvolvedor Full Stack Júnior",
+      "juniorLaravelDev": "Desenvolvedor Full Stack Laravel Júnior",
+      "seniorLaravelDev": "Desenvolvedor Full Stack Laravel Sênior",
+      "seniorNETDev": "Desenvolvedor .NET Sênior",
+      "seniorDev": "Desenvolvedor Full Stack Sênior",
+      "ingDev": "Engenheiro de Desenvolvimento"
+    },
+    "exp-1": {
+      "func-1": "Desenvolvimento de APIs com PHP, Laravel e .NET.",
+      "func-2": "Desenvolvimento de interfaces com Laravel (Blade) e jQuery.",
+      "func-3": "Integração de serviços externos, APIs e e-mail.",
+      "func-4": "Projeto e implementação de bancos de dados SQL Server e MySQL.",
+      "func-5": "Otimização de processos de negócios.",
+      "func-6": "Atualização e manutenção de módulos de sites.",
+      "func-7": "Levantamento de requisitos do projeto.",
+      "func-8": "Documentação técnica do projeto."
+    },
+    "exp-2": {
+      "func-1": "Desenvolvimento de APIs com Laravel.",
+      "func-2": "Desenvolvimento de interfaces com Laravel (Blade) e Vue.",
+      "func-3": "Implementação de testes unitários e de funcionalidade com PHPUnit e Jest.",
+      "func-4": "Administração de banco de dados MySQL.",
+      "func-5": "Utilização de Clean Code.",
+      "func-6": "Utilização de Scrum como metodologia ágil.",
+      "func-7": "Levantamento e análise de requisitos.",
+      "func-8": "Documentação técnica de projetos."
+    },
+    "exp-3": {
+      "func-1": "Desenvolvimento de APIs com Laravel e .NET.",
+      "func-2": "Desenvolvimento de interfaces com Angular, Vue e jQuery.",
+      "func-3": "Configuração e gerenciamento de servidores web.",
+      "func-4": "Projeto e implementação de bancos de dados SQL Server, MySQL, PostgreSQL e MongoDB.",
+      "func-5": "Integração de serviços externos, como sistemas de pagamento online e e-mail.",
+      "func-6": "Documentação de aplicações ou soluções desenvolvidas.",
+      "func-7": "Atualização e manutenção de plataformas e sistemas web atribuídos.",
+      "func-8": "Documentação de processos técnicos e fluxos de trabalho de desenvolvimento.",
+      "func-9": "Documentação do usuário, como manuais do usuário.",
+      "func-10": "Implementação de testes unitários e de funcionalidades com PHPUnit e Jest."
+    },
+    "exp-4": {
+      "func-1": "Desenvolvimento de APIs com Laravel.",
+      "func-2": "Desenvolvimento de interfaces com Laravel (Blade) e jQuery.",
+      "func-3": "Integração de serviços externos.",
+      "func-4": "Implementação de segurança com Sanctum (OAuth 2.0).",
+      "func-5": "Projeto, implementação e administração de banco de dados MySQL.",
+      "func-6": "Implementação de Integração Contínua/Entrega Contínua (CI/CD)",
+      "func-7": "Otimização de processos de negócio.",
+      "func-8": "Levantamento de requisitos.",
+      "func-9": "Correção de bugs em sistemas ERP.",
+      "func-10": "Documentação de APIs."
+    },
+    "exp-5": {
+      "func-1": "Desenvolvimento e manutenção de APIs com Laravel.",
+      "func-2": "Desenvolvimento de interfaces com Laravel (Blade) e jQuery.",
+      "func-3": "Atualização e manutenção de módulos no ERP.",
+      "func-4": "Administração e configuração de AWS e Digital Ocean.",
+      "func-5": "Projeto, implementação e manutenção de bancos de dados MySQL e MongoDB.",
+      "func-6": "Integração de serviços externos, APIs e e-mail.",
+      "func-7": "Implementação de testes unitários e de funcionalidades com PHPUnit e Jest.",
+      "func-8": "Utilização de Clean Code.",
+      "func-9": "Utilização da metodologia ágil Scrum com Jira como ferramenta de gerenciamento de projetos.",
+      "func-10": "Otimização de CI/CD, criação de pipelines para implantação em ambientes de desenvolvimento e produção, juntamente com testes automatizados.",
+      "func-11": "Levantamento e análise de requisitos.",
+      "func-12": "Documentação de requisitos, APIs, implantação, testes automatizados e criação de manuais.",
+      "func-13": "Participação em Code Review, mentoria e treinamento de desenvolvedores juniores da equipe."
+    },
+    "exp-6": {
+      "func-1": "Projeto e desenvolvimento de APIs usando .NET.",
+      "func-2": "Integração de APIs internas com serviços externos.",
+      "func-3": "Implementação de arquitetura de software utilizando Clean Architecture, Domain-Driven Design e princípios SOLID com Clean Code.",
+      "func-4": "Desenvolvimento e otimização de stored procedures, consultas e funções em SQL Server, MySQL e Entity Framework, melhorando o desempenho do banco de dados.",
+      "func-5": "Implementação de autenticação e autorização utilizando JWT e OAuth 2.0.",
+      "func-6": "Gerenciamento do ciclo de vida de desenvolvimento com Git, Azure DevOps e pipelines de CI/CD, reduzindo tempos de implantação e erros manuais.",
+      "func-7": "Desenvolvimento e implementação de testes unitários e de integração com xUnit e Moq, garantindo a qualidade do software antes da implantação.",
+      "func-8": "Integração de serviços em nuvem utilizando Azure Functions, App Services, Blob Storage e Service Bus.",
+      "func-9": "Documentação de processos, APIs e manuais do usuário, facilitando o aprendizado e a manutenção do sistema."
+    },
+    "exp-7": {
+      "func-1": "Desenvolvimento e manutenção de APIs com FastAPI, Laravel e .NET.",
+      "func-2": "Desenvolvimento de interfaces de usuário com Angular e Vue.",
+      "func-3": "Configuração e gerenciamento de servidores web e bancos de dados SQL Server, MySQL, PostgreSQL e Redis.",
+      "func-4": "Integração de serviços externos, como sistemas de pagamento online e e-mail.",
+      "func-5": "Utilização de Clean Code.",
+      "func-6": "Utilização do Scrum como metodologia ágil.",
+      "func-7": "Levantamento e análise de requisitos funcionais e não funcionais.",
+      "func-8": "Implementação de testes unitários e de funcionalidades com Pytest, PHPUnit e Vitest.",
+      "func-9": "Criação de documentação para aplicações ou soluções desenvolvidas.",
+      "func-10": "Atualização e manutenção de plataformas e sistemas web atribuídos."
+    },
+    "exp-8": {
+      "func-1": "Desenvolvimento e manutenção de APIs com Laravel.",
+      "func-2": "Desenvolvimento de interfaces com Angular.",
+      "func-3": "Migração de aplicações do React.",
+      "func-4": "Implementação de autenticação e autorização usando JWT.",
+      "func-5": "Administração e configuração do Google Cloud.",
+      "func-6": "Implementação, configuração e manutenção do CPanel.",
+      "func-7": "Projeto, implementação e manutenção de bancos de dados MySQL e PostgreSQL.",
+      "func-8": "Utilização de Clean Code.",
+      "func-9": "Implementação de arquitetura de software utilizando Clean Architecture, Hexagonal Architecture e Domain-Driven Design.",
+      "func-10": "Utilização da metodologia ágil Scrum com Jira como ferramenta de gerenciamento de projetos.",
+      "func-11": "Implementação de Integração Contínua/Entrega Contínua (CI/CD), criação de pipelines para implantação em ambientes de desenvolvimento.",
+      "func-12": "Documentação de requisitos, componentes, APIs, implantação e criação de manuais.",
+      "func-13": "Participação em Code Review, mentoria e treinamento de desenvolvedores juniores."
+    },
+    "exp-9": {
+      "func-1": "Desenvolvimento e manutenção de APIs com Laravel.",
+      "func-2": "Desenvolvimento de interfaces com Vue.",
+      "func-3": "Atualização e manutenção de módulos do sistema.",
+      "func-4": "Implementação de autenticação e autorização usando JWT.",
+      "func-5": "Projeto, implementação e manutenção de bancos de dados PostgreSQL e Redis.",
+      "func-6": "Utilização de Clean Code.",
+      "func-7": "Implementação e manutenção de arquitetura de software utilizando Clean Architecture, CSR pattern e Domain-Driven Design.",
+      "func-8": "Utilização da metodologia ágil Scrum com Jira como ferramenta de gerenciamento de projetos.",
+      "func-9": "Desenvolvimento e implementação de Task Scheduling e Queues.",
+      "func-10": "Migração e higienização de dados.",
+      "func-11": "Documentação de APIs com Postman."
+    }
+  },
+  "education": {
+    "title": "Educação",
+    "degrees": {
+      "bachelor": "Bacharel",
+      "engineer": "Engenheiro",
+      "master": "Mestrado"
+    },
+    "fieldsOfStudy": {
+      "systemsEngr": "Engenharia de Sistemas e Computação",
+      "systemsMtr": "Gestão de Sistemas Empresariais"
+    }
+  }
+}
