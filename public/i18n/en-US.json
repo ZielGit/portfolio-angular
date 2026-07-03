@@ -8,13 +8,6 @@
   "Banner.Description": "I have <span class='underline'>8 years of experience</span> developing systems, interfaces, bots, and technological solutions to make the web a better place. I am dedicated to writing and refactoring clean, reusable, and scalable code in <span class='underline'>Angular</span> and <span class='underline'>Laravel</span>, applying good practices and development standards.",
   "Banner.ActionBtn": "Say Hi",
 
-  "AboutMe.Title": "About Me",
-  "AboutMe.Paragraphs": [
-    "In <span class='underline'>5 years of experience</span> I have covered many roles: <span class='underline'>Systems Analyst</span>, <span class='underline'>Backend Developer</span>, <span class='underline'>Frontend Developer</span>, and <span class='underline'>Technical Lead</span>. I love contributing my knowledge to create new things that help solve problems.",
-    "My capabilities also include implementing system improvements, optimizing sites, standardizing patterns, and suggesting and executing ideas that add value to the project I am working on.",
-    "I also program things for my personal use, whether for hobby or utility.",
-    "Some of the technologies I have trained and worked with include (but are not limited to):"
-  ],
   "greeting": "Hello! My name is",
   "title": "Full Stack Developer",
   "professionalSummary": {
@@ -22,6 +15,22 @@
     "summary": "{{level}} Full Stack Developer with over {{years}} years of experience in the design, development, and implementation of scalable web systems. Specialized in {{mainSkills}}, with a focus on clean code, clean architecture, and automated deployments. Experience leading technical initiatives and mentoring junior developers, strengthening software quality and team best practices.",
     "mainSkillsSeparator": ", ",
     "mainSkillsLastSeparator": " and "
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "roles": {
+      "developer": "Developer",
+      "devops": "DevOps Engineer",
+      "qa": "QA Automation"
+    },
+    "paragraphs": {
+      "0": "What I enjoy most about my work is taking a messy problem and turning it into something simple, solid, and easy to maintain for whoever comes next.",
+      "1": "I'm a Systems and Computer Engineer with a Master's degree in Enterprise Systems Management. Throughout my career I've worked across different roles ({{roles}}), which gave me a more complete view of what it takes to build quality software, since it's not just about the code working, but about it being maintainable, well tested, and delivering real value to the project. That's why I enjoy improving existing systems, optimizing performance, standardizing patterns, and proposing ideas that help the team move forward.",
+      "2": "In my free time, I'm usually taking some course that sparked my curiosity or contributes to my professional growth, since I like to keep learning constantly, whether by diving deeper into software architecture or exploring new technologies. I also build things for personal use, whether as a hobby or out of practical need.",
+      "3": "If you're looking for someone who, beyond writing code, thinks about quality, maintainability, and the team that comes after, let's talk."
+    },
+    "rolesSeparator": ", ",
+    "rolesLastSeparator": " and "
   },
   "present": "Present",
   "experience": {
