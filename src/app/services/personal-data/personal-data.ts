@@ -1,5 +1,6 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { AboutMe } from '../../models/about-me-model';
 import { PersonalInfoModel } from '../../models/personal-info-model';
 import { ProfessionalSummaryModel } from '../../models/professional-summary-model';
 import { SocialLinksModel, SocialPlatform } from '../../models/social-links-model';
@@ -33,12 +34,21 @@ export class PersonalData {
     level: 'Senior',
   });
 
+  private readonly aboutMe = signal<AboutMe>({
+    paragraphKeys: ['aboutMe.paragraphs.0', 'aboutMe.paragraphs.1', 'aboutMe.paragraphs.2', 'aboutMe.paragraphs.3'],
+    roles: ['aboutMe.roles.developer', 'aboutMe.roles.devops', 'aboutMe.roles.qa'],
+    profileImage: '/images/me.jpg',
+    profileImageAlt: 'Frans Vilcahuamán',
+  });
+
   // Computed properties públicos
   readonly basic = computed(() => this.basicInfo());
   readonly social = computed(() => this.socialLinks());
   readonly summary = computed(() => this.professionalSummary());
+  readonly about = computed(() => this.aboutMe());
   readonly mailtoLink = computed(() => `mailto:${this.basic().email}`);
   readonly telLink = computed(() => `tel:${this.basic().phone.replace(/\s/g, '')}`);
+  readonly yearsOfExperience = computed(() => this.summary().yearsOfExperience);
 
   readonly translatedSummary = computed(() => {
     const summaryKey = this.summary().summaryKey;
@@ -64,6 +74,21 @@ export class PersonalData {
 
     const allButLast = mainSkills.slice(0, -1).join(separator);
     const last = mainSkills[mainSkills.length - 1];
+
+    return `${allButLast}${lastSeparator}${last}`;
+  }
+
+  formatRoles(): string {
+    const roles = this.about().roles.map(key => this.translateService.instant(key));
+
+    if (roles.length === 0) return '';
+    if (roles.length === 1) return roles[0];
+
+    const separator = this.translateService.instant('aboutMe.rolesSeparator');
+    const lastSeparator = this.translateService.instant('aboutMe.rolesLastSeparator');
+
+    const allButLast = roles.slice(0, -1).join(separator);
+    const last = roles[roles.length - 1];
 
     return `${allButLast}${lastSeparator}${last}`;
   }
