@@ -15,7 +15,6 @@ export class AboutSection {
 
   readonly paragraphKeys = computed(() => this.personalData.about().paragraphKeys);
   readonly paragraphParams = computed(() => ({
-    years: this.personalData.yearsOfExperience(),
     roles: this.personalData.formatRoles(),
   }));
   readonly profileImage = this.personalData.about().profileImage;
