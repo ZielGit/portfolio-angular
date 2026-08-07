@@ -1,4 +1,5 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
 import { AboutMe } from '../../models/about-me-model';
 import { PersonalInfoModel } from '../../models/personal-info-model';
@@ -10,6 +11,8 @@ import { SocialLinksModel, SocialPlatform } from '../../models/social-links-mode
 })
 export class PersonalData {
   private translateService = inject(TranslateService);
+
+  private readonly langChange = toSignal(this.translateService.onLangChange, { initialValue: null });
 
   private readonly basicInfo = signal<PersonalInfoModel>({
     firstName: 'Frans J.',
@@ -51,6 +54,7 @@ export class PersonalData {
   readonly yearsOfExperience = computed(() => this.summary().yearsOfExperience);
 
   readonly translatedSummary = computed(() => {
+    this.langChange();
     const summaryKey = this.summary().summaryKey;
     const level = this.summary().level;
     const years = this.summary().yearsOfExperience;
@@ -64,22 +68,42 @@ export class PersonalData {
   });
 
   formatMainSkills(): string {
-    const mainSkills = this.summary().mainSkills;
+    return this.joinWithSeparators(
+      this.summary().mainSkills,
+      'professionalSummary.mainSkillsSeparator',
+      'professionalSummary.mainSkillsLastSeparator'
+    );
+  }
 
-    if (mainSkills.length === 0) return '';
-    if (mainSkills.length === 1) return mainSkills[0];
+  formatMainSkillsHtml(): string {
+    const mainSkills = this.summary().mainSkills.map(skill => `<span class='underline'>${skill}</span>`);
 
-    const separator = this.translateService.instant('professionalSummary.mainSkillsSeparator');
-    const lastSeparator = this.translateService.instant('professionalSummary.mainSkillsLastSeparator');
+    return this.joinWithSeparators(
+      mainSkills,
+      'professionalSummary.mainSkillsSeparator',
+      'professionalSummary.mainSkillsLastSeparator'
+    );
+  }
 
-    const allButLast = mainSkills.slice(0, -1).join(separator);
-    const last = mainSkills[mainSkills.length - 1];
+  private joinWithSeparators(items: readonly string[], separatorKey: string, lastSeparatorKey: string): string {
+    this.langChange();
+    if (items.length === 0) return '';
+    if (items.length === 1) return items[0];
+
+    const separator = this.translateService.instant(separatorKey);
+    const lastSeparator = this.translateService.instant(lastSeparatorKey);
+
+    const allButLast = items.slice(0, -1).join(separator);
+    const last = items[items.length - 1];
 
     return `${allButLast}${lastSeparator}${last}`;
   }
 
   formatRoles(): string {
-    const roles = this.about().roles.map(key => this.translateService.instant(key));
+    this.langChange();
+    const roles = this.about()
+      .roles.map(key => this.translateService.instant(key))
+      .map(role => `<span class='underline'>${role}</span>`);
 
     if (roles.length === 0) return '';
     if (roles.length === 1) return roles[0];

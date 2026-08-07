@@ -19,7 +19,7 @@ export class BannerSection {
   readonly summaryParams = computed(() => ({
     level: this.personalData.summary().level,
     years: this.personalData.summary().yearsOfExperience,
-    mainSkills: this.personalData.formatMainSkills(),
+    mainSkills: this.personalData.formatMainSkillsHtml(),
   }));
   readonly mailtoLink = computed(() => this.personalData.mailtoLink());
 }
