@@ -167,6 +167,25 @@
       "systemsMtr": "Enterprise Systems Management"
     }
   },
+  "projects": {
+    "title": "Projects",
+    "cryplab": {
+      "title": "CrypLab",
+      "description": "A Crypto Marketplace and Auction Platform, where cryptocurrencies or products with tracking are bought and sold using virtual wallets."
+    },
+    "libraryManagement": {
+      "title": "University Library Management System",
+      "description": "A university library management system, with registration of books, users, loans and returns."
+    },
+    "doctorManagement": {
+      "title": "The Doctor - Management Platform",
+      "description": "A comprehensive administrative system for managing clinics and medical centers. A web platform developed with Laravel that allows managing companies, establishments, doctors, patients, appointments, receipts, pharmacy, cash register, human resources and more."
+    },
+    "doctorCare": {
+      "title": "The Doctor - Care Platform",
+      "description": "A healthcare system that connects patients with healthcare professionals securely, conveniently, and with personalized service. A web platform developed with Laravel that offers virtual consultations, second opinions, and appointment management for both virtual and in-person appointments."
+    }
+  },
   "FeatureProjects.Title": "My Projects",
   "FeatureProjects.Label": "Highlighted Project",
   "FeatureProjects.Projects": [
