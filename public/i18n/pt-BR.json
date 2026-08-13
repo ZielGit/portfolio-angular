@@ -163,5 +163,24 @@
       "systemsEngr": "Engenharia de Sistemas e Computação",
       "systemsMtr": "Gestão de Sistemas Empresariais"
     }
+  },
+  "projects": {
+    "title": "Projetos",
+    "cryplab": {
+      "title": "CrypLab",
+      "description": "Uma plataforma de compra e venda de criptomoedas e leilões, onde criptomoedas ou produtos rastreáveis ​​são comprados e vendidos usando carteiras virtuais."
+    },
+    "libraryManagement": {
+      "title": "Sistema de Gestão Bibliotecária Universitária",
+      "description": "Sistema de gestão bibliotecária universitária, com registro de livros, usuários, empréstimos e devoluções."
+    },
+    "doctorManagement": {
+      "title": "O Médico - Plataforma de Gestão",
+      "description": "Sistema administrativo integral para a gestão de clínicas e centros médicos. Plataforma web desenvolvida com Laravel que permite administrar empresas, estabelecimentos, médicos, pacientes, consultas, comprovantes, farmácia, caixa, recursos humanos e muito mais."
+    },
+    "doctorCare": {
+      "title": "O Médico - Plataforma de Cuidados",
+      "description": "Sistema de saúde que conecta pacientes a profissionais de saúde de forma segura, conveniente e com atendimento personalizado. Esta plataforma web, desenvolvida com Laravel, oferece consultas virtuais, segundas opiniões e agendamento de consultas, tanto virtuais quanto presenciais."
+    }
   }
 }
