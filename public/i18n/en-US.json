@@ -169,6 +169,7 @@
   },
   "projects": {
     "title": "Projects",
+    "featuredProjects": "Featured Projects",
     "cryplab": {
       "title": "CrypLab",
       "description": "A Crypto Marketplace and Auction Platform, where cryptocurrencies or products with tracking are bought and sold using virtual wallets."

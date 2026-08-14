@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { ProjectData } from '../../../../services/project-data/project-data';
 
 @Component({
   selector: 'app-featured-projects-section',
@@ -9,6 +10,10 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './featured-projects-section.scss',
 })
 export class FeaturedProjectsSection {
+  private readonly projectData = inject(ProjectData);
+
+  readonly featuredProjects = this.projectData.featuredProjects;
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
