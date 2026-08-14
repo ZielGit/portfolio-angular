@@ -166,6 +166,7 @@
   },
   "projects": {
     "title": "Projetos",
+    "featuredProjects": "Projetos em Destaque",
     "cryplab": {
       "title": "CrypLab",
       "description": "Uma plataforma de compra e venda de criptomoedas e leilões, onde criptomoedas ou produtos rastreáveis ​​são comprados e vendidos usando carteiras virtuais."

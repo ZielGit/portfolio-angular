@@ -3,7 +3,7 @@
     <div class="section-box">
       <div data-aos="fade-up" data-aos-duration="1000">
         <h3 class="section-title">
-          <span class="n-section-title">03.</span> {{ "FeatureProjects.Title" | translate }}
+          <span class="n-section-title">03.</span> {{ 'projects.featuredProjects' | translate }}
         </h3>
       </div>
 
@@ -39,9 +39,6 @@
           style="background-image: url('{{project.images[0]}}');"
         >
           <div class="proyect-box">
-            <h4 [class.text-right]="i % 2 === 0" [class.text-left]="i % 2 !== 0" class="feature-proyect">
-              {{ "FeatureProjects.Label" | translate }}
-            </h4>
             <h5 [class.text-right]="i % 2 === 0" [class.text-left]="i % 2 !== 0" class="proyect-name">
               {{ project.titleKey | translate }}
             </h5>
