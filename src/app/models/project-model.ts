@@ -13,3 +13,10 @@ export interface Project {
   readonly startDate?: Date;
   readonly endDate?: Date | null;
 }
+
+export interface ProjectSortOptions {
+  readonly sortBy?: 'startDate' | 'endDate';
+  readonly order?: 'asc' | 'desc';
+}
+
+export type ProjectSortField = 'startDate' | 'endDate';
