@@ -5,18 +5,10 @@ import { BannerSection } from './sections/banner-section/banner-section';
 import { ContactSection } from './sections/contact-section/contact-section';
 import { ExperienceSection } from './sections/experience-section/experience-section';
 import { FeaturedProjectsSection } from './sections/featured-projects-section/featured-projects-section';
-import { MoreProjectsSection } from './sections/more-projects-section/more-projects-section';
 
 @Component({
   selector: 'app-home',
-  imports: [
-    AboutSection,
-    BannerSection,
-    ContactSection,
-    FeaturedProjectsSection,
-    ExperienceSection,
-    MoreProjectsSection,
-  ],
+  imports: [AboutSection, BannerSection, ContactSection, FeaturedProjectsSection, ExperienceSection],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

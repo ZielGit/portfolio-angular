@@ -1,6 +1,6 @@
 import { computed, Injectable, signal } from '@angular/core';
 import { PROJECT_CONSTANTS } from '../../constants/project-constants';
-import { Project } from '../../models/project-model';
+import { Project, ProjectSortField, ProjectSortOptions } from '../../models/project-model';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +24,8 @@ export class ProjectData {
       ],
       visibility: 'private',
       featured: true,
+      startDate: new Date(2021, 8),
+      endDate: new Date(2021, 11),
     },
     {
       id: PROJECT_CONSTANTS.LIBRARY_MANAGEMENT.id,
@@ -41,6 +43,8 @@ export class ProjectData {
       ],
       visibility: 'private',
       featured: true,
+      startDate: new Date(2023, 5),
+      endDate: new Date(2023, 10),
     },
     {
       id: PROJECT_CONSTANTS.DOCTOR_MANAGEMENT.id,
@@ -60,6 +64,8 @@ export class ProjectData {
       ],
       visibility: 'private',
       featured: true,
+      startDate: new Date(2023, 1),
+      endDate: new Date(2024, 4),
     },
     {
       id: PROJECT_CONSTANTS.DOCTOR_CARE.id,
@@ -77,16 +83,48 @@ export class ProjectData {
       ],
       visibility: 'private',
       featured: true,
+      startDate: new Date(2023, 1),
+      endDate: new Date(2024, 4),
     },
   ]);
 
-  readonly projects = computed(() => this.projectsData());
+  private readonly sortOptions = signal<Required<ProjectSortOptions>>({
+    sortBy: 'endDate',
+    order: 'desc',
+  });
 
-  readonly featuredProjects = computed(() => this.projectsData().filter(project => project.featured));
+  readonly projects = computed(() => {
+    const data = this.projectsData();
+    const options = this.sortOptions();
+    return this.sortProjects(data, options);
+  });
 
-  readonly otherProjects = computed(() => this.projectsData().filter(project => !project.featured));
+  readonly featuredProjects = computed(() => this.projects().filter(project => project.featured));
+
+  readonly otherProjects = computed(() => this.projects().filter(project => !project.featured));
 
   getProjectById(id: string): Project | undefined {
     return this.projectsData().find(project => project.id === id);
+  }
+
+  private sortProjects(projects: readonly Project[], options: Required<ProjectSortOptions>): readonly Project[] {
+    const { sortBy, order } = options;
+
+    return [...projects].sort((a, b) => {
+      const dateA = this.getDateForSorting(a, sortBy);
+      const dateB = this.getDateForSorting(b, sortBy);
+
+      const diff = dateA.getTime() - dateB.getTime();
+      return order === 'asc' ? diff : -diff;
+    });
+  }
+
+  private getDateForSorting(project: Project, sortBy: ProjectSortField): Date {
+    if (sortBy === 'endDate') {
+      // Si no hay fecha de fin, usar fecha actual (proyecto en curso)
+      return project.endDate || new Date();
+    }
+    // Si no hay fecha de inicio, tratar como la mas antigua
+    return project.startDate ?? new Date(0);
   }
 }

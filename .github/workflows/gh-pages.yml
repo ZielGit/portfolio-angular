@@ -1,7 +1,7 @@
 name: Deploy Angular with GitHub Pages
 on:
   push:
-    branches: ["master"]
+    branches: ['master']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,11 +11,13 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
       - name: Install deps
         run: npm i
       - name: Build app bundle
         run: npm run build-portfolio
+      - name: Create 404.html for SPA routing
+        run: cp dist/portfolio-angular/browser/index.html dist/portfolio-angular/browser/404.html
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:

@@ -14,14 +14,8 @@ const translateServiceMock: Partial<TranslateService> = {
     if (key === 'experience.title') {
       return 'Experiencia';
     }
-    if (key === 'FeatureProjects.Projects') {
-      return [];
-    }
-    if (key === 'FeatureProjects.Title') {
+    if (key === 'projects.featuredProjects') {
       return 'Proyectos Destacados';
-    }
-    if (key === 'FeatureProjects.Label') {
-      return 'Proyecto Destacado';
     }
     return key;
   },
