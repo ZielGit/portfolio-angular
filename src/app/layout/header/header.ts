@@ -1,6 +1,6 @@
 import { NgStyle } from '@angular/common';
 import { Component, computed, HostListener, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import {
   NgbDropdown,
   NgbDropdownMenu,
@@ -38,7 +38,6 @@ import { LanguageStore } from '../../services/language-store/language-store';
   styleUrl: './header.scss',
 })
 export class Header {
-  private router = inject(Router);
   analyticsApi = inject(AnalyticsApi);
   private languageStore = inject(LanguageStore);
   private cvGenerator = inject(CvGenerator);
@@ -49,24 +48,6 @@ export class Header {
   readonly currentLanguage = computed(() => this.languageStore.language());
   readonly currentLanguageConfig = computed(() => LANGUAGE_CONFIGS[this.currentLanguage()]);
   readonly availableLanguages = computed(() => Object.values(LANGUAGE_CONFIGS));
-
-  cvName = '';
-
-  scroll(el: string): void {
-    const element = document.getElementById(el);
-
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // Si el elemento no existe, navegar a home primero
-      this.router.navigate([`/${this.currentLanguage()}`]).then(() => {
-        setTimeout(() => {
-          document.getElementById(el)?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      });
-    }
-    this.responsiveMenuVisible = false;
-  }
 
   previewCV(): void {
     this.cvGenerator.openCVInNewTab();
