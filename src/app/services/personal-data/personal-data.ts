@@ -38,7 +38,7 @@ export class PersonalData {
   });
 
   private readonly aboutMe = signal<AboutMe>({
-    paragraphKeys: ['aboutMe.paragraphs.0', 'aboutMe.paragraphs.1', 'aboutMe.paragraphs.2', 'aboutMe.paragraphs.3'],
+    paragraphKeys: ['aboutMe.paragraphs.0', 'aboutMe.paragraphs.1', 'aboutMe.paragraphs.2'],
     roles: ['aboutMe.roles.developer', 'aboutMe.roles.devops', 'aboutMe.roles.qa'],
     profileImage: 'images/me.jpg',
     profileImageAlt: 'Frans Vilcahuamán',
