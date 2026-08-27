@@ -118,6 +118,11 @@ export class CvGenerator {
 
         // Dividir texto largo en múltiples líneas
         const splitDesc = doc.splitTextToSize(`• ${funcText}`, pageWidth - margin * 2 - 5);
+        if (yPosition + splitDesc.length * 5 > 250) {
+          doc.addPage();
+          yPosition = 20;
+        }
+
         doc.text(splitDesc, margin + 5, yPosition);
         yPosition += splitDesc.length * 5;
       });
