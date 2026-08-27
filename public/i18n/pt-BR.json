@@ -24,8 +24,7 @@
     "paragraphs": {
       "0": "O que mais gosto no meu trabalho é a possibilidade de pegar um problema desorganizado e transformá-lo em algo simples, sólido e fácil de manter para quem vier depois.",
       "1": "Sou Engenheiro de Sistemas e Computação, com Mestrado em Gestão de Sistemas Empresariais. Ao longo da minha carreira passei por diferentes funções ({{roles}}), o que me deu uma visão mais completa de como se constrói software de qualidade, já que não se trata apenas do código funcionar, mas de ser sustentável, bem testado e agregar valor real ao projeto. Por isso gosto de implementar melhorias em sistemas existentes, otimizar desempenho, padronizar práticas e propor ideias que ajudem a equipe a avançar.",
-      "2": "No meu tempo livre, costumo estar sempre fazendo algum curso que despertou minha curiosidade ou que contribui para meu crescimento profissional, pois gosto de me manter em constante aprendizado, seja aprofundando em arquitetura de software ou explorando novas tecnologias. Também programo coisas para uso pessoal, seja por hobby ou por utilidade própria.",
-      "3": "Se você procura alguém que, além de escrever código, pensa na qualidade, na sustentabilidade e na equipe que virá depois, vamos conversar."
+      "2": "No meu tempo livre, costumo estar sempre fazendo algum curso que despertou minha curiosidade ou que contribui para meu crescimento profissional, pois gosto de me manter em constante aprendizado, seja aprofundando em arquitetura de software ou explorando novas tecnologias. Também programo coisas para uso pessoal, seja por hobby ou por utilidade própria."
     },
     "rolesSeparator": ", ",
     "rolesLastSeparator": " e "
@@ -184,5 +183,11 @@
       "title": "O Médico - Plataforma de Cuidados",
       "description": "Sistema de saúde que conecta pacientes a profissionais de saúde de forma segura, conveniente e com atendimento personalizado. Esta plataforma web, desenvolvida com Laravel, oferece consultas virtuais, segundas opiniões e agendamento de consultas, tanto virtuais quanto presenciais."
     }
+  },
+  "contact": {
+    "pretitle": "Quer conversar?",
+    "title": "Me chame!",
+    "description": "Se você procura alguém que, além de escrever código, pensa na qualidade, na sustentabilidade e na equipe que virá depois, este é um bom ponto de partida. Escreva-me para conversar sobre novas oportunidades e responderei assim que vir sua mensagem.",
+    "button": "Fale comigo"
   }
 }

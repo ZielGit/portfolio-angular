@@ -26,8 +26,7 @@
     "paragraphs": {
       "0": "What I enjoy most about my work is taking a messy problem and turning it into something simple, solid, and easy to maintain for whoever comes next.",
       "1": "I'm a Systems and Computer Engineer with a Master's degree in Enterprise Systems Management. Throughout my career I've worked across different roles ({{roles}}), which gave me a more complete view of what it takes to build quality software, since it's not just about the code working, but about it being maintainable, well tested, and delivering real value to the project. That's why I enjoy improving existing systems, optimizing performance, standardizing patterns, and proposing ideas that help the team move forward.",
-      "2": "In my free time, I'm usually taking some course that sparked my curiosity or contributes to my professional growth, since I like to keep learning constantly, whether by diving deeper into software architecture or exploring new technologies. I also build things for personal use, whether as a hobby or out of practical need.",
-      "3": "If you're looking for someone who, beyond writing code, thinks about quality, maintainability, and the team that comes after, let's talk."
+      "2": "In my free time, I'm usually taking some course that sparked my curiosity or contributes to my professional growth, since I like to keep learning constantly, whether by diving deeper into software architecture or exploring new technologies. I also build things for personal use, whether as a hobby or out of practical need."
     },
     "rolesSeparator": ", ",
     "rolesLastSeparator": " and "
@@ -187,9 +186,10 @@
       "description": "A healthcare system that connects patients with healthcare professionals securely, conveniently, and with personalized service. A web platform developed with Laravel that offers virtual consultations, second opinions, and appointment management for both virtual and in-person appointments."
     }
   },
-
-  "Contact.Pretitle": "And... Now?",
-  "Contact.Title": "Say Hi!",
-  "Contact.Content": "I will be glad to hear from you if you want to discuss new opportunities. Write to me, and I will respond as soon as I see your message.",
-  "Contact.Btn": "Contact Me"
+  "contact": {
+    "pretitle": "Want to chat?",
+    "title": "Say hi!",
+    "description": "If you're looking for someone who, beyond writing code, thinks about quality, maintainability, and the team that comes after, this is a good place to start. Reach out to talk about new opportunities and I'll get back to you as soon as I see your message.",
+    "button": "Contact me"
+  }
 }
