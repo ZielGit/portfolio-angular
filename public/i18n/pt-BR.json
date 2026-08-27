@@ -1,10 +1,9 @@
 {
-  "Header.cvBtn": "Retomar",
-  "Header.cvName": "CV_Frans_Vilcahuaman_Portugués.pdf",
   "nav": {
     "home": "Início",
     "projects": "Projetos",
-    "certificates": "Certificados"
+    "certificates": "Certificados",
+    "button": "Currículo"
   },
   "greeting": "Olá! Meu nome é",
   "title": "Desenvolvedor Full Stack",

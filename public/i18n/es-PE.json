@@ -1,12 +1,9 @@
 {
-  "Header.cvBtn": "Curriculum",
-  "Header.cvName": "CV_Frans_Vilcahuaman_Español.pdf",
-  "Banner.Description": "Tengo <span class='underline'>5 años de experiencia</span> desarrollando sistemas para hacer de la web un lugar mejor. Me dedico a escribir y refactorizar código limpio, reutilizable y escalable en varias tecnologias, aplicando buenas practicas y estandares de calidad y desarrollo.",
-  "Banner.ActionBtn": "Saludame",
   "nav": {
     "home": "Inicio",
     "projects": "Proyectos",
-    "certificates": "Certificados"
+    "certificates": "Certificados",
+    "button": "Curriculum"
   },
   "greeting": "Hola! Mi nombre es",
   "title": "Desarrollador Full Stack",
