@@ -175,7 +175,7 @@ export class CvGenerator {
       yPosition += 4; // Espacio entre educaciones
     });
 
-    const cvName = this.translateService.instant('Header.cvName');
+    const cvName = this.translateService.instant('cvName');
 
     // Propiedades del documento
     doc.setProperties({

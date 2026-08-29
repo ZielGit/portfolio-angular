@@ -1,11 +1,11 @@
 {
-  "Header.cvBtn": "Retomar",
-  "Header.cvName": "CV_Frans_Vilcahuaman_Portugués.pdf",
   "nav": {
     "home": "Início",
     "projects": "Projetos",
-    "certificates": "Certificados"
+    "certificates": "Certificados",
+    "button": "Currículo"
   },
+  "cvName": "Curriculum Frans Vilcahuaman Portugués",
   "greeting": "Olá! Meu nome é",
   "title": "Desenvolvedor Full Stack",
   "professionalSummary": {
@@ -14,6 +14,7 @@
     "mainSkillsSeparator": ", ",
     "mainSkillsLastSeparator": " e "
   },
+  "bannerButton": "Diga Olá",
   "aboutMe": {
     "title": "Acerca de mí",
     "roles": {
@@ -182,6 +183,22 @@
     "doctorCare": {
       "title": "O Médico - Plataforma de Cuidados",
       "description": "Sistema de saúde que conecta pacientes a profissionais de saúde de forma segura, conveniente e com atendimento personalizado. Esta plataforma web, desenvolvida com Laravel, oferece consultas virtuais, segundas opiniões e agendamento de consultas, tanto virtuais quanto presenciais."
+    }
+  },
+  "languages": {
+    "title": "Idiomas",
+    "label": {
+      "spanish": "Espanhol",
+      "english": "Inglês",
+      "portuguese": "Português",
+      "japanese": "Japonês"
+    },
+    "languageLevels": {
+      "native": "Nativo",
+      "fluent": "Fluente",
+      "professional": "Profissional",
+      "intermediate": "Intermediário",
+      "basic": "Básico"
     }
   },
   "contact": {

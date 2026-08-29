@@ -1,13 +1,11 @@
 {
-  "Header.cvBtn": "Curriculum",
-  "Header.cvName": "CV_Frans_Vilcahuaman_Español.pdf",
-  "Banner.Description": "Tengo <span class='underline'>5 años de experiencia</span> desarrollando sistemas para hacer de la web un lugar mejor. Me dedico a escribir y refactorizar código limpio, reutilizable y escalable en varias tecnologias, aplicando buenas practicas y estandares de calidad y desarrollo.",
-  "Banner.ActionBtn": "Saludame",
   "nav": {
     "home": "Inicio",
     "projects": "Proyectos",
-    "certificates": "Certificados"
+    "certificates": "Certificados",
+    "button": "Curriculum"
   },
+  "cvName": "Curriculum Frans Vilcahuaman Español",
   "greeting": "Hola! Mi nombre es",
   "title": "Desarrollador Full Stack",
   "professionalSummary": {
@@ -16,6 +14,7 @@
     "mainSkillsSeparator": ", ",
     "mainSkillsLastSeparator": " y "
   },
+  "bannerButton": "Saludame",
   "aboutMe": {
     "title": "Acerca de mí",
     "roles": {
@@ -184,6 +183,22 @@
     "doctorCare": {
       "title": "El Doctor - Plataforma de Atención",
       "description": "Sistema asistencial para conectar a pacientes con profesionales de la salud de manera segura, práctica y personalizada. Plataforma web desarrollada con Laravel que ofrece servicios de consulta virtual, segunda opinión de salud y gestión de citas tanto virtuales como presenciales."
+    }
+  },
+  "languages": {
+    "title": "Idiomas",
+    "label": {
+      "spanish": "Español",
+      "english": "Inglés",
+      "portuguese": "Portugués",
+      "japanese": "Japonés"
+    },
+    "languageLevels": {
+      "native": "Nativo",
+      "fluent": "Fluido",
+      "professional": "Profesional",
+      "intermediate": "Intermedio",
+      "basic": "Básico"
     }
   },
   "contact": {

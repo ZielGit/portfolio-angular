@@ -2,6 +2,7 @@ import { computed, inject, Injectable, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
 import { AboutMe } from '../../models/about-me-model';
+import { CVLanguageModel } from '../../models/cv-language-model';
 import { PersonalInfoModel } from '../../models/personal-info-model';
 import { ProfessionalSummaryModel } from '../../models/professional-summary-model';
 import { SocialLinksModel, SocialPlatform } from '../../models/social-links-model';
@@ -38,11 +39,18 @@ export class PersonalData {
   });
 
   private readonly aboutMe = signal<AboutMe>({
-    paragraphKeys: ['aboutMe.paragraphs.0', 'aboutMe.paragraphs.1', 'aboutMe.paragraphs.2', 'aboutMe.paragraphs.3'],
+    paragraphKeys: ['aboutMe.paragraphs.0', 'aboutMe.paragraphs.1', 'aboutMe.paragraphs.2'],
     roles: ['aboutMe.roles.developer', 'aboutMe.roles.devops', 'aboutMe.roles.qa'],
     profileImage: 'images/me.jpg',
     profileImageAlt: 'Frans Vilcahuamán',
   });
+
+  private readonly languages = signal<readonly CVLanguageModel[]>([
+    { labelKey: 'languages.label.spanish', proficiencyKey: 'languages.languageLevels.native' },
+    { labelKey: 'languages.label.english', proficiencyKey: 'languages.languageLevels.intermediate' },
+    { labelKey: 'languages.label.portuguese', proficiencyKey: 'languages.languageLevels.professional' },
+    { labelKey: 'languages.label.japanese', proficiencyKey: 'languages.languageLevels.basic' },
+  ]);
 
   // Computed properties públicos
   readonly basic = computed(() => this.basicInfo());
@@ -52,6 +60,7 @@ export class PersonalData {
   readonly mailtoLink = computed(() => `mailto:${this.basic().email}`);
   readonly telLink = computed(() => `tel:${this.basic().phone.replace(/\s/g, '')}`);
   readonly yearsOfExperience = computed(() => this.summary().yearsOfExperience);
+  readonly spokenLanguages = computed(() => this.languages());
 
   readonly translatedSummary = computed(() => {
     this.langChange();

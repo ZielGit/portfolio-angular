@@ -1,13 +1,11 @@
 {
-  "Header.cvBtn": "Resume",
-  "Header.cvName": "CV_Frans_Vilcahuaman_Inglés.pdf",
-  "Banner.Description": "I have <span class='underline'>8 years of experience</span> developing systems, interfaces, bots, and technological solutions to make the web a better place. I am dedicated to writing and refactoring clean, reusable, and scalable code in <span class='underline'>Angular</span> and <span class='underline'>Laravel</span>, applying good practices and development standards.",
-  "Banner.ActionBtn": "Say Hi",
   "nav": {
     "home": "Home",
     "projects": "Projects",
-    "certificates": "Certificates"
+    "certificates": "Certificates",
+    "button": "Resume"
   },
+  "cvName": "Curriculum Frans Vilcahuaman Inglés",
   "greeting": "Hello! My name is",
   "title": "Full Stack Developer",
   "professionalSummary": {
@@ -16,6 +14,7 @@
     "mainSkillsSeparator": ", ",
     "mainSkillsLastSeparator": " and "
   },
+  "bannerButton": "Say Hi",
   "aboutMe": {
     "title": "About Me",
     "roles": {
@@ -184,6 +183,22 @@
     "doctorCare": {
       "title": "The Doctor - Care Platform",
       "description": "A healthcare system that connects patients with healthcare professionals securely, conveniently, and with personalized service. A web platform developed with Laravel that offers virtual consultations, second opinions, and appointment management for both virtual and in-person appointments."
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "label": {
+      "spanish": "Spanish",
+      "english": "English",
+      "portuguese": "Portuguese",
+      "japanese": "Japanese"
+    },
+    "languageLevels": {
+      "native": "Native",
+      "fluent": "Fluent",
+      "professional": "Professional",
+      "intermediate": "Intermediate",
+      "basic": "Basic"
     }
   },
   "contact": {
