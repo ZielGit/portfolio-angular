@@ -185,6 +185,22 @@
       "description": "Sistema de saúde que conecta pacientes a profissionais de saúde de forma segura, conveniente e com atendimento personalizado. Esta plataforma web, desenvolvida com Laravel, oferece consultas virtuais, segundas opiniões e agendamento de consultas, tanto virtuais quanto presenciais."
     }
   },
+  "languages": {
+    "title": "Idiomas",
+    "label": {
+      "spanish": "Espanhol",
+      "english": "Inglês",
+      "portuguese": "Português",
+      "japanese": "Japonês"
+    },
+    "languageLevels": {
+      "native": "Nativo",
+      "fluent": "Fluente",
+      "professional": "Profissional",
+      "intermediate": "Intermediário",
+      "basic": "Básico"
+    }
+  },
   "contact": {
     "pretitle": "Quer conversar?",
     "title": "Me chame!",
