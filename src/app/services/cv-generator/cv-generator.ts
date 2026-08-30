@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import jsPDF from 'jspdf';
+import { CVLanguageModel } from '../../models/cv-language-model';
 import { EducationModel } from '../../models/education-model';
 import { ExperienceModel } from '../../models/experience-model';
 import { CapitalizePipe } from '../../pipes/capitalize/capitalize-pipe';
@@ -23,6 +24,7 @@ export class CvGenerator {
   readonly personal = this.personalData.getCompleteInfo();
   readonly experiences = this.experienceData.experiences;
   readonly educations = this.educationData.getEducations();
+  readonly spokenLanguages = this.personalData.spokenLanguages;
 
   openCVInNewTab(): void {
     const doc = new jsPDF();
@@ -174,6 +176,47 @@ export class CvGenerator {
 
       yPosition += 4; // Espacio entre educaciones
     });
+
+    // --- LANGUAGES SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const languagesTitle = this.translateService.instant('languages.title');
+    doc.text(languagesTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    // Línea divisoria
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    const contentWidth = pageWidth - margin * 2;
+    const columnWidth = contentWidth / 2;
+
+    this.spokenLanguages().forEach((lang: CVLanguageModel, index: number) => {
+      // Verificar si necesitamos nueva página
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      doc.setFontSize(10);
+      doc.setFont('arial', 'normal');
+
+      const label = this.translateService.instant(lang.labelKey);
+      const proficiency = this.translateService.instant(lang.proficiencyKey);
+
+      const isLeftColumn = index % 2 === 0;
+      const xPosition = isLeftColumn ? margin : margin + columnWidth;
+
+      doc.text(`${label}: ${proficiency}`, xPosition, yPosition);
+
+      // Avanzar yPosition solo cuando se completa la fila (derecha) o es el último elemento
+      const isLastItem = index === this.spokenLanguages().length - 1;
+      if (!isLeftColumn || isLastItem) {
+        yPosition += 5;
+      }
+    });
+
+    // yPosition += 4; // Espacio después de la sección
 
     const cvName = this.translateService.instant('cvName');
 
