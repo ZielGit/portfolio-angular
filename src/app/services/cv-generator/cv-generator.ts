@@ -41,8 +41,38 @@ export class CvGenerator {
     // --- Contact Info ---
     doc.setFontSize(10);
     doc.setFont('arial', 'normal');
-    const contactLine = `${this.personal.location} | ${this.personal.phone} | ${this.personal.email} | ${this.personal.social.linkedin}`;
-    doc.text(contactLine, pageWidth / 2, yPosition, { align: 'center' });
+
+    const contactParts = [
+      { text: this.personal.location, url: '' },
+      { text: this.personal.phone, url: '' },
+      { text: this.personal.email, url: `mailto:${this.personal.email}` },
+      { text: 'LinkedIn', url: this.personal.social.linkedin },
+      { text: 'GitHub', url: this.personal.social.github },
+      { text: this.translateService.instant('portfolio'), url: this.personal.social.portfolio },
+    ];
+
+    const separator = ' | ';
+    const totalContactWidth =
+      contactParts.reduce((total, part) => total + doc.getTextWidth(part.text), 0) +
+      separator.length * (contactParts.length - 1) * 0.8;
+    const contactStartX = pageWidth / 2 - totalContactWidth / 2;
+    let contactX = contactStartX;
+
+    contactParts.forEach((part, index) => {
+      if (index > 0) {
+        doc.text(separator, contactX, yPosition);
+        contactX += doc.getTextWidth(separator);
+      }
+
+      if (part.url) {
+        doc.textWithLink(part.text, contactX, yPosition, { url: part.url });
+      } else {
+        doc.text(part.text, contactX, yPosition);
+      }
+
+      contactX += doc.getTextWidth(part.text);
+    });
+
     yPosition += 3;
     // Línea divisoria
     doc.setLineWidth(0.4);
