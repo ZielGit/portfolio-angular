@@ -4,11 +4,13 @@ import jsPDF from 'jspdf';
 import { CVLanguageModel } from '../../models/cv-language-model';
 import { EducationModel } from '../../models/education-model';
 import { ExperienceModel } from '../../models/experience-model';
+import { Project } from '../../models/project-model';
 import { CapitalizePipe } from '../../pipes/capitalize/capitalize-pipe';
 import { LocalizedDatePipe } from '../../pipes/localized-date/localized-date-pipe';
 import { EducationData } from '../education-data/education-data';
 import { ExperienceData } from '../experience-data/experience-data';
 import { PersonalData } from '../personal-data/personal-data';
+import { ProjectData } from '../project-data/project-data';
 
 @Injectable({
   providedIn: 'root',
@@ -18,12 +20,14 @@ export class CvGenerator {
   private personalData = inject(PersonalData);
   private experienceData = inject(ExperienceData);
   private educationData = inject(EducationData);
+  private projectData = inject(ProjectData);
   private localizedDatePipe = new LocalizedDatePipe();
   private capitalizePipe = new CapitalizePipe();
 
   readonly personal = this.personalData.getCompleteInfo();
   readonly experiences = this.experienceData.experiences;
   readonly educations = this.educationData.getEducations();
+  readonly featuredProjects = this.projectData.featuredProjects;
   readonly spokenLanguages = this.personalData.spokenLanguages;
 
   openCVInNewTab(): void {
@@ -41,8 +45,38 @@ export class CvGenerator {
     // --- Contact Info ---
     doc.setFontSize(10);
     doc.setFont('arial', 'normal');
-    const contactLine = `${this.personal.location} | ${this.personal.phone} | ${this.personal.email} | ${this.personal.social.linkedin}`;
-    doc.text(contactLine, pageWidth / 2, yPosition, { align: 'center' });
+
+    const contactParts = [
+      { text: this.personal.location, url: '' },
+      { text: this.personal.phone, url: '' },
+      { text: this.personal.email, url: `mailto:${this.personal.email}` },
+      { text: 'LinkedIn', url: this.personal.social.linkedin },
+      { text: 'GitHub', url: this.personal.social.github },
+      { text: this.translateService.instant('portfolio'), url: this.personal.social.portfolio },
+    ];
+
+    const separator = ' | ';
+    const totalContactWidth =
+      contactParts.reduce((total, part) => total + doc.getTextWidth(part.text), 0) +
+      separator.length * (contactParts.length - 1) * 0.8;
+    const contactStartX = pageWidth / 2 - totalContactWidth / 2;
+    let contactX = contactStartX;
+
+    contactParts.forEach((part, index) => {
+      if (index > 0) {
+        doc.text(separator, contactX, yPosition);
+        contactX += doc.getTextWidth(separator);
+      }
+
+      if (part.url) {
+        doc.textWithLink(part.text, contactX, yPosition, { url: part.url });
+      } else {
+        doc.text(part.text, contactX, yPosition);
+      }
+
+      contactX += doc.getTextWidth(part.text);
+    });
+
     yPosition += 3;
     // Línea divisoria
     doc.setLineWidth(0.4);
@@ -133,13 +167,55 @@ export class CvGenerator {
     });
     yPosition += 2;
 
+    // --- PROJECT SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const projectsTitle = this.translateService.instant('projects.title');
+    doc.text(projectsTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    this.featuredProjects().forEach((project: Project) => {
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      doc.setFontSize(11);
+      doc.setFont('arial', 'bold');
+      doc.text(this.translateService.instant(project.titleKey), margin, yPosition);
+      yPosition += 5;
+
+      doc.setFontSize(10);
+      doc.setFont('arial', 'normal');
+      const description = this.translateService.instant(project.descriptionKey);
+      const splitDescription = doc.splitTextToSize(description, pageWidth - margin * 2);
+      if (yPosition + splitDescription.length * 5 > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+      doc.text(splitDescription, margin, yPosition);
+      yPosition += splitDescription.length * 5;
+
+      const technologies = `Technologies: ${project.technologies.join(', ')}`;
+      const splitTechnologies = doc.splitTextToSize(technologies, pageWidth - margin * 2);
+      if (yPosition + splitTechnologies.length * 5 > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+      doc.text(splitTechnologies, margin, yPosition);
+      yPosition += splitTechnologies.length * 5 + 4;
+    });
+    yPosition += 2;
+
     // --- EDUCATION SECTION ---
     doc.setFontSize(12);
     doc.setFont('arial', 'bold');
     const educationTitle = this.translateService.instant('education.title');
     doc.text(educationTitle.toUpperCase(), margin, yPosition);
     yPosition += 1;
-
     // Línea divisoria
     doc.setLineWidth(0.2);
     doc.line(margin, yPosition, pageWidth - margin, yPosition);
@@ -176,6 +252,7 @@ export class CvGenerator {
 
       yPosition += 4; // Espacio entre educaciones
     });
+    yPosition += 2;
 
     // --- LANGUAGES SECTION ---
     doc.setFontSize(12);
