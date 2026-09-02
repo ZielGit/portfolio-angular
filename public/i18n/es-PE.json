@@ -186,6 +186,9 @@
       "description": "Sistema asistencial para conectar a pacientes con profesionales de la salud de manera segura, práctica y personalizada. Plataforma web desarrollada con Laravel que ofrece servicios de consulta virtual, segunda opinión de salud y gestión de citas tanto virtuales como presenciales."
     }
   },
+  "certifications": {
+    "title": "Certificaciones"
+  },
   "languages": {
     "title": "Idiomas",
     "label": {

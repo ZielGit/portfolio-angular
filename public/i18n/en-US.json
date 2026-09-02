@@ -186,6 +186,9 @@
       "description": "A healthcare system that connects patients with healthcare professionals securely, conveniently, and with personalized service. A web platform developed with Laravel that offers virtual consultations, second opinions, and appointment management for both virtual and in-person appointments."
     }
   },
+  "certifications": {
+    "title": "Certifications"
+  },
   "languages": {
     "title": "Languages",
     "label": {
