@@ -169,6 +169,7 @@
   "projects": {
     "title": "Proyectos",
     "featuredProjects": "Proyectos Destacados",
+    "technologies": "Tecnologías",
     "cryplab": {
       "title": "CrypLab",
       "description": "Un Crypto Marketplace y Auction Platform, donde se compran y venden criptomonedas o productos con seguimiento a envio, mediante billeteras virtuales."

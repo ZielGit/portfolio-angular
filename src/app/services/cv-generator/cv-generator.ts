@@ -203,7 +203,7 @@ export class CvGenerator {
       doc.text(splitDescription, margin, yPosition);
       yPosition += splitDescription.length * 5;
 
-      const technologies = `Technologies: ${project.technologies.join(', ')}`;
+      const technologies = `${this.translateService.instant('projects.technologies')}: ${project.technologies.join(', ')}`;
       const splitTechnologies = doc.splitTextToSize(technologies, pageWidth - margin * 2);
       if (yPosition + splitTechnologies.length * 5 > 250) {
         doc.addPage();
