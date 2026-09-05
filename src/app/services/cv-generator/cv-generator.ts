@@ -1,12 +1,14 @@
 import { inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import jsPDF from 'jspdf';
+import { CertificateModel } from '../../models/certificate-model';
 import { CVLanguageModel } from '../../models/cv-language-model';
 import { EducationModel } from '../../models/education-model';
 import { ExperienceModel } from '../../models/experience-model';
 import { Project } from '../../models/project-model';
 import { CapitalizePipe } from '../../pipes/capitalize/capitalize-pipe';
 import { LocalizedDatePipe } from '../../pipes/localized-date/localized-date-pipe';
+import { CertificateData } from '../certificate-data/certificate-data';
 import { EducationData } from '../education-data/education-data';
 import { ExperienceData } from '../experience-data/experience-data';
 import { PersonalData } from '../personal-data/personal-data';
@@ -21,6 +23,7 @@ export class CvGenerator {
   private experienceData = inject(ExperienceData);
   private educationData = inject(EducationData);
   private projectData = inject(ProjectData);
+  private certificateData = inject(CertificateData);
   private localizedDatePipe = new LocalizedDatePipe();
   private capitalizePipe = new CapitalizePipe();
 
@@ -28,6 +31,7 @@ export class CvGenerator {
   readonly experiences = this.experienceData.experiences;
   readonly educations = this.educationData.getEducations();
   readonly featuredProjects = this.projectData.featuredProjects;
+  readonly featuredCertificates = this.certificateData.featuredCertificates;
   readonly spokenLanguages = this.personalData.spokenLanguages;
 
   openCVInNewTab(): void {
@@ -167,7 +171,7 @@ export class CvGenerator {
     });
     yPosition += 2;
 
-    // --- PROJECT SECTION ---
+    // --- PROJECTS SECTION ---
     doc.setFontSize(12);
     doc.setFont('arial', 'bold');
     const projectsTitle = this.translateService.instant('projects.title');
@@ -251,6 +255,35 @@ export class CvGenerator {
       yPosition += 5;
 
       yPosition += 4; // Espacio entre educaciones
+    });
+    yPosition += 2;
+
+    // --- CERTIFICATIONS SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const certificatesTitle = this.translateService.instant('certifications.title');
+    doc.text(certificatesTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    this.featuredCertificates().forEach((cert: CertificateModel) => {
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      doc.setFontSize(10);
+      doc.setFont('arial', 'normal');
+      const certificate = `• ${cert.name} — ${cert.issuingOrganization}`;
+      const splitCertificate = doc.splitTextToSize(certificate, pageWidth - margin * 2 - 5);
+      if (yPosition + splitCertificate.length * 5 > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+      doc.text(splitCertificate, margin + 5, yPosition);
+      yPosition += splitCertificate.length * 5;
     });
     yPosition += 2;
 
