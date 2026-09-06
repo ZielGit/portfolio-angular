@@ -6,6 +6,7 @@ import { CVLanguageModel } from '../../models/cv-language-model';
 import { EducationModel } from '../../models/education-model';
 import { ExperienceModel } from '../../models/experience-model';
 import { Project } from '../../models/project-model';
+import { SkillGroup } from '../../models/skill-model';
 import { CapitalizePipe } from '../../pipes/capitalize/capitalize-pipe';
 import { LocalizedDatePipe } from '../../pipes/localized-date/localized-date-pipe';
 import { CertificateData } from '../certificate-data/certificate-data';
@@ -13,6 +14,7 @@ import { EducationData } from '../education-data/education-data';
 import { ExperienceData } from '../experience-data/experience-data';
 import { PersonalData } from '../personal-data/personal-data';
 import { ProjectData } from '../project-data/project-data';
+import { SkillData } from '../skill-data/skill-data';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +26,7 @@ export class CvGenerator {
   private educationData = inject(EducationData);
   private projectData = inject(ProjectData);
   private certificateData = inject(CertificateData);
+  private skillData = inject(SkillData);
   private localizedDatePipe = new LocalizedDatePipe();
   private capitalizePipe = new CapitalizePipe();
 
@@ -32,6 +35,7 @@ export class CvGenerator {
   readonly educations = this.educationData.getEducations();
   readonly featuredProjects = this.projectData.featuredProjects;
   readonly featuredCertificates = this.certificateData.featuredCertificates;
+  readonly skillGroups = this.skillData.skillGroups;
   readonly spokenLanguages = this.personalData.spokenLanguages;
 
   openCVInNewTab(): void {
@@ -112,6 +116,39 @@ export class CvGenerator {
     const splitSummary = doc.splitTextToSize(summaryText, pageWidth - margin * 2);
     doc.text(splitSummary, margin, yPosition);
     yPosition += splitSummary.length * 5 + 2;
+
+    // --- TECHNICAL SKILLS SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const skillsTitle = this.translateService.instant('technicalSkills.title');
+    doc.text(skillsTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    this.skillGroups().forEach((group: SkillGroup) => {
+      const category = this.translateService.instant(group.labelKey);
+      const skills = group.skills.map(skill => skill.name).join(', ');
+      doc.setFontSize(10);
+      doc.setFont('arial', 'bold');
+      const categoryText = `${category}: `;
+      const categoryWidth = doc.getTextWidth(categoryText);
+      doc.setFont('arial', 'normal');
+      const splitSkills = doc.splitTextToSize(skills, pageWidth - margin * 2 - categoryWidth);
+
+      if (yPosition + splitSkills.length * 5 > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      doc.setFont('arial', 'bold');
+      doc.text(categoryText, margin, yPosition);
+      doc.setFont('arial', 'normal');
+      doc.text(splitSkills, margin + categoryWidth, yPosition);
+      yPosition += splitSkills.length * 5;
+    });
+    yPosition += 2;
 
     // --- EXPERIENCE SECTION ---
     doc.setFontSize(12);
