@@ -32,6 +32,28 @@
     "rolesLastSeparator": " and "
   },
   "present": "Present",
+  "technicalSkills": {
+    "title": "Technical Skills",
+    "categories": {
+      "programming-language": "Programming Languages",
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "database": "Database Management",
+      "cloud": "Cloud Services",
+      "devops": "DevOps",
+      "architecture": "Architecture",
+      "testing": "Testing",
+      "tool": "Tools",
+      "spoken-language": "Languages",
+      "methodology": "Methodology"
+    },
+    "level": {
+      "basic": "Basic",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert"
+    }
+  },
   "experience": {
     "title": "Experience",
     "positions": {
