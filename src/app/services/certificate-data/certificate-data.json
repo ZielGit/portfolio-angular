@@ -1,0 +1,46 @@
+[
+  {
+    "id": "cert-001",
+    "name": "Creación de API REST con Laravel y MySQL",
+    "issuingOrganization": "Udemy",
+    "issueDate": [2021, 5],
+    "expirationDate": null,
+    "credentialUrl": "https://www.udemy.com/certificate/UC-43697ab3-0b3e-4510-b395-5f1c246cf9dc/",
+    "skills": ["PHP", "Laravel", "MySQL", "API REST"],
+    "featured": true,
+    "instructionLanguage": "languages.label.spanish"
+  },
+  {
+    "id": "cert-002",
+    "name": "Universidad Angular - De Cero a Experto en Angular!",
+    "issuingOrganization": "Udemy",
+    "issueDate": [2024, 2],
+    "expirationDate": null,
+    "credentialUrl": "https://www.udemy.com/certificate/UC-4085eca3-a44f-4d81-8d6d-c80bc826529d/",
+    "skills": ["TypeScript", "Angular", "Angular Material"],
+    "featured": true,
+    "instructionLanguage": "languages.label.spanish"
+  },
+  {
+    "id": "cert-003",
+    "name": "Especialista en Base de Datos SQL Server & MySQL para Big Data",
+    "issuingOrganization": "Data Science Analysis",
+    "issueDate": [2024, 8],
+    "expirationDate": null,
+    "credentialUrl": "https://drive.google.com/file/d/1wdyq8wuXmmogAXqL00bfc-fF6AzoVoVw/view?usp=sharing",
+    "skills": ["SQL", "SQL Server", "MySQL"],
+    "featured": true,
+    "instructionLanguage": "languages.label.spanish"
+  },
+  {
+    "id": "cert-004",
+    "name": "Configure NGINX on a Cloud Server: Digital Ocean & AWS",
+    "issuingOrganization": "Udemy",
+    "issueDate": [2025, 6],
+    "expirationDate": null,
+    "credentialUrl": "https://www.udemy.com/certificate/UC-cbf23e0c-b0ec-45c7-80e2-646a41473c72/",
+    "skills": ["Cloud Server", "Digital Ocean", "AWS"],
+    "featured": true,
+    "instructionLanguage": "languages.label.english"
+  }
+]

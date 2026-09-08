@@ -1,16 +1,20 @@
 import { inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import jsPDF from 'jspdf';
+import { CertificateModel } from '../../models/certificate-model';
 import { CVLanguageModel } from '../../models/cv-language-model';
 import { EducationModel } from '../../models/education-model';
 import { ExperienceModel } from '../../models/experience-model';
 import { Project } from '../../models/project-model';
+import { SkillGroup } from '../../models/skill-model';
 import { CapitalizePipe } from '../../pipes/capitalize/capitalize-pipe';
 import { LocalizedDatePipe } from '../../pipes/localized-date/localized-date-pipe';
+import { CertificateData } from '../certificate-data/certificate-data';
 import { EducationData } from '../education-data/education-data';
 import { ExperienceData } from '../experience-data/experience-data';
 import { PersonalData } from '../personal-data/personal-data';
 import { ProjectData } from '../project-data/project-data';
+import { SkillData } from '../skill-data/skill-data';
 
 @Injectable({
   providedIn: 'root',
@@ -21,6 +25,8 @@ export class CvGenerator {
   private experienceData = inject(ExperienceData);
   private educationData = inject(EducationData);
   private projectData = inject(ProjectData);
+  private certificateData = inject(CertificateData);
+  private skillData = inject(SkillData);
   private localizedDatePipe = new LocalizedDatePipe();
   private capitalizePipe = new CapitalizePipe();
 
@@ -28,6 +34,8 @@ export class CvGenerator {
   readonly experiences = this.experienceData.experiences;
   readonly educations = this.educationData.getEducations();
   readonly featuredProjects = this.projectData.featuredProjects;
+  readonly featuredCertificates = this.certificateData.featuredCertificates;
+  readonly skillGroups = this.skillData.skillGroups;
   readonly spokenLanguages = this.personalData.spokenLanguages;
 
   openCVInNewTab(): void {
@@ -109,6 +117,39 @@ export class CvGenerator {
     doc.text(splitSummary, margin, yPosition);
     yPosition += splitSummary.length * 5 + 2;
 
+    // --- TECHNICAL SKILLS SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const skillsTitle = this.translateService.instant('technicalSkills.title');
+    doc.text(skillsTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    this.skillGroups().forEach((group: SkillGroup) => {
+      const category = this.translateService.instant(group.labelKey);
+      const skills = group.skills.map(skill => skill.name).join(', ');
+      doc.setFontSize(10);
+      doc.setFont('arial', 'bold');
+      const categoryText = `${category}: `;
+      const categoryWidth = doc.getTextWidth(categoryText);
+      doc.setFont('arial', 'normal');
+      const splitSkills = doc.splitTextToSize(skills, pageWidth - margin * 2 - categoryWidth);
+
+      if (yPosition + splitSkills.length * 5 > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      doc.setFont('arial', 'bold');
+      doc.text(categoryText, margin, yPosition);
+      doc.setFont('arial', 'normal');
+      doc.text(splitSkills, margin + categoryWidth, yPosition);
+      yPosition += splitSkills.length * 5;
+    });
+    yPosition += 5;
+
     // --- EXPERIENCE SECTION ---
     doc.setFontSize(12);
     doc.setFont('arial', 'bold');
@@ -167,7 +208,7 @@ export class CvGenerator {
     });
     yPosition += 2;
 
-    // --- PROJECT SECTION ---
+    // --- PROJECTS SECTION ---
     doc.setFontSize(12);
     doc.setFont('arial', 'bold');
     const projectsTitle = this.translateService.instant('projects.title');
@@ -199,7 +240,7 @@ export class CvGenerator {
       doc.text(splitDescription, margin, yPosition);
       yPosition += splitDescription.length * 5;
 
-      const technologies = `Technologies: ${project.technologies.join(', ')}`;
+      const technologies = `${this.translateService.instant('projects.technologies')}: ${project.technologies.join(', ')}`;
       const splitTechnologies = doc.splitTextToSize(technologies, pageWidth - margin * 2);
       if (yPosition + splitTechnologies.length * 5 > 250) {
         doc.addPage();
@@ -254,6 +295,35 @@ export class CvGenerator {
     });
     yPosition += 2;
 
+    // --- CERTIFICATIONS SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const certificatesTitle = this.translateService.instant('certifications.title');
+    doc.text(certificatesTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    this.featuredCertificates().forEach((cert: CertificateModel) => {
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      doc.setFontSize(10);
+      doc.setFont('arial', 'normal');
+      const certificate = `• ${cert.name} — ${cert.issuingOrganization}`;
+      const splitCertificate = doc.splitTextToSize(certificate, pageWidth - margin * 2 - 5);
+      if (yPosition + splitCertificate.length * 5 > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+      doc.text(splitCertificate, margin + 5, yPosition);
+      yPosition += splitCertificate.length * 5;
+    });
+    yPosition += 6;
+
     // --- LANGUAGES SECTION ---
     doc.setFontSize(12);
     doc.setFont('arial', 'bold');
@@ -293,7 +363,33 @@ export class CvGenerator {
       }
     });
 
-    // yPosition += 4; // Espacio después de la sección
+    yPosition += 6;
+
+    // --- ADDITIONAL INFORMATION SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const additionalInfoTitle = this.translateService.instant('additionalInfo.title');
+    doc.text(additionalInfoTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    const additionalInfoObj = this.translateService.instant('additionalInfo.info') as Record<string, string>;
+    const additionalInfo = Object.values(additionalInfoObj);
+
+    doc.setFontSize(10);
+    doc.setFont('arial', 'normal');
+    additionalInfo.forEach((info: string) => {
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      const splitInfo = doc.splitTextToSize(`• ${info}`, pageWidth - margin * 2 - 5);
+      doc.text(splitInfo, margin + 5, yPosition);
+      yPosition += splitInfo.length * 5;
+    });
 
     const cvName = this.translateService.instant('cvName');
 

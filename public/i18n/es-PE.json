@@ -32,6 +32,28 @@
     "rolesLastSeparator": " y "
   },
   "present": "Actualidad",
+  "technicalSkills": {
+    "title": "Habilidades Técnicas",
+    "categories": {
+      "programming-language": "Lenguajes de Programación",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de Datos",
+      "cloud": "Nube",
+      "devops": "DevOps",
+      "architecture": "Arquitectura",
+      "testing": "Pruebas",
+      "tool": "Herramientas",
+      "spoken-language": "Idiomas",
+      "methodology": "Metodología"
+    },
+    "level": {
+      "expert": "Experto",
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "basic": "Básico"
+    }
+  },
   "experience": {
     "title": "Experiencia",
     "positions": {
@@ -169,6 +191,7 @@
   "projects": {
     "title": "Proyectos",
     "featuredProjects": "Proyectos Destacados",
+    "technologies": "Tecnologías",
     "cryplab": {
       "title": "CrypLab",
       "description": "Un Crypto Marketplace y Auction Platform, donde se compran y venden criptomonedas o productos con seguimiento a envio, mediante billeteras virtuales."
@@ -186,6 +209,9 @@
       "description": "Sistema asistencial para conectar a pacientes con profesionales de la salud de manera segura, práctica y personalizada. Plataforma web desarrollada con Laravel que ofrece servicios de consulta virtual, segunda opinión de salud y gestión de citas tanto virtuales como presenciales."
     }
   },
+  "certifications": {
+    "title": "Certificaciones"
+  },
   "languages": {
     "title": "Idiomas",
     "label": {
@@ -200,6 +226,16 @@
       "professional": "Profesional",
       "intermediate": "Intermedio",
       "basic": "Básico"
+    }
+  },
+  "additionalInfo": {
+    "title": "Información Adicional",
+    "info": {
+      "0": "Si requiere el currículum documentado puede solicitarlo por correo o WhatsApp.",
+      "1": "Se incluyen únicamente los certificados más relevantes. Para consultar el listado completo, visite mi perfil de LinkedIn.",
+      "2": "Disponibilidad para trabajo presencial.",
+      "3": "Disponibilidad para trabajo remoto.",
+      "4": "Disponibilidad para trabajo híbrido."
     }
   },
   "contact": {
