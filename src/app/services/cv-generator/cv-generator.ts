@@ -148,7 +148,7 @@ export class CvGenerator {
       doc.text(splitSkills, margin + categoryWidth, yPosition);
       yPosition += splitSkills.length * 5;
     });
-    yPosition += 2;
+    yPosition += 5;
 
     // --- EXPERIENCE SECTION ---
     doc.setFontSize(12);
@@ -322,7 +322,7 @@ export class CvGenerator {
       doc.text(splitCertificate, margin + 5, yPosition);
       yPosition += splitCertificate.length * 5;
     });
-    yPosition += 2;
+    yPosition += 6;
 
     // --- LANGUAGES SECTION ---
     doc.setFontSize(12);
@@ -363,7 +363,33 @@ export class CvGenerator {
       }
     });
 
-    // yPosition += 4; // Espacio después de la sección
+    yPosition += 6;
+
+    // --- ADDITIONAL INFORMATION SECTION ---
+    doc.setFontSize(12);
+    doc.setFont('arial', 'bold');
+    const additionalInfoTitle = this.translateService.instant('additionalInfo.title');
+    doc.text(additionalInfoTitle.toUpperCase(), margin, yPosition);
+    yPosition += 1;
+    doc.setLineWidth(0.2);
+    doc.line(margin, yPosition, pageWidth - margin, yPosition);
+    yPosition += 7;
+
+    const additionalInfoObj = this.translateService.instant('additionalInfo.info') as Record<string, string>;
+    const additionalInfo = Object.values(additionalInfoObj);
+
+    doc.setFontSize(10);
+    doc.setFont('arial', 'normal');
+    additionalInfo.forEach((info: string) => {
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      const splitInfo = doc.splitTextToSize(`• ${info}`, pageWidth - margin * 2 - 5);
+      doc.text(splitInfo, margin + 5, yPosition);
+      yPosition += splitInfo.length * 5;
+    });
 
     const cvName = this.translateService.instant('cvName');
 
