@@ -228,6 +228,16 @@
       "basic": "Basic"
     }
   },
+  "additionalInfo": {
+    "title": "Additional Information",
+    "info": {
+      "0": "If you require the documented resume, you can request it via email or WhatsApp.",
+      "1": "Only the most relevant certifications are included. For the complete list, please visit my LinkedIn profile.",
+      "2": "Availability for on-site work.",
+      "3": "Availability for remote work.",
+      "4": "Availability for hybrid work."
+    }
+  },
   "contact": {
     "pretitle": "Want to chat?",
     "title": "Say hi!",

@@ -228,6 +228,16 @@
       "basic": "Básico"
     }
   },
+  "additionalInfo": {
+    "title": "Informações Adicionais",
+    "info": {
+      "0": "Se você precisa do currículo documentado, pode solicitá-lo por e-mail ou WhatsApp.",
+      "1": "Foram incluídos apenas os certificados mais relevantes. Para consultar a lista completa, visite meu perfil no LinkedIn.",
+      "2": "Disponibilidade para trabalho presencial.",
+      "3": "Disponibilidade para trabalho remoto.",
+      "4": "Disponibilidade para trabalho híbrido."
+    }
+  },
   "contact": {
     "pretitle": "Quer conversar?",
     "title": "Me chame!",
