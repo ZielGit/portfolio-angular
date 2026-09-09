@@ -50,6 +50,13 @@ export class CvGenerator {
     doc.text(this.personal.fullName, pageWidth / 2, yPosition, { align: 'center' });
     yPosition += 8;
 
+    // --- Target Position ---
+    doc.setFontSize(13);
+    doc.setFont('arial', 'bold');
+    const targetPosition = this.translateService.instant('title');
+    doc.text(targetPosition, pageWidth / 2, yPosition, { align: 'center' });
+    yPosition += 8;
+
     // --- Contact Info ---
     doc.setFontSize(10);
     doc.setFont('arial', 'normal');
