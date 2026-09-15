@@ -38,8 +38,10 @@ export class CvGenerator {
   readonly skillGroups = this.skillData.skillGroups;
   readonly spokenLanguages = this.personalData.spokenLanguages;
 
-  openCVInNewTab(): void {
+  async openCVInNewTab(): Promise<void> {
+    const { registerArialFonts } = await import('../../../styles/fonts/Arial/arial-fonts');
     const doc = new jsPDF();
+    registerArialFonts(doc);
     const pageWidth = doc.internal.pageSize.getWidth();
     const margin = 20;
     let yPosition = 20;
