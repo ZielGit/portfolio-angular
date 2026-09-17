@@ -201,16 +201,14 @@ export class CvGenerator {
 
       exp.functionKeys.forEach((func: string) => {
         const funcText = this.translateService.instant(func);
+        const textWidth = pageWidth - margin * 2 - 5;
 
-        // Dividir texto largo en múltiples líneas
-        const splitDesc = doc.splitTextToSize(`• ${funcText}`, pageWidth - margin * 2 - 5);
-        if (yPosition + splitDesc.length * 5 > 250) {
+        if (yPosition + 5 > 250) {
           doc.addPage();
           yPosition = 20;
         }
 
-        doc.text(splitDesc, margin + 5, yPosition);
-        yPosition += splitDesc.length * 5;
+        yPosition += this.writeBulletItem(doc, funcText, margin + 5, yPosition, textWidth);
       });
 
       yPosition += 4; // Espacio entre experiencias
@@ -322,14 +320,8 @@ export class CvGenerator {
 
       doc.setFontSize(10);
       doc.setFont('arial', 'normal');
-      const certificate = `• ${cert.name} — ${cert.issuingOrganization}`;
-      const splitCertificate = doc.splitTextToSize(certificate, pageWidth - margin * 2 - 5);
-      if (yPosition + splitCertificate.length * 5 > 250) {
-        doc.addPage();
-        yPosition = 20;
-      }
-      doc.text(splitCertificate, margin + 5, yPosition);
-      yPosition += splitCertificate.length * 5;
+      const certificate = `${cert.name} — ${cert.issuingOrganization}`;
+      yPosition += this.writeBulletItem(doc, certificate, margin + 5, yPosition, pageWidth - margin * 2 - 5);
     });
     yPosition += 6;
 
@@ -395,9 +387,7 @@ export class CvGenerator {
         yPosition = 20;
       }
 
-      const splitInfo = doc.splitTextToSize(`• ${info}`, pageWidth - margin * 2 - 5);
-      doc.text(splitInfo, margin + 5, yPosition);
-      yPosition += splitInfo.length * 5;
+      yPosition += this.writeBulletItem(doc, info, margin + 5, yPosition, pageWidth - margin * 2 - 5);
     });
 
     const cvName = this.translateService.instant('cvName');
@@ -412,6 +402,19 @@ export class CvGenerator {
     });
 
     window.open(doc.output('bloburl'), '_blank');
+  }
+
+  private writeBulletItem(doc: jsPDF, text: string, x: number, y: number, maxWidth: number): number {
+    const bulletIndent = 4;
+    const lines = doc.splitTextToSize(text, maxWidth - bulletIndent);
+
+    doc.text('•', x, y);
+    lines.forEach((line: string, index: number) => {
+      const lineY = y + index * 5;
+      doc.text(line, x + bulletIndent, lineY);
+    });
+
+    return lines.length * 5;
   }
 
   private formatDate(date: Date | string | null, isEndDate = false): string {
