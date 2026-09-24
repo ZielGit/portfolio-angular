@@ -1,11 +1,11 @@
 export interface CertificateModel {
-  id: string;
-  name: string;
-  issuingOrganization: string;
-  issueDate: Date;
-  expirationDate?: Date | null;
-  credentialUrl?: string;
-  skills: string[];
-  featured: boolean;
-  instructionLanguage: string;
+  readonly id: string;
+  readonly name: string;
+  readonly issuingOrganization: string;
+  readonly issueDate: Date;
+  readonly expirationDate?: Date | null;
+  readonly credentialUrl?: string;
+  readonly skills: string[];
+  readonly featured: boolean;
+  readonly instructionLanguage: string;
 }
