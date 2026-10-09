@@ -1,0 +1,205 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "certificates": "Certificados",
+    "button": "Curriculum"
+  },
+  "cvName": "Curriculum Frans Vilcahuaman Español",
+  "portfolio": "Portafolio",
+  "greeting": "Hola! Mi nombre es",
+  "title": "Desarrollador Full Stack",
+  "professionalSummary": {
+    "title": "Perfil Profesional",
+    "summary": "Desarrollador {{level}} Full Stack con más de {{years}} años de experiencia en el diseño, desarrollo e implementación de sistemas web escalables. Especializado en {{mainSkills}}, con enfoque en código limpio, arquitectura limpia y automatización de despliegues. Experiencia liderando iniciativas técnicas y brindando mentoría a desarrolladores junior, fortaleciendo la calidad del software y las buenas prácticas del equipo.",
+    "mainSkillsSeparator": ", ",
+    "mainSkillsLastSeparator": " y "
+  },
+  "bannerButton": "Saludame",
+  "aboutMe": {
+    "title": "Acerca de mí",
+    "roles": {
+      "developer": "Desarrollador",
+      "devops": "Ingeniero DevOps",
+      "qa": "Automatizador QA"
+    },
+    "paragraphs": {
+      "0": "Lo que más disfruto de mi trabajo es la posibilidad de tomar un problema desordenado y convertirlo en algo simple, sólido y fácil de mantener para quien venga después.",
+      "1": "Soy Ingeniero de Sistemas y Computación, con una Maestría en Gerencia de Sistemas Empresariales. A lo largo de mi carrera he pasado por distintos roles ({{roles}}), lo que me dio una visión más completa de cómo se construye software de calidad, ya que no solo se trata de que el código funcione, sino de que sea mantenible, esté bien probado y aporte valor real al proyecto. Por eso me gusta implementar mejoras en sistemas existentes, optimizar rendimiento, estandarizar patrones y proponer ideas que ayuden al equipo a avanzar.",
+      "2": "En mi tiempo libre, casi siempre estoy con algún curso que me despertó curiosidad o que aporta a mi crecimiento profesional; me gusta mantenerme en constante aprendizaje, ya sea profundizando en arquitectura de software o explorando tecnologías nuevas. También programo cosas para uso personal, ya sea por hobbie o por utilidad propia."
+    },
+    "rolesSeparator": ", ",
+    "rolesLastSeparator": " y "
+  },
+  "present": "Actualidad",
+  "technicalSkills": {
+    "title": "Habilidades Técnicas",
+    "categories": {
+      "programming-language": "Lenguajes de Programación",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de Datos",
+      "cloud": "Nube",
+      "devops": "DevOps",
+      "architecture": "Arquitectura",
+      "testing": "Pruebas",
+      "tool": "Herramientas",
+      "spoken-language": "Idiomas",
+      "methodology": "Metodología"
+    },
+    "level": {
+      "expert": "Experto",
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "basic": "Básico"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "positions": {
+      "juniorProg": "Programador Junior Full Stack",
+      "JuniorDev": "Desarrollador Junior Full Stack",
+      "juniorLaravelDev": "Desarrollador Junior Laravel Full Stack",
+      "seniorLaravelDev": "Desarrollador Senior Laravel Full Stack",
+      "seniorNETDev": "Desarrollador Senior .NET",
+      "seniorDev": "Desarrollador Senior Full Stack",
+      "ingDev": "Ingeniero Desarrollador"
+    },
+    "exp-1": {
+      "func-1": "Desarrollé APIs con PHP, .NET y Laravel, e interfaces en Blade y jQuery.",
+      "func-2": "Diseñé e implementé bases de datos SQL Server y MySQL.",
+      "func-3": "Integré servicios externos, APIs y correo electrónico.",
+      "func-4": "Optimicé procesos de negocio, dando mantenimiento y actualizando los módulos de los sitios web.",
+      "func-5": "Recopilé requerimientos y documenté técnicamente los proyectos."
+    },
+    "exp-2": {
+      "func-1": "Desarrollé APIs con Laravel e interfaces en Blade y Vue, aplicando Clean Code.",
+      "func-2": "Implementé pruebas unitarias y de características con PHPUnit y Jest.",
+      "func-3": "Administré la base de datos MySQL.",
+      "func-4": "Recopilé y analicé requerimientos, documentando técnicamente el proyecto bajo metodología ágil Scrum."
+    },
+    "exp-3": {
+      "func-1": "Desarrollé APIs con Laravel y .NET, e interfaces con Angular, Vue y jQuery para distintos clientes.",
+      "func-2": "Configuré y administré servidores web y bases de datos SQL Server, MySQL, PostgreSQL y MongoDB.",
+      "func-3": "Integré servicios externos de pagos en línea y correo electrónico.",
+      "func-4": "Implementé pruebas unitarias y de características con PHPUnit y Jest.",
+      "func-5": "Elaboré documentación técnica de procesos, flujos de desarrollo y manuales de usuario."
+    },
+    "exp-4": {
+      "func-1": "Desarrollé APIs con Laravel e interfaces con Blade y jQuery, integrando servicios externos.",
+      "func-2": "Implementé seguridad con Sanctum (OAuth 2.0) y administré la base de datos MySQL.",
+      "func-3": "Configuré pipelines de Integración y Despliegue Continuo (CI/CD).",
+      "func-4": "Optimicé procesos de negocio y corregí errores del sistema ERP.",
+      "func-5": "Recopilé requerimientos y documenté APIs del proyecto."
+    },
+    "exp-5": {
+      "func-1": "Desarrollé y mantuve APIs y módulos de ERP con Laravel, con interfaces en Blade y jQuery.",
+      "func-2": "Administré y configuré infraestructura en AWS y Digital Ocean.",
+      "func-3": "Diseñé y mantuve bases de datos MySQL y MongoDB, e integré servicios externos y correo electrónico.",
+      "func-4": "Implementé pruebas unitarias y de características con PHPUnit y Jest, y optimicé pipelines de CI/CD para despliegue en desarrollo y producción.",
+      "func-5": "Recopilé y analicé requerimientos, documentando APIs, despliegues y pruebas automatizadas.",
+      "func-6": "Realicé revisiones de código y mentoría técnica a desarrolladores junior bajo metodología Scrum con Jira."
+    },
+    "exp-6": {
+      "func-1": "Diseñé y desarrollé APIs con .NET, integrándolas con servicios externos y aplicando Clean Architecture, DDD y principios SOLID.",
+      "func-2": "Optimicé procedimientos almacenados, consultas y funciones en SQL Server, MySQL y Entity Framework, mejorando el rendimiento de la base de datos.",
+      "func-3": "Implementé autenticación y autorización mediante JWT y OAuth 2.0.",
+      "func-4": "Gestioné el ciclo de vida del desarrollo con Git y Azure DevOps, reduciendo tiempos de despliegue mediante pipelines de CI/CD.",
+      "func-5": "Desarrollé pruebas unitarias y de integración con xUnit y Moq previas al despliegue.",
+      "func-6": "Integré servicios en la nube con Azure Functions, App Services, Blob Storage y Service Bus.",
+      "func-7": "Documenté procesos, APIs y manuales de usuario, facilitando el aprendizaje y mantenimiento del sistema."
+    },
+    "exp-7": {
+      "func-1": "Desarrollé y mantuve APIs con FastAPI, Laravel y .NET, junto con interfaces en Angular y Vue.",
+      "func-2": "Configuré y administré servidores web y bases de datos SQL Server, MySQL, PostgreSQL y Redis.",
+      "func-3": "Integré servicios externos de pagos en línea y correo electrónico.",
+      "func-4": "Implementé pruebas unitarias y de características con Pytest, PHPUnit y Vitest, asegurando la calidad del software.",
+      "func-5": "Recopilé y analicé requerimientos funcionales y no funcionales bajo metodología Scrum.",
+      "func-6": "Elaboré documentación técnica de las plataformas y sistemas web asignados."
+    },
+    "exp-8": {
+      "func-1": "Desarrollé APIs con Laravel e interfaces con Angular, migrando módulos previamente construidos en React, aplicando Clean Code, Clean Architecture, Arquitectura Hexagonal y Domain-Driven Design.",
+      "func-2": "Implementé autenticación y autorización mediante JWT, y administré infraestructura en Google Cloud y cPanel.",
+      "func-3": "Diseñé y mantuve bases de datos MySQL y PostgreSQL.",
+      "func-4": "Implementé pipelines de CI/CD para automatizar despliegues a entornos de desarrollo.",
+      "func-5": "Documenté requerimientos, componentes, APIs y procesos de despliegue.",
+      "func-6": "Realicé revisiones de código y brindé mentoría técnica a desarrolladores junior bajo metodología Scrum con Jira."
+    },
+    "exp-9": {
+      "func-1": "Desarrollé y mantuve APIs con Laravel e interfaces con Vue, aplicando Clean Code, Clean Architecture, patrón CSR y Domain-Driven Design.",
+      "func-2": "Implementé autenticación y autorización mediante JWT, reforzando la seguridad del sistema.",
+      "func-3": "Diseñé y administré bases de datos PostgreSQL y Redis, optimizando el acceso y almacenamiento de datos.",
+      "func-4": "Desarrollé procesos de Task Scheduling y Queues para automatizar tareas en segundo plano.",
+      "func-5": "Lideré la migración y saneamiento de datos entre sistemas, garantizando la integridad de la información.",
+      "func-6": "Gestioné el proyecto bajo metodología Scrum con Jira, documentando APIs en Postman."
+    }
+  },
+  "education": {
+    "title": "Educación",
+    "degrees": {
+      "bachelor": "Bachiller",
+      "engineer": "Ingeniero",
+      "master": "Magíster"
+    },
+    "fieldsOfStudy": {
+      "systemsEngr": "Ingeniería de Sistemas y Computación",
+      "systemsMtr": "Gerencia de Sistemas Empresariales"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "featuredProjects": "Proyectos Destacados",
+    "technologies": "Tecnologías",
+    "cryplab": {
+      "title": "CrypLab",
+      "description": "Un Crypto Marketplace y Auction Platform, donde se compran y venden criptomonedas o productos con seguimiento a envio, mediante billeteras virtuales."
+    },
+    "libraryManagement": {
+      "title": "Sistema de Gestión Bibliotecaria Universitaria",
+      "description": "Sistema de gestión bibliotecaria universitaria, con registro de libros, usuarios, préstamos y devoluciones."
+    },
+    "doctorManagement": {
+      "title": "El Doctor - Plataforma de Gestión",
+      "description": "Sistema administrativo integral para la gestión de clínicas y centros médicos. Plataforma web desarrollada con Laravel que permite administrar empresas, establecimientos, médicos, pacientes, citas, comprobantes, farmacia, caja, recursos humanos y más."
+    },
+    "doctorCare": {
+      "title": "El Doctor - Plataforma de Atención",
+      "description": "Sistema asistencial para conectar a pacientes con profesionales de la salud de manera segura, práctica y personalizada. Plataforma web desarrollada con Laravel que ofrece servicios de consulta virtual, segunda opinión de salud y gestión de citas tanto virtuales como presenciales."
+    }
+  },
+  "certifications": {
+    "title": "Certificaciones"
+  },
+  "languages": {
+    "title": "Idiomas",
+    "label": {
+      "spanish": "Español",
+      "english": "Inglés",
+      "portuguese": "Portugués",
+      "japanese": "Japonés"
+    },
+    "languageLevels": {
+      "native": "Nativo",
+      "fluent": "Fluido",
+      "professional": "Profesional",
+      "intermediate": "Intermedio",
+      "basic": "Básico"
+    }
+  },
+  "additionalInfo": {
+    "title": "Información Adicional",
+    "info": {
+      "0": "Si requiere el currículum documentado puede solicitarlo por correo o WhatsApp.",
+      "1": "Se incluyen únicamente los certificados más relevantes. Para consultar el listado completo, visite mi perfil de LinkedIn.",
+      "2": "Disponibilidad para trabajo presencial.",
+      "3": "Disponibilidad para trabajo remoto.",
+      "4": "Disponibilidad para trabajo híbrido."
+    }
+  },
+  "contact": {
+    "pretitle": "¿Quieres conversar?",
+    "title": "¡Salúdame!",
+    "description": "Si buscas a alguien que además de escribir código, piensa en la calidad, la mantenibilidad y en el equipo que vendrá después, este es un buen punto de partida. Escríbeme para conversar sobre nuevas oportunidades y te responderé tan pronto como vea tu mensaje.",
+    "button": "Contactame"
+  }
+}
