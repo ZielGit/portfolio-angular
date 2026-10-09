@@ -1,0 +1,109 @@
+@use 'variables' as *;
+
+:host {
+  display: block;
+}
+
+.certificate-page {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding-top: 135px;
+  padding-bottom: 200px;
+}
+
+.certificate-header {
+  margin-bottom: 50px;
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 600;
+    color: $LightestSlate;
+    font-family: $MainFont;
+  }
+}
+
+.certificate-subtitle {
+  color: $Green;
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-family: $CodeFont;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.certificate-table-container {
+  overflow-x: auto;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 12px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    color: $LightestSlate;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.5;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    font-family: $MainFont;
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(17, 24, 39, 0.5);
+      }
+    }
+
+    td {
+      color: $Slate;
+      line-height: 1.6;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+      vertical-align: middle;
+    }
+  }
+}
+
+.certificate-name {
+  color: $LightestSlate;
+  font-weight: 600;
+}
+
+.certificate-company {
+  color: $LightSlate;
+}
+
+.certificate-date {
+  color: $Green;
+  font-family: $CodeFont;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .certificate-page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .certificate-table-container {
+    margin: 0 -10px;
+  }
+
+  thead th,
+  tbody td {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
