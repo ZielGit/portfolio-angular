@@ -1,0 +1,27 @@
+<section class="certificate-page">
+  <div class="certificate-header">
+    <p class="certificate-subtitle">Certificados</p>
+    <h1>Certificados</h1>
+  </div>
+
+  <div class="certificate-table-container">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Empresa emisora</th>
+          <th scope="col">Fecha de expedición</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (certificate of certificates(); track certificate.id) {
+        <tr>
+          <td class="certificate-name">{{ certificate.name }}</td>
+          <td class="certificate-company">{{ certificate.issuingOrganization }}</td>
+          <td class="certificate-date">{{ certificate.issueDate | date: 'MMMM yyyy' }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
