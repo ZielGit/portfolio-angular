@@ -8,6 +8,7 @@ export const routes: Routes = [
     children: [
       { path: '', loadComponent: () => import('./pages/home/home').then(m => m.Home) },
       { path: 'projects', loadComponent: () => import('./pages/project/project').then(m => m.Project) },
+      { path: 'certificates', loadComponent: () => import('./pages/certificate/certificate').then(m => m.Certificate) },
     ],
   },
   { path: '**', redirectTo: `/${DEFAULT_LANGUAGE}` },
